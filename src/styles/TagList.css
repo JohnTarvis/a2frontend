@@ -1,0 +1,31 @@
+.tag-list{
+    margin: 0 auto ; 
+    color:white;
+    width:15%;
+    float:inline-start;
+    text-align: center;
+    position:relative;
+}
+
+.tag{
+    display:inline-block;
+    margin:5px;
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.included{
+    color:#0f0;
+}
+
+.excluded{
+    color:#f00;
+}
+
+.tag-neutral{
+    display:inline-block;
+    margin:5px;
+    cursor:pointer;
+    text-decoration: underline;
+}
+
