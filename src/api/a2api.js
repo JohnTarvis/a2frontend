@@ -10,7 +10,8 @@ class A2Api {
     const url = `${BASE_URL}/${endpoint}`;
     const headers = { 
       Authorization: `Bearer ${A2Api.token}`,
-      'Access-Control-Allow-Origin': '*'
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
     };
     const params = (method === "get")
         ? data
