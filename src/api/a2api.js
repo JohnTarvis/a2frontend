@@ -8,7 +8,10 @@ class A2Api {
   static async request(endpoint, data = {}, method = "get") {
     // console.debug("API Call:", endpoint, data, method);
     const url = `${BASE_URL}/${endpoint}`;
-    const headers = { Authorization: `Bearer ${A2Api.token}` };
+    const headers = { 
+      Authorization: `Bearer ${A2Api.token}`,
+      'Access-Control-Allow-Origin': '*'
+    };
     const params = (method === "get")
         ? data
         : {};
