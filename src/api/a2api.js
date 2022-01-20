@@ -1,12 +1,14 @@
 import axios from "axios";
 
-const BASE_URL = 'https://damp-island-15072.herokuapp.com'//"http://localhost:3001";
+const app = require('express')();
+app.use(cors());
+
+const BASE_URL = 'https://damp-island-15072.herokuapp.com';//"http://localhost:3001";
 
 
 class A2Api {
   static token;
   static async request(endpoint, data = {}, method = "get") {
-    // console.debug("API Call:", endpoint, data, method);
     const url = `${BASE_URL}/${endpoint}`;
     const headers = { 
       Authorization: `Bearer ${A2Api.token}`,
