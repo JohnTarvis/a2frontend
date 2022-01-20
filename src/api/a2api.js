@@ -22,6 +22,7 @@ class A2Api {
         ? data
         : {};
     try {
+      console.log('toaxios=========================================',{url,method,data,params,headers});
       return (await axios({ url, method, data, params, headers })).data;
     } catch (err) {
       console.error("API Error:", err.response);
