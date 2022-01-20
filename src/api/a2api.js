@@ -1,5 +1,8 @@
 import axios from "axios";
 
+const cors = require('cors');
+app.use(cors());
+
 const BASE_URL = 'https://damp-island-15072.herokuapp.com'//"http://localhost:3001";
 
 
@@ -10,7 +13,7 @@ class A2Api {
     const url = `${BASE_URL}/${endpoint}`;
     const headers = { 
       Authorization: `Bearer ${A2Api.token}`,
-      'Access-Control-Allow-Origin': 'https://damp-island-15072.herokuapp.com',
+      'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
     };
     const params = (method === "get")
