@@ -1,8 +1,5 @@
 import axios from "axios";
 
-const cors = require('cors');
-app.use(cors());
-
 const BASE_URL = 'https://damp-island-15072.herokuapp.com'//"http://localhost:3001";
 
 
