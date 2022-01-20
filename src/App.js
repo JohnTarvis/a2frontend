@@ -10,6 +10,11 @@ import jwt from "jsonwebtoken";
 
 export const A2_TOKEN = "anonanon-token";
 
+const app = require('express');
+const cors = require('cors');
+app.use(response);
+app.use(cors);
+
 function App() {
   
   const [anon, setAnon] = useState(null);
