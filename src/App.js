@@ -1,4 +1,4 @@
-import { response } from 'express';
+// import { response } from 'express';
 
 
 import React, { useState, useEffect } from "react";
@@ -14,10 +14,10 @@ import jwt from "jsonwebtoken";
 export const A2_TOKEN = "anonanon-token";
 
 
-const app = require('express');
-const cors = require('cors');
-app.use(response);
-app.use(cors);
+// const app = require('express');
+// const cors = require('cors');
+// app.use(response);
+// app.use(cors);
 
 function App() {
   
