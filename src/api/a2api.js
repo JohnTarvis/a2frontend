@@ -22,7 +22,7 @@ class A2Api {
         ? data
         : {};
     try {
-      console.log('toaxios=========================================',{url,method,data,params,headers});
+      // console.log('toaxios=========================================',{url,method,data,params,headers});
       return (await axios({ url, method, data, params, headers })).data;
     } catch (err) {
       console.error("API Error:", err.response);
@@ -74,41 +74,7 @@ class A2Api {
     let res = await this.request('tag/',{tag},'post');
   }
 
- 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // static async getCompanies(name) {
-  //   let res = await this.request("companies", { name });
-  //   return res.companies;
-  // }
-
-  // static async getCompany(handle) {
-  //   let res = await this.request(`companies/${handle}`);
-  //   return res.company;
-  // }
-
-  // static async getJobs(title) {
-  //   let res = await this.request("jobs", { title });
-  //   return res.jobs;
-  // }
-
-  // static async apply(handle, id) {
-  //   await this.request(`anon/${handle}/jobs/${id}`, {}, "post");
-  // }
 }
 
 
