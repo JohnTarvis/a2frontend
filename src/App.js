@@ -13,18 +13,11 @@ import jwt from "jsonwebtoken";
 
 export const A2_TOKEN = "anonanon-token";
 
-
-// const app = require('express');
-// const cors = require('cors');
-// app.use(response);
-// app.use(cors);
-
 function App() {
   
   const [anon, setAnon] = useState(null);
   const [token, setToken] = useLocalStorage(A2_TOKEN);
   const [loaded, setLoaded] = useState(false);
-  // const [posts, setPosts] = useState(null);
 
   useEffect(function loadanonInfo() {
 
@@ -64,12 +57,9 @@ function App() {
 
   async function createTags(tagString){
     const tags = tagString.split(/\W+/);
-    // console.log('IN APP listing tags: ',tags);
     for(let tag of tags){
-      // console.log('IN APP going through tags loop current is:',tag);
       try{
         await A2Api.createTag(tag);
-        // console.log('successfully added tag: ',tag);
       } catch(errors){
         console.log('failed to create tag: ',tag);
         console.log('errors ',errors);
