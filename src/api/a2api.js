@@ -43,6 +43,10 @@ class A2Api {
     return res.posts;
   }
 
+  static async deleteAllPosts(){
+    await this.request('post/')
+  }
+
 ////////////////////////////////////////////////////////////////////////////////-anons
 
   static async getAnon(handle) {

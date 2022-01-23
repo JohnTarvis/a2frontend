@@ -36,25 +36,8 @@ function TagList(){
             return a.tag > b.tag ? 1 : -1;
         });
         const sorted = result.tags;
-
-
         setAllTags(sorted);
         setTagsIncluded(sorted);
-
-        // console.log('==============================================');
-
-        /////////////////////////////////////////////////////////////////////////
-        // const tts = [];
-        // for(let tag of sorted){
-        //     const toggleTag = new ToggleTag(tag);
-        //     // console.log('tt===========================',tag);
-        //     tts.push(toggleTag);
-        // }
-        // setToggleTags(tts);
-
-        // console.log('TOGGLETAGS==================================',tts);
-
-        // console.log('toggletags==========================================',toggleTags);
     }
 
     function getAllPostCards(){
@@ -77,13 +60,14 @@ function TagList(){
         }
     }
 
+    ///======================================================================TESTING
     function clickHandler(e){
         if(e.target.id==='test-click'){
-            TagToggler.getTags();
-            $('.PostCard').show();
+            
         }
         displayTaggedClient(e);
     }
+    /////////////////////////////////////////////////////////////////////////////////
 
 
     if (!allTags) return <LoadingSpinner />;
