@@ -71,6 +71,7 @@ class A2Api {
   }
 
   static async createTag(tag){
+    console.log('ddddddddddddddddddddddddddddddddddddddddddddddd',"CREATE TAG A2API");
     let res = await this.request('tag/',{tag},'post');
   }
 
