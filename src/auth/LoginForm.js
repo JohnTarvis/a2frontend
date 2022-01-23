@@ -22,7 +22,7 @@ function LoginForm({ login }) {
     let loginResult = await login(formData);
     console.log('loginResult= ',loginResult);
     if (loginResult.success) {
-      history.push("/posts");
+      history.push("/");
     } else {
       setFormErrors(loginResult.errors);
     }
