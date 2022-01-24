@@ -14,14 +14,17 @@ import '../styles/PostCard.css';
 function PostCard(props) {
     return (
             <div className="PostCard" id={`postcard-${props.id}` }>
-                <div className="image-subject">
-                    {props.post_subject}
-                </div>
 
-                <ColoredLine color="white"/>
 
                 <div>
                     <img src={picunrel} alt='' className="post-image-preview" />
+                </div>
+                <ColoredLine color="white"/>
+
+
+
+                <div className="image-subject">
+                    {props.post_subject}
                 </div>
 
                 <ColoredLine color="white"/>
