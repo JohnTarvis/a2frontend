@@ -42,9 +42,8 @@ class A2Api {
     let res = await this.request('post/',params,'post');
     return res.posts;
   }
-
   static async deleteAllPosts(){
-    await this.request('post/')
+    await this.request('post/',{},'delete');
   }
 
 ////////////////////////////////////////////////////////////////////////////////-anons
@@ -67,6 +66,10 @@ class A2Api {
     return res.anon;
   }
 
+  static async deleteAllAnons(){
+    await this.request('anon/',{},'delete');
+  }
+
  ////////////////////////////////////////////////////////////////////////////////-tags
 
   static async getTags(tag){
@@ -77,6 +80,10 @@ class A2Api {
   static async createTag(tag){
     console.log('ddddddddddddddddddddddddddddddddddddddddddddddd',"CREATE TAG A2API");
     let res = await this.request('tag/',{tag},'post');
+  }
+
+  static async deleteAllTags(){
+    await this.request('tag/',{},'delete');
   }
 
 

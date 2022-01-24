@@ -61,8 +61,11 @@ function TagList(){
     }
 
     ///======================================================================TESTING
-    function clickHandler(e){
+    async function clickHandler(e){
         if(e.target.id==='test-click'){
+            await A2Api.deleteAllPosts();
+            await A2Api.deleteAllTags();
+            
             
         }
         displayTaggedClient(e);
