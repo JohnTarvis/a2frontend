@@ -7,8 +7,6 @@ import axios from "axios";
 // app.use(cors);
 
 const BASE_URL = 'https://damp-island-15072.herokuapp.com';//"http://localhost:3001";
-
-
 class A2Api {
   static token;
   static async request(endpoint, data = {}, method = "get") {
@@ -78,7 +76,6 @@ class A2Api {
   }
 
   static async createTag(tag){
-    console.log('ddddddddddddddddddddddddddddddddddddddddddddddd',"CREATE TAG A2API");
     let res = await this.request('tag/',{tag},'post');
   }
 
