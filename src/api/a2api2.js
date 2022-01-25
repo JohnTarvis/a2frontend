@@ -118,27 +118,5 @@ class A2Api {
     }
 
 
-
 }
 
-
-
-//     static async request(endpoint, data = {}, method = "get") {
-//         const url = `${BASE_URL}/${endpoint}`;
-//         const headers = { 
-//         Authorization: `Bearer ${A2Api.token}`,
-//         'Access-Control-Allow-Origin': '*',
-//         'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-//     };
-//     const params = (method === "get")
-//         ? data
-//         : {};
-//     try {
-//       // console.log('toaxios=========================================',{url,method,data,params,headers});
-//       return (await axios({ url, method, data, params, headers })).data;
-//     } catch (err) {
-//       console.error("API Error:", err.response);
-//       let message = err.response.data.error.message;
-//       throw Array.isArray(message) ? message : [message];
-//     }
-//   }
