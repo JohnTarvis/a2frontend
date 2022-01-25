@@ -3,6 +3,7 @@
   border-top:1px solid white;
   height:100%;
   background-image: url('../resources/images/sky.png');
+  background-size: cover;
 }
 
 .PostsDisplay-container{
