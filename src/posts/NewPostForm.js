@@ -99,7 +99,7 @@ function NewPostForm({ createPost }) {
                 </div>
 
                 <div className="form-group">
-                  <label>upload file</label>
+                  <label>Upload File</label>
                   <input 
                     type="file" 
                     name="file"
@@ -107,7 +107,7 @@ function NewPostForm({ createPost }) {
                     onChange={handleChange} 
                   />
                 </div>
-                
+
                 {formErrors.length
                     ? <Alert type="danger" messages={formErrors} />
                     : null
