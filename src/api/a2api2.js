@@ -3,9 +3,13 @@ import axios from "axios";
 
 
 const BASE_URL = 'https://damp-island-15072.herokuapp.com';
+
+
+
+
 class A2api2 {
     static token;
-    ///================================================================================SIMPLE REQUEST
+    ///======================================================================================SIMPLE REQUEST
     static async simpleRequest(r = {method:'get',endpoint:'/',data:{}}){
         const {method, endpoint, data} = r;
         const url = `${BASE_URL}/${r.endpoint}`;
@@ -31,6 +35,8 @@ class A2api2 {
 
 
 
+
+
 ///=============================================================================================POSTS
 
 
@@ -40,18 +46,20 @@ class A2api2 {
 
 
     static async getPosts(params){
-        let res = await this.simpleRequest({method:'get',endpoint:'post/',data:params});//`post/`,params);
+        let res = await this.simpleRequest({method:'get',endpoint:'post/',data:params});
         return res.posts;
     }
 
     static async createPost(params){
-        let res = await this.simpleRequest({method:'post',endpoint:'post/',data:params});//`post/`,params);
+        let res = await this.simpleRequest({method:'post',endpoint:'post/',data:params});
         return res.posts;
     }
 
     static async deleteAllPosts(){
-        await this.simpleRequest({method:'delete',endpoint:'post/',data:{}});//this.request('post/',{},'delete');
+        await this.simpleRequest({method:'delete',endpoint:'post/',data:{}});
     }
+
+
 
 
 
@@ -65,17 +73,17 @@ class A2api2 {
 
 
     static async getTags(params){
-        let res = await this.simpleRequest({method:'get',endpoint:'tag/',data:params});//`tag/`,params);
+        let res = await this.simpleRequest({method:'get',endpoint:'tag/',data:params});
         return res.tags;
     }
 
     static async createTag(params){
-        let res = await this.simpleRequest({method:'post',endpoint:'tag/',data:params});//`tag/`,params);
+        let res = await this.simpleRequest({method:'post',endpoint:'tag/',data:params});
         return res.tags;
     }
 
     static async deleteAllTags(){
-        await this.simpleRequest({method:'delete',endpoint:'tag/',data:{}});//this.request('tag/',{},'delete');
+        await this.simpleRequest({method:'delete',endpoint:'tag/',data:{}});
     }
 
 
@@ -88,33 +96,42 @@ class A2api2 {
 
 
     static async getAnons(params){
-        let res = await this.simpleRequest({method:'get',endpoint:'anon/',data:params});//`anon/`,params);
+        let res = await this.simpleRequest({method:'get',endpoint:'anon/',data:params});
         return res.anons;
     }
 
     static async createAnon(params){
-        let res = await this.simpleRequest({method:'post',endpoint:'anon/',data:params});//`anon/`,params);
+        let res = await this.simpleRequest({method:'post',endpoint:'anon/',data:params});
         return res.anons;
     }
 
     static async deleteAllAnons(){
-        await this.simpleRequest({method:'delete',endpoint:'anon/',data:{}});//this.request('anon/',{},'delete');
+        await this.simpleRequest({method:'delete',endpoint:'anon/',data:{}});
     }
 
 
+
+
+
+
+///=============================================================================================PROFILE
+
+
+
+
+
+
+
     static async login(data) {
-        // let res = await this.request(`auth/token`, data, "post");
         let res = await this.simpleRequest({method:'post',data:data,endpoint:'auth/token'});
         return res.token;
     }
 
     static async register(data) {
-        // let res = await this.request(`auth/register`, data, "post");
         let res = await this.request({method:'post',data:data,endpoint:'auth/register'});
         return res.token;
     }
     static async saveProfile(handle, data) {
-        // let res = await this.request(`anon/${handle}`, data, "patch");
         let res = await this.simpleRequest({method:'patch',data:data,endpoint:`anon/${handle}`})
         return res.anon;
     }
