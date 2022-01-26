@@ -58,6 +58,9 @@ function NewPostForm({ createPost }) {
     setFormData(data => ({ ...data, [name]: value }));
   }
 
+  // <input type="file" id="myFile" name="filename">
+  // <input type="submit">
+
   return (
       <div className="NewPostForm">
         <div className="container col-md-6 offset-md-3 col-lg-4 offset-lg-4">
@@ -74,6 +77,7 @@ function NewPostForm({ createPost }) {
                       onChange={handleChange}
                   />
                 </div>
+
                 <div className="form-group">
                   <label>Body</label>
                   <textarea rows="10" cols="10" 
@@ -83,6 +87,7 @@ function NewPostForm({ createPost }) {
                       onChange={handleChange}
                   />
                 </div>
+
                 <div className="form-group">
                   <label>Tags</label>
                   <input
@@ -93,6 +98,16 @@ function NewPostForm({ createPost }) {
                   />
                 </div>
 
+                <div className="form-group">
+                  <label>upload file</label>
+                  <input 
+                    type="file" 
+                    name="file"
+                    value={formData.post_image}
+                    onChange={handleChange} 
+                  />
+                </div>
+                
                 {formErrors.length
                     ? <Alert type="danger" messages={formErrors} />
                     : null

@@ -11,6 +11,8 @@ import A2Api from "./api/a2api";
 import AnonContext from "./auth/AnonContext";
 import jwt from "jsonwebtoken";
 
+import A2Api2 from './api/a2api2';
+
 export const A2_TOKEN = "anonanon-token";
 
 function App() {
