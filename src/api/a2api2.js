@@ -3,7 +3,7 @@ import axios from "axios";
 
 
 const BASE_URL = 'https://damp-island-15072.herokuapp.com';
-class A2Api {
+class A2api2 {
     static token;
     ///================================================================================SIMPLE REQUEST
     static async simpleRequest(r = {method:'get',endpoint:'/',data:{}}){
@@ -122,3 +122,5 @@ class A2Api {
 
 }
 
+
+export default A2api2;

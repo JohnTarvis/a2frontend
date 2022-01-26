@@ -7,11 +7,10 @@ import useLocalStorage from "./hooks/useLocalStorage";
 import Navigation from "./routes-nav/Navigation";
 import Routes from "./routes-nav/Routes";
 import LoadingSpinner from "./common/LoadingSpinner";
-import A2Api from "./api/a2api";
 import AnonContext from "./auth/AnonContext";
 import jwt from "jsonwebtoken";
 
-import A2Api2 from './api/a2api2';
+import A2api2 from './api/A2api2';
 
 export const A2_TOKEN = "anonanon-token";
 
@@ -27,8 +26,8 @@ function App() {
       if (token) {
         try {
           let { handle } = jwt.decode(token);
-          A2Api.token = token;
-          let anon = await A2Api.getAnon(handle);
+          A2api22.token = token;
+          let anon = await A2api22.getAnon(handle);
           setAnon(anon);
         } catch (err) {
           console.error("App loadanonInfo: problem loading", err);
@@ -48,7 +47,7 @@ function App() {
 
   async function register(registerData) {
     try {
-      let token = await A2Api.register(registerData);
+      let token = await A2api2.register(registerData);
       setToken(token);
       return { success: true };
     } catch (errors) {
@@ -61,7 +60,7 @@ function App() {
     const tags = tagString.split(/\W+/);
     for(let tag of tags){
       try{
-        await A2Api.createTag(tag);
+        await A2api2.createTag(tag);
       } catch(errors){
         console.log('failed to create tag: ',tag);
         console.log('errors ',errors);
@@ -72,7 +71,7 @@ function App() {
   async function createPost(postData){
     try {
       postData.poster_handle = anon.handle;
-      await A2Api.createPost(postData);
+      await A2api2.createPost(postData);
       await createTags(postData.post_tags);
       return { success: true };
     } catch (errors) {
@@ -84,7 +83,7 @@ function App() {
   async function login(loginData) {
     console.log('login');
     try {
-      let token = await A2Api.login(loginData);
+      let token = await A2api2.login(loginData);
       setToken(token);
       return { success: true };
     } catch (errors) {

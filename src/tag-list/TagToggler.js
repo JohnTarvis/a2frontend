@@ -6,18 +6,8 @@ import TagList from './TagList';
 
 
 class TagToggler{
-    // constructor(tag){
-    //     this._tag = tag.tag;
-    //     this._DOM_class = 'tag';
-    //     this._DOM_id = 'tag-'+tag.tag;
-    //     this._toggles = ['tag excluded','tag','tag included'];
-    //     this._searches = tag.searches || 0;
-    // }
-
-    static _toggles = ['tag excluded','tag','tag included'];
 
     static toggles = ['tag excluded','tag neutral','tag included'];
-
 
     static getTags(){
         const tags = $('.tag');
@@ -96,18 +86,7 @@ class TagToggler{
             }
         }
 
-        // for(let tag of neutralTags){
 
-        //     for(let postCard of postCards){
-
-        //         if( !this.hasTag(postCard,tag) )
-        //             $(postCard).hide();
-        //         else
-        //             $(postCard).show();
-
-        //     }
-
-        // }
     }
 
     static showAllPostCards(){

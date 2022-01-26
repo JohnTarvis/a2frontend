@@ -1,5 +1,4 @@
 import React, { useState,useContext } from "react";
-// import React, { useContext } from "react";
 
 import { useHistory } from "react-router-dom";
 import Alert from "../common/Alert";
@@ -57,9 +56,6 @@ function NewPostForm({ createPost }) {
     const { name, value } = evt.target;
     setFormData(data => ({ ...data, [name]: value }));
   }
-
-  // <input type="file" id="myFile" name="filename">
-  // <input type="submit">
 
   return (
       <div className="NewPostForm">

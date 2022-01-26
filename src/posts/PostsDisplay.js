@@ -9,6 +9,9 @@ import TopBanner from "../top-banner/TopBanner";
 
 import PostContext from "./PostContext";
 
+import A2api2 from "../api/a2api2";
+
+
 function PostsDisplay(){
 
     // const [posts, setPosts] = useState(null);
@@ -20,7 +23,7 @@ function PostsDisplay(){
     }, []);
   
     async function search(params) {
-      let posts = await A2Api.getPosts(params);
+      let posts = await A2api2.getPosts(params);
       setAllPosts(posts);
     }
 
