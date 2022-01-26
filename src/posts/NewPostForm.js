@@ -102,7 +102,7 @@ function NewPostForm({ createPost }) {
                   <label>Upload File</label>
                   <input 
                     type="file" 
-                    name="file"
+                    name="post_image"
                     value={formData.post_image}
                     onChange={handleChange} 
                   />
