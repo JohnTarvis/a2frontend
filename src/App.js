@@ -1,6 +1,5 @@
 // import { response } from 'express';
 
-
 import React, { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import useLocalStorage from "./hooks/useLocalStorage";
@@ -10,7 +9,7 @@ import LoadingSpinner from "./common/LoadingSpinner";
 import AnonContext from "./auth/AnonContext";
 import jwt from "jsonwebtoken";
 
-import A2api2 from './api/A2api2';
+import A2api2 from '../api/a2api2';
 
 export const A2_TOKEN = "anonanon-token";
 
@@ -27,7 +26,7 @@ function App() {
         try {
           let { handle } = jwt.decode(token);
           A2api22.token = token;
-          let anon = await A2api22.getAnon(handle);
+          let anon = await A2api2.getAnon(handle);
           setAnon(anon);
         } catch (err) {
           console.error("App loadanonInfo: problem loading", err);
