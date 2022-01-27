@@ -10,14 +10,14 @@ import '../styles/PostCard.css';
 
 // import questionBanner from "../resources/images/questionBanner.png";
 
-
 function PostCard(props) {
+    const punrel = 'https://a2uploads.s3.us-west-1.amazonaws.com/unrelated.jpg';
     return (
             <div className="PostCard" id={`postcard-${props.id}` }>
 
 
                 <div>
-                    <img src={picunrel} alt='' className="post-image-preview" />
+                    <img src={punrel} alt='' className="post-image-preview" />
                 </div>
                 <ColoredLine color="white"/>
 

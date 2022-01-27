@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import '../styles/TagList.css';
 import ColoredLine from '../common/ColoredLine';
-// import A2Api from "../api/a2api";
 import LoadingSpinner from "../common/LoadingSpinner";
 
 import PostContext from "../posts/PostContext";

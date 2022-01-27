@@ -28,6 +28,8 @@ function Post() {
 
     if (!post) return <LoadingSpinner />;
 
+    const punrel = 'https://a2uploads.s3.us-west-1.amazonaws.com/unrelated.jpg';
+
     return <div className="post-page">
 
                 <div className="Post" id={`Post-${post[0].id}` }>
@@ -38,7 +40,7 @@ function Post() {
                     <ColoredLine color="white"/>
 
                     <div>
-                        <img src={picunrel} alt='' className="post-image-preview" />
+                        <img src={punrel} alt='' className="post-image-preview" />
                     </div>
 
                     <ColoredLine color="white"/>
