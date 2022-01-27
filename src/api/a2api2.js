@@ -90,8 +90,10 @@ class A2api2 {
 ///=============================================================================================ANONS
 
 
-
-
+    static async getAnon(handle) {
+        let res = await this.request({method:'get',endpoint:`anon/${handle}`,data:params});
+        return res.anon;
+    }
 
     static async getAnons(params){
         let res = await this.simpleRequest({method:'get',endpoint:'anon/',data:params});
