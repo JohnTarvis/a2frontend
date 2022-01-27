@@ -15,13 +15,10 @@ function PostCard(props) {
     return (
             <div className="PostCard" id={`postcard-${props.id}` }>
 
-
                 <div>
                     <img src={punrel} alt='' className="post-image-preview" />
                 </div>
                 <ColoredLine color="white"/>
-
-
 
                 <div className="image-subject">
                     {props.post_subject}
