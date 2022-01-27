@@ -25,7 +25,7 @@ function App() {
       if (token) {
         try {
           let { handle } = jwt.decode(token);
-          A2api22.token = token;
+          A2api2.token = token;
           let anon = await A2api2.getAnon(handle);
           setAnon(anon);
         } catch (err) {
