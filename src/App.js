@@ -11,6 +11,8 @@ import jwt from "jsonwebtoken";
 
 import A2api2 from './api/a2api2';
 
+import A2Api from "./api/a2api";
+
 export const A2_TOKEN = "anonanon-token";
 
 function App() {
@@ -25,8 +27,8 @@ function App() {
       if (token) {
         try {
           let { handle } = jwt.decode(token);
-          A2api2.token = token;
-          let anon = await A2api2.getAnon(handle);
+          A2Api.token = token;
+          let anon = await A2Api.getAnon(handle);
           setAnon(anon);
         } catch (err) {
           console.error("App loadanonInfo: problem loading", err);
