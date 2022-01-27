@@ -70,6 +70,7 @@ function App() {
   async function createPost(postData){
     try {
       postData.poster_handle = anon.handle;
+      
       await A2api2.createPost(postData);
       await createTags(postData.post_tags);
       return { success: true };

@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
-import picunrel from "../resources/images/picunrel.jpeg";
-import A2Api from "../api/a2api";
+import { useParams } from "react-router-dom";
 import LoadingSpinner from "../common/LoadingSpinner";
 import ColoredLine from "../common/ColoredLine";
 
@@ -9,9 +7,8 @@ import A2api2 from "../api/a2api2";
 
 import '../styles/Post.css';
 
-import { useHistory } from "react-router-dom";
 
-function Post(props) {
+function Post() {
 
     const {id} = useParams();
 
