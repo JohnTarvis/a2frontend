@@ -27,8 +27,6 @@ function Post(props) {
 
     if (!post) return <LoadingSpinner />;
 
-    // console.log('post=======================',post);
-
     return <div className="post-page">
 
                 <div className="Post" id={`Post-${post[0].id}` }>
@@ -39,7 +37,7 @@ function Post(props) {
                     <ColoredLine color="white"/>
 
                     <div>
-                        <img src={picunrel} alt='' className="post-image-preview" />
+                        <img src={'https://a2uploads.s3.us-west-1.amazonaws.com/unrelated.jpg'} alt='' className="post-image-preview" />
                     </div>
 
                     <ColoredLine color="white"/>
