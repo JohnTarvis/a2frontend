@@ -6,7 +6,6 @@ const BASE_URL = 'https://damp-island-15072.herokuapp.com';
 
 
 
-
 class A2api2 {
     static token;
     ///======================================================================================SIMPLE REQUEST
@@ -14,7 +13,7 @@ class A2api2 {
         const {method, endpoint, data} = r;
         const url = `${BASE_URL}/${r.endpoint}`;
         const headers = {
-            Authorization: `Bearer ${A2Api.token}`,
+            Authorization: `Bearer ${A2api2.token}`,
             'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
         }
@@ -58,7 +57,6 @@ class A2api2 {
     static async deleteAllPosts(){
         await this.simpleRequest({method:'delete',endpoint:'post/',data:{}});
     }
-
 
 
 
@@ -113,9 +111,7 @@ class A2api2 {
 
 
 
-
 ///=============================================================================================PROFILE
-
 
 
 
