@@ -1,40 +1,33 @@
 
-// Load the AWS SDK for Node.js
-var AWS = require('aws-sdk');
-// Set the region 
-AWS.config.update({region: 'REGION'});
-var fs = require('fs');
-var path = require('path');
+import React ,{useState} from 'react';
+import AWS from 'aws-sdk'
 
+const S3_BUCKET = proces.env.S3_BUCKET;//'YOUR_BUCKET_NAME_HERE';
+const REGION = process.env.S3_REGION;//'YOUR_DESIRED_REGION_HERE';
 
+AWS.config.update({
+    accessKeyId: process.env.S3_ACCESS_KEY_ID, //'YOUR_ACCESS_KEY_HERE',
+    secretAccessKey: process.env.S3_SECRET_ACCESS_KEY//'YOUR_SECRET_ACCESS_KEY_HERE'
+})
 
-function Awsapi(){
+const myBucket = new AWS.S3({
+    params: { Bucket: S3_BUCKET},
+    region: REGION,
+})
 
-    // Create S3 service object
-    var s3 = new AWS.S3({apiVersion: '2006-03-01'});
+const Awsapi = (file) => {
 
-    // call S3 to retrieve upload file to specified bucket
-    var uploadParams = {Bucket: process.argv[2], Key: '', Body: ''};
-    var file = process.argv[3];
+    const params = {
+        ACL: 'public-read',
+        Body: file,
+        Bucket: S3_BUCKET,
+        Key: file.name
+    };
 
-    // Configure the file stream and obtain the upload parameters
-    var fileStream = fs.createReadStream(file);
-    fileStream.on('error', function(err) {
-    console.log('File Error', err);
-    });
-    uploadParams.Body = fileStream;
-    uploadParams.Key = path.basename(file);
-
-    // call S3 to retrieve upload file to specified bucket
-    s3.upload (uploadParams, function (err, data) {
-    if (err) {
-        console.log("Error", err);
-    } if (data) {
-        console.log("Upload Success", data.Location);
-    }
-    });
-
-
+    myBucket.putObject(params)
+        .send((err) => {
+            if (err) console.log(err)
+        });
 }
 
 export default Awsapi;
