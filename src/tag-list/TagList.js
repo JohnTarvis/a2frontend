@@ -65,8 +65,8 @@ function TagList(){
     ///======================================================================TESTING
     async function clickHandler(e){
         if(e.target.id==='test-click'){
-            await A2Api.deleteAllPosts();
-            await A2Api.deleteAllTags();
+            await A2api2.deleteAllPosts();
+            await A2api2.deleteAllTags();
             
             
         }
