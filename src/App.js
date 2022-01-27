@@ -9,7 +9,7 @@ import LoadingSpinner from "./common/LoadingSpinner";
 import AnonContext from "./auth/AnonContext";
 import jwt from "jsonwebtoken";
 
-import A2api2 from '../api/a2api2';
+import A2api2 from './api/a2api2';
 
 export const A2_TOKEN = "anonanon-token";
 
@@ -70,7 +70,7 @@ function App() {
   async function createPost(postData){
     try {
       postData.poster_handle = anon.handle;
-      
+
       await A2api2.createPost(postData);
       await createTags(postData.post_tags);
       return { success: true };
