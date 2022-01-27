@@ -11,6 +11,7 @@ import $ from 'jquery';
 import TagToggler from "./TagToggler";
 
 import A2api2 from "../api/a2api2";
+import A2Api from "../api/a2api";
 
 
 function TagList(){
@@ -33,7 +34,7 @@ function TagList(){
   
     async function search(params) {
         // console.log('PARAMS IN TAGLIST ',params);
-        let result = await A2api2.getTags(params);
+        let result = await A2Api.getTags(params);
         result.tags.sort((a,b)=>{
             return a.tag > b.tag ? 1 : -1;
         });
@@ -65,8 +66,8 @@ function TagList(){
     ///======================================================================TESTING
     async function clickHandler(e){
         if(e.target.id==='test-click'){
-            await A2api2.deleteAllPosts();
-            await A2api2.deleteAllTags();
+            // await A2Api.deleteAllPosts();
+            // await A2Api.deleteAllTags();
             
             
         }

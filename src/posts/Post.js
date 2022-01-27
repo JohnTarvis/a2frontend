@@ -4,6 +4,7 @@ import LoadingSpinner from "../common/LoadingSpinner";
 import ColoredLine from "../common/ColoredLine";
 
 import A2api2 from "../api/a2api2";
+import A2Api from "../api/a2api";
 
 import '../styles/Post.css';
 
@@ -21,7 +22,7 @@ function Post() {
     }, []);
   
     async function search() {
-        let result = await A2api2.getPosts({id:id});
+        let result = await A2Api.getPosts({id:id});
         setPost(result);
     }
 

@@ -3,6 +3,7 @@ import Alert from "../common/Alert";
 // import JoblyApi from "../api/api";
 import AnonContext from "../auth/AnonContext";
 import A2api2 from "../api/a2api2";
+import A2Api from "../api/a2api";
 
 
 function ProfileForm() {
@@ -40,7 +41,7 @@ function ProfileForm() {
     let updatedUser;
 
     try {
-      updatedUser = await A2api2.saveProfile(username, profileData);
+      updatedUser = await A2Api.saveProfile(username, profileData);
     } catch (errors) {
       debugger;
       setFormErrors(errors);

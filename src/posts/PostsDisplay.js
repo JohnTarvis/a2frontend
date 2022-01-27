@@ -23,7 +23,7 @@ function PostsDisplay(){
     }, []);
   
     async function search(params) {
-      let posts = await A2api2.getPosts(params);
+      let posts = await A2Api.getPosts(params);
       setAllPosts(posts);
     }
 

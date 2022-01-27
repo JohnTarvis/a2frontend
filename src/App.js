@@ -85,7 +85,7 @@ function App() {
   async function login(loginData) {
     console.log('login');
     try {
-      let token = await A2api2.login(loginData);
+      let token = await A2Api.login(loginData);
       setToken(token);
       return { success: true };
     } catch (errors) {
