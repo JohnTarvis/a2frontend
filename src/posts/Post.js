@@ -7,6 +7,9 @@ import A2api2 from "../api/a2api2";
 
 import '../styles/Post.css';
 
+import picunrel from "../resources/images/picunrel.jpeg";
+
+
 
 function Post() {
 
@@ -34,7 +37,7 @@ function Post() {
                     <ColoredLine color="white"/>
 
                     <div>
-                        <img src={'https://a2uploads.s3.us-west-1.amazonaws.com/unrelated.jpg'} alt='' className="post-image-preview" />
+                        <img src={picunrel} alt='' className="post-image-preview" />
                     </div>
 
                     <ColoredLine color="white"/>
