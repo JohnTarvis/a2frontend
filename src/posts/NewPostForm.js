@@ -61,31 +61,30 @@ function NewPostForm({ createPost }) {
 
 ////////////////////////////////////////////////////////////////////////////////////////
 
-  const S3_BUCKET ='a2uploads';
-  const REGION ='us-west-1';
-  const ACCESS_KEY = process.env.S3_ACCESS_KEY_ID;
-  const SECRET_ACCESS_KEY = process.env.S3_SECRET_ACCESS_KEY;
+  // const S3_BUCKET ='a2uploads';
+  // const REGION ='us-west-1';
+  // const ACCESS_KEY = process.env.S3_ACCESS_KEY_ID;
+  // const SECRET_ACCESS_KEY = process.env.S3_SECRET_ACCESS_KEY;
 
-  const config = {
-    bucketName: S3_BUCKET,
-    region: REGION,
-    accessKeyId: ACCESS_KEY,
-    secretAccessKey: SECRET_ACCESS_KEY,
-  }
+  // const config = {
+  //   bucketName: S3_BUCKET,
+  //   region: REGION,
+  //   accessKeyId: ACCESS_KEY,
+  //   secretAccessKey: SECRET_ACCESS_KEY,
+  // }
 
-  const [selectedFile, setSelectedFile] = useState(null);
+  // const [selectedFile, setSelectedFile] = useState(null);
 
-  const handleFileInput = (e) => {
-    console.log('config==================================',config);
+  // const handleFileInput = (e) => {
 
-    setSelectedFile(e.target.files[0]);
-  }
+  //   setSelectedFile(e.target.files[0]);
+  // }
 
-  const handleUpload = async (file) => {
-      uploadFile(file, config)
-          .then(data => console.log(data))
-          .catch(err => console.error(err))
-  }
+  // const handleUpload = async (file) => {
+  //     uploadFile(file, config)
+  //         .then(data => console.log(data))
+  //         .catch(err => console.error(err))
+  // }
 
 ////////////////////////////////////////////////////////////////////////////////////////
 
@@ -133,7 +132,7 @@ function NewPostForm({ createPost }) {
                     type="file" 
                     name="post_image"
                     value={formData.post_image}
-                    onChange={handleFileInput} 
+                    onChange={handleChange} 
                   />
                 </div>
 
