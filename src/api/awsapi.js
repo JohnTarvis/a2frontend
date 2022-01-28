@@ -2,7 +2,7 @@
 import React ,{useState} from 'react';
 import AWS from 'aws-sdk'
 
-const S3_BUCKET = proces.env.S3_BUCKET;//'YOUR_BUCKET_NAME_HERE';
+const S3_BUCKET = process.env.S3_BUCKET;//'YOUR_BUCKET_NAME_HERE';
 const REGION = process.env.S3_REGION;//'YOUR_DESIRED_REGION_HERE';
 
 AWS.config.update({
