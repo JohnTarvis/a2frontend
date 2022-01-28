@@ -72,7 +72,7 @@ function App() {
 /////////////////////////////////////////////////////////////////////////CREATE POST
   async function createPost(postData){
     try {
-      postData.poster_handle = anon.handle;
+      postData.poster_handle = anon.handle || 'anonymous';
 
       await A2Api.createPost(postData);
       await createTags(postData.post_tags);
