@@ -49,7 +49,7 @@ function App() {
 /////////////////////////////////////////////////////////////////////////REGISTER
   async function register(registerData) {
     try {
-      let token = await A2api2.register(registerData);
+      let token = await A2Api.register(registerData);
       setToken(token);
       return { success: true };
     } catch (errors) {
@@ -62,7 +62,7 @@ function App() {
     const tags = tagString.split(/\W+/);
     for(let tag of tags){
       try{
-        await A2api2.createTag(tag);
+        await A2Api.createTag(tag);
       } catch(errors){
         console.log('failed to create tag: ',tag);
         console.log('errors ',errors);
