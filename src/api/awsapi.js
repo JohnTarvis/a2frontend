@@ -15,7 +15,7 @@ const myBucket = new AWS.S3({
     region: REGION,
 })
 
-const Awsapi = (file) => {
+async function Awsapi(file){
 
     const params = {
         ACL: 'public-read',
