@@ -41,12 +41,12 @@ function App() {
     setLoaded(false);
     getAnon();
   }, [token]);
-
+/////////////////////////////////////////////////////////////////////////LOGIN
   function logout() {
     setAnon(null);
     setToken(null);
   }
-
+/////////////////////////////////////////////////////////////////////////REGISTER
   async function register(registerData) {
     try {
       let token = await A2api2.register(registerData);
@@ -57,7 +57,7 @@ function App() {
       return { success: false, errors };
     }
   }
-
+/////////////////////////////////////////////////////////////////////////CREATE TAGS
   async function createTags(tagString){
     const tags = tagString.split(/\W+/);
     for(let tag of tags){
@@ -69,7 +69,7 @@ function App() {
       }
     } 
   }
-
+/////////////////////////////////////////////////////////////////////////CREATE POST
   async function createPost(postData){
     try {
       postData.poster_handle = anon.handle;
@@ -79,14 +79,13 @@ function App() {
 
       // await Awsapi(postData.post_image);
 
-
       return { success: true };
     } catch (errors) {
       console.error("create post failed", errors);
       return { success: false, errors };
     }
   }
-
+/////////////////////////////////////////////////////////////////////////LOGIN
   async function login(loginData) {
     console.log('login');
     try {

@@ -44,6 +44,7 @@ function NewPostForm({ createPost }) {
     formData.post_date = date;
 
     // handleUpload(selectedFile);
+    
 
     let result = await createPost(formData);
     if (result.success) {
@@ -75,8 +76,8 @@ function NewPostForm({ createPost }) {
   const [selectedFile, setSelectedFile] = useState(null);
 
   const handleFileInput = (e) => {
-    // console.log('files===============================================',e.target.files[0]);
     setSelectedFile(e.target.files[0]);
+    console.log('config==================================',config);
   }
 
   const handleUpload = async (file) => {
