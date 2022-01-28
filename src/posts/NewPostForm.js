@@ -76,8 +76,9 @@ function NewPostForm({ createPost }) {
   const [selectedFile, setSelectedFile] = useState(null);
 
   const handleFileInput = (e) => {
-    setSelectedFile(e.target.files[0]);
     console.log('config==================================',config);
+
+    setSelectedFile(e.target.files[0]);
   }
 
   const handleUpload = async (file) => {
