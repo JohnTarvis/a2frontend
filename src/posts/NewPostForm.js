@@ -42,7 +42,9 @@ function NewPostForm({ createPost }) {
     evt.preventDefault();
     const date = new Date();
     formData.post_date = date;
-    handleUpload(selectedFile);
+
+    // handleUpload(selectedFile);
+
     let result = await createPost(formData);
     if (result.success) {
       history.push("/");
