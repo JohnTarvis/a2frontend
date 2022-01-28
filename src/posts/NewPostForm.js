@@ -5,9 +5,7 @@ import Alert from "../common/Alert";
 
 import AnonContext from "../auth/AnonContext";
 
-function generateRandomTag(){
-  return `tag${Math.floor(Math.random()*10)} `;
-}
+import { uploadFile } from 'react-s3';
 
 function generateRandomTags(number = 3, size=10){
   let back = '';
@@ -44,6 +42,7 @@ function NewPostForm({ createPost }) {
     evt.preventDefault();
     const date = new Date();
     formData.post_date = date;
+    handleUpload(selectedFile);
     let result = await createPost(formData);
     if (result.success) {
       history.push("/");
@@ -56,6 +55,35 @@ function NewPostForm({ createPost }) {
     const { name, value } = evt.target;
     setFormData(data => ({ ...data, [name]: value }));
   }
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+  const S3_BUCKET ='a2uploads';
+  const REGION ='us-west-1';
+  const ACCESS_KEY = +process.env.S3_ACCESS_KEY_ID;
+  const SECRET_ACCESS_KEY = +process.env.SECRET_ACCESS_KEY;
+
+  const config = {
+    bucketName: S3_BUCKET,
+    region: REGION,
+    accessKeyId: ACCESS_KEY,
+    secretAccessKey: SECRET_ACCESS_KEY,
+  }
+
+  const [selectedFile, setSelectedFile] = useState(null);
+
+  const handleFileInput = (e) => {
+      setSelectedFile(e.target.files[0]);
+  }
+
+  const handleUpload = async (file) => {
+      uploadFile(file, config)
+          .then(data => console.log(data))
+          .catch(err => console.error(err))
+  }
+
+////////////////////////////////////////////////////////////////////////////////////////
+
 
   return (
       <div className="NewPostForm">
@@ -100,7 +128,7 @@ function NewPostForm({ createPost }) {
                     type="file" 
                     name="post_image"
                     value={formData.post_image}
-                    onChange={handleChange} 
+                    onChange={handleFileInput} 
                   />
                 </div>
 

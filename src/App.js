@@ -77,8 +77,8 @@ function App() {
       await A2api2.createPost(postData);
       await createTags(postData.post_tags);
 
-      await Awsapi(postData.post_image);
-      
+      // await Awsapi(postData.post_image);
+
 
       return { success: true };
     } catch (errors) {
