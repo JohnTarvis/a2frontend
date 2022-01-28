@@ -5,7 +5,6 @@ import Alert from "../common/Alert";
 
 import AnonContext from "../auth/AnonContext";
 
-import { uploadFile } from 'react-s3';
 
 function generateRandomTags(number = 3, size=10){
   let back = '';
