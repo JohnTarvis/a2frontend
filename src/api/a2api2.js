@@ -11,7 +11,7 @@ class A2api2 {
         const {method, endpoint, data} = r;
         const url = `${BASE_URL}/${r.endpoint}`;
         const headers = {
-            Authorization: `Bearer ${a2Api.token}`,
+            Authorization: `Bearer ${A2api2.token}`,
             'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
         }
