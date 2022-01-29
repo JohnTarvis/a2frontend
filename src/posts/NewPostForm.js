@@ -43,10 +43,12 @@ function NewPostForm({ createPost }) {
     const date = new Date();
     formData.post_date = date;
 
+    // console.log('selectedFile================================================',selectedFile);
+    // console.log('file========================================================',formData.image);
+
     formData.image = selectedFile;
 
     let result = await createPost(formData);
-    
     if (result.success) {
       history.push("/");
     } else {
@@ -105,7 +107,7 @@ function NewPostForm({ createPost }) {
                   <input 
                     type="file" 
                     name="post_image"
-                    value={selectedFile}
+                    value={formData.image}
                     onChange={(e) => setSelectedFile(e.target.files[0])}
                   />
                 </div>
