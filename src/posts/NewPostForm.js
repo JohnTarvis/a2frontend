@@ -104,7 +104,7 @@ function NewPostForm({ createPost }) {
                   <input 
                     type="file" 
                     name="post_image"
-                    value={formData.post_image}
+                    value={formData.image}
                     onChange={setSelectedFile}
                   />
                 </div>
