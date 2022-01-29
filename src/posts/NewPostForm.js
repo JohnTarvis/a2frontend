@@ -43,8 +43,8 @@ function NewPostForm({ createPost }) {
     const date = new Date();
     formData.post_date = date;
 
-    // console.log('selectedFile================================================',selectedFile);
-    // console.log('file========================================================',formData.image);
+    console.log('selectedFile================================================',selectedFile);
+    console.log('filename========================================================',selectedFile.name);
 
     formData.image = selectedFile;
 
