@@ -42,6 +42,12 @@ function NewPostForm({ createPost }) {
     evt.preventDefault();
     const date = new Date();
     formData.post_date = date;
+
+
+    console.log('formdata.image==================================',formData.image);
+    console.log('selectedfile====================================',selectedFile);
+
+
     let result = await createPost(formData);
     if (result.success) {
       history.push("/");
