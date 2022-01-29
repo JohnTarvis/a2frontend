@@ -43,10 +43,7 @@ function NewPostForm({ createPost }) {
     const date = new Date();
     formData.post_date = date;
 
-
-    console.log('formdata.image==================================',formData.image);
-    console.log('selectedfile====================================',selectedFile);
-
+    console.log('selectedFile================================================',selectedFile);
 
     let result = await createPost(formData);
     if (result.success) {
@@ -61,35 +58,9 @@ function NewPostForm({ createPost }) {
     setFormData(data => ({ ...data, [name]: value }));
   }
 
-////////////////////////////////////////////////////////////////////////////////////////
-
-  // const S3_BUCKET ='a2uploads';
-  // const REGION ='us-west-1';
-  // const ACCESS_KEY = process.env.S3_ACCESS_KEY_ID;
-  // const SECRET_ACCESS_KEY = process.env.S3_SECRET_ACCESS_KEY;
-
-  // const config = {
-  //   bucketName: S3_BUCKET,
-  //   region: REGION,
-  //   accessKeyId: ACCESS_KEY,
-  //   secretAccessKey: SECRET_ACCESS_KEY,
-  // }
-
   const [selectedFile, setSelectedFile] = useState(null);
 
-  // const handleFileInput = (e) => {
-
-  //   setSelectedFile(e.target.files[0]);
-  // }
-
-  // const handleUpload = async (file) => {
-  //     uploadFile(file, config)
-  //         .then(data => console.log(data))
-  //         .catch(err => console.error(err))
-  // }
-
 ////////////////////////////////////////////////////////////////////////////////////////
-
 
   return (
       <div className="NewPostForm">
@@ -101,30 +72,30 @@ function NewPostForm({ createPost }) {
                 <div className="form-group">
                   <label>Subject</label>
                   <input
-                      name="post_subject"
-                      className="form-control"
-                      value={formData.post_subject}
-                      onChange={handleChange}
+                    name="post_subject"
+                    className="form-control"
+                    value={formData.post_subject}
+                    onChange={handleChange}
                   />
                 </div>
 
                 <div className="form-group">
                   <label>Body</label>
                   <textarea rows="10" cols="10" 
-                      name="post_body"
-                      className="form-control"
-                      value={formData.post_body}
-                      onChange={handleChange}
+                    name="post_body"
+                    className="form-control"
+                    value={formData.post_body}
+                    onChange={handleChange}
                   />
                 </div>
 
                 <div className="form-group">
                   <label>Tags</label>
                   <input
-                      name="post_tags"
-                      className="form-control"
-                      value={formData.post_tags}
-                      onChange={handleChange}
+                    name="post_tags"
+                    className="form-control"
+                    value={formData.post_tags}
+                    onChange={handleChange}
                   />
                 </div>
 
