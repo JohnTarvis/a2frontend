@@ -44,6 +44,7 @@ function NewPostForm({ createPost }) {
     formData.post_date = date;
 
     console.log('selectedFile================================================',selectedFile);
+    console.log('file========================================================',formData.image);
 
     let result = await createPost(formData);
     if (result.success) {
