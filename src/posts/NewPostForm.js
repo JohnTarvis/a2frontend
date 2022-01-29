@@ -43,6 +43,7 @@ function NewPostForm({ createPost }) {
     formData.post_date = date;
 
     // handleUpload(selectedFile);
+
     
 
     let result = await createPost(formData);
