@@ -46,7 +46,7 @@ function NewPostForm({ createPost }) {
     // console.log('selectedFile================================================',selectedFile);
     // console.log('file========================================================',formData.image);
 
-    formData.image = selectedFile;
+    // formData.image = selectedFile;
 
     let result = await createPost(formData);
     if (result.success) {
