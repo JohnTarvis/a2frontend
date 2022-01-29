@@ -37,15 +37,11 @@ function NewPostForm({ createPost }) {
       "formData=", formData,
       "formErrors=", formErrors,
   );
+
   async function handleSubmit(evt) {
     evt.preventDefault();
     const date = new Date();
     formData.post_date = date;
-
-    // handleUpload(selectedFile);
-
-    
-
     let result = await createPost(formData);
     if (result.success) {
       history.push("/");
@@ -73,7 +69,7 @@ function NewPostForm({ createPost }) {
   //   secretAccessKey: SECRET_ACCESS_KEY,
   // }
 
-  // const [selectedFile, setSelectedFile] = useState(null);
+  const [selectedFile, setSelectedFile] = useState(null);
 
   // const handleFileInput = (e) => {
 
@@ -132,7 +128,7 @@ function NewPostForm({ createPost }) {
                     type="file" 
                     name="post_image"
                     value={formData.post_image}
-                    onChange={handleChange} 
+                    onChange={setSelectedFile}
                   />
                 </div>
 
