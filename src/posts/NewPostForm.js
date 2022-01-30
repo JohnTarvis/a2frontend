@@ -5,8 +5,7 @@ import Alert from "../common/Alert";
 
 import AnonContext from "../auth/AnonContext";
 
-import uploadFile from '../api/awsapi';
-
+////////////////////////////////////////////////////////////////////////////////////////GENERATE RANDOM TAGS
 
 function generateRandomTags(number = 3, size=10){
   let back = '';
@@ -40,21 +39,19 @@ function NewPostForm({ createPost }) {
       "formErrors=", formErrors,
   );
 
+////////////////////////////////////////////////////////////////////////////////////////HANDLE SUBMIT
+
   async function handleSubmit(evt) {
     evt.preventDefault();
     const date = new Date();
     formData.post_date = date;
 
-    // console.log('selectedFile====================================================',selectedFile);
-    // console.log('filename========================================================',selectedFile.name);
 
     formData.image = selectedFile.name;
     formData.file = selectedFile;
 
-    const S3Result = await uploadFile(formData.file);
-    console.log("S3 response", S3Result);
-
     let result = await createPost(formData);
+    
     if (result.success) {
       history.push("/");
     } else {
@@ -62,14 +59,14 @@ function NewPostForm({ createPost }) {
     }
   }
 
+////////////////////////////////////////////////////////////////////////////////////////HANDLE CHANGE
+
   function handleChange(evt) {
     const { name, value } = evt.target;
     setFormData(data => ({ ...data, [name]: value }));
   }
 
   const [selectedFile, setSelectedFile] = useState(null);
-
-////////////////////////////////////////////////////////////////////////////////////////
 
   return (
       <div className="NewPostForm">
