@@ -1,10 +1,5 @@
 import axios from "axios";
-// import { response } from 'express';
 
-// const app = require('express');
-// const cors = require('cors');
-// app.use(response);
-// app.use(cors);
 
 const BASE_URL = 'https://damp-island-15072.herokuapp.com';
 class A2Api {

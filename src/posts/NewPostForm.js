@@ -70,7 +70,6 @@ function NewPostForm({ createPost }) {
       .catch((err) => {
         console.log("Something Went Wrong", err);
       });
-  };
 
 ////////////////////////////////////////////////////////////////////////////////////////CREATE POST
 
@@ -81,6 +80,8 @@ function NewPostForm({ createPost }) {
     } else {
       setFormErrors(result.errors);
     }
+
+  };
 
 ////////////////////////////////////////////////////////////////////////////////////////HANDLE CHANGE
 
