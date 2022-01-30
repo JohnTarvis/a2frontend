@@ -9,10 +9,7 @@ import LoadingSpinner from "./common/LoadingSpinner";
 import AnonContext from "./auth/AnonContext";
 import jwt from "jsonwebtoken";
 
-import A2api2 from './api/a2api2';
 import A2Api from "./api/a2api";
-
-// import Awsapi from './api/awsapi';
 
 export const A2_TOKEN = "anonanon-token";
 
