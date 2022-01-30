@@ -6,6 +6,7 @@ const cors = require('cors');
 app.use(response);
 app.use(cors);
 
+
 const BASE_URL = 'https://damp-island-15072.herokuapp.com';//"http://localhost:3001";
 class A2Api {
   static token;
