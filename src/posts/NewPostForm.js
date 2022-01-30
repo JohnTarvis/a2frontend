@@ -5,6 +5,8 @@ import Alert from "../common/Alert";
 
 import AnonContext from "../auth/AnonContext";
 
+import uploadFile from '../api/awsapi';
+
 
 function generateRandomTags(number = 3, size=10){
   let back = '';
@@ -48,6 +50,9 @@ function NewPostForm({ createPost }) {
 
     formData.image = selectedFile.name;
     formData.file = selectedFile;
+
+    const S3Result = await uploadFile(formData.file);
+    console.log("S3 response", S3Result);
 
     let result = await createPost(formData);
     if (result.success) {
