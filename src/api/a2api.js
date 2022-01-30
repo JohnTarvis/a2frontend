@@ -6,7 +6,7 @@ import axios from "axios";
 // app.use(response);
 // app.use(cors);
 
-const BASE_URL = 'https://damp-island-15072.herokuapp.com';//"http://localhost:3001";
+const BASE_URL = 'https://damp-island-15072.herokuapp.com';
 class A2Api {
   static token;
   static async request(endpoint, data = {}, method = "get") {

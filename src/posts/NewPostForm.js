@@ -41,14 +41,38 @@ function NewPostForm({ createPost }) {
 
 ////////////////////////////////////////////////////////////////////////////////////////HANDLE SUBMIT
 
+  const BASE_URL = 'https://damp-island-15072.herokuapp.com';
+
   async function handleSubmit(evt) {
     evt.preventDefault();
     const date = new Date();
     formData.post_date = date;
 
-
     formData.image = selectedFile.name;
     formData.file = selectedFile;
+
+///////////////////////////////////////////////////////////////////////////
+
+    console.log("file data ====>", selectedFile);
+
+    const data = new FormData();
+    data.append("image", selectedFile); // image key to use in Postman
+
+    const server = BASE_URL;
+
+    fetch(`${server}/single`, {
+      method: "POST",
+      body: data,
+    })
+      .then((result) => {
+        console.log("File sent successfully", result);
+      })
+      .catch((err) => {
+        console.log("Something Went Wrong", err);
+      });
+  };
+
+////////////////////////////////////////////////////////////////////////////////////////CREATE POST
 
     let result = await createPost(formData);
     
@@ -57,7 +81,6 @@ function NewPostForm({ createPost }) {
     } else {
       setFormErrors(result.errors);
     }
-  }
 
 ////////////////////////////////////////////////////////////////////////////////////////HANDLE CHANGE
 
