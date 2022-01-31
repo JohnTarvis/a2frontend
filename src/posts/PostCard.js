@@ -1,14 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
+// import React from "react";
+// import { Link } from "react-router-dom";
 
-import picunrel from "../resources/images/picunrel.jpeg";
+// import picunrel from "../resources/images/picunrel.jpeg";
 
-import ColoredLine from "../common/ColoredLine";
+// import ColoredLine from "../common/ColoredLine";
 
-// import "./PostCard.css";
-import '../styles/PostCard.css';
+// import '../styles/PostCard.css';
 
-// import questionBanner from "../resources/images/questionBanner.png";
 
 function PostCard(props) {
     const punrel = 'https://a2uploads.s3.us-west-1.amazonaws.com/unrelated.jpg';

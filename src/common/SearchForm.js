@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
-// import "./SearchForm.css";
-import '../styles/SearchForm.css';
+// import '../styles/SearchForm.css';
 
 function SearchForm({ searchFor }) {
   console.debug("SearchForm", "searchFor=", typeof searchFor);

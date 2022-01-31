@@ -1,11 +1,11 @@
-import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
-import Landingpage from "../landingpage/Landingpage";
-import LoginForm from "../auth/LoginForm";
-import RegistrationForm from "../auth/RegistrationForm";
-import NewPostForm from "../posts/NewPostForm";
-import PostsDisplay from "../posts/PostsDisplay";
-import Post from "../posts/Post";
+// import React from "react";
+// import { Switch, Route, Redirect } from "react-router-dom";
+// import Landingpage from "../landingpage/Landingpage";
+// import LoginForm from "../auth/LoginForm";
+// import RegistrationForm from "../auth/RegistrationForm";
+// import NewPostForm from "../posts/NewPostForm";
+// import PostsDisplay from "../posts/PostsDisplay";
+// import Post from "../posts/Post";
 
 function Routes({ login, register, createPost, getAllPosts }) {
   // console.debug(

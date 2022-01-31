@@ -1,9 +1,8 @@
-import React, { useState, useContext } from "react";
-import Alert from "../common/Alert";
-// import JoblyApi from "../api/api";
-import AnonContext from "../auth/AnonContext";
-import A2api2 from "../api/a2api2";
-import A2Api from "../api/a2api";
+// import React, { useState, useContext } from "react";
+// import Alert from "../common/Alert";
+// import AnonContext from "../auth/AnonContext";
+// import A2api2 from "../api/a2api2";
+// import A2Api from "../api/a2api";
 
 
 function ProfileForm() {
