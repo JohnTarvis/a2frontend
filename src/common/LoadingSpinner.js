@@ -1,6 +1,7 @@
-// import React from "react";
+import React from "react";
 
-// import "./LoadingSpinner.css";
+import "./LoadingSpinner.css";
+
 import '../styles/LoadingSpinner.css';
 
 function LoadingSpinner() {

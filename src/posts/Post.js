@@ -1,14 +1,14 @@
-// import React, { useState, useEffect } from "react";
-// import { useParams } from "react-router-dom";
-// import LoadingSpinner from "../common/LoadingSpinner";
-// import ColoredLine from "../common/ColoredLine";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import LoadingSpinner from "../common/LoadingSpinner";
+import ColoredLine from "../common/ColoredLine";
 
-// import A2api2 from "../api/a2api2";
-// import A2Api from "../api/a2api";
+import A2api2 from "../api/a2api2";
+import A2Api from "../api/a2api";
 
-// import '../styles/Post.css';
+import '../styles/Post.css';
 
-// import picunrel from "../resources/images/picunrel.jpeg";
+import picunrel from "../resources/images/picunrel.jpeg";
 
 
 

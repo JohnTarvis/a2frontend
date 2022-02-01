@@ -1,17 +1,17 @@
-// import { response } from 'express';
+import { response } from 'express';
 
-// import React, { useState, useEffect } from "react";
-// import { BrowserRouter } from "react-router-dom";
-// import useLocalStorage from "./hooks/useLocalStorage";
-// import Navigation from "./routes-nav/Navigation";
-// import Routes from "./routes-nav/Routes";
-// import LoadingSpinner from "./common/LoadingSpinner";
-// import AnonContext from "./auth/AnonContext";
-// import jwt from "jsonwebtoken";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter } from "react-router-dom";
+import useLocalStorage from "./hooks/useLocalStorage";
+import Navigation from "./routes-nav/Navigation";
+import Routes from "./routes-nav/Routes";
+import LoadingSpinner from "./common/LoadingSpinner";
+import AnonContext from "./auth/AnonContext";
+import jwt from "jsonwebtoken";
 
-// import A2Api from "./api/a2api";
+import A2Api from "./api/a2api";
 
-// export const A2_TOKEN = "anonanon-token";
+export const A2_TOKEN = "anonanon-token";
 
 function App() {
   

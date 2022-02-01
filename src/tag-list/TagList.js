@@ -1,16 +1,16 @@
-// import React, { useState, useEffect, useContext } from "react";
-// import '../styles/TagList.css';
-// import ColoredLine from '../common/ColoredLine';
-// import LoadingSpinner from "../common/LoadingSpinner";
+import React, { useState, useEffect, useContext } from "react";
+import '../styles/TagList.css';
+import ColoredLine from '../common/ColoredLine';
+import LoadingSpinner from "../common/LoadingSpinner";
 
-// import PostContext from "../posts/PostContext";
+import PostContext from "../posts/PostContext";
 
-// import $ from 'jquery';
+import $ from 'jquery';
 
-// import TagToggler from "./TagToggler";
+import TagToggler from "./TagToggler";
 
-// import A2api2 from "../api/a2api2";
-// import A2Api from "../api/a2api";
+import A2api2 from "../api/a2api2";
+import A2Api from "../api/a2api";
 
 
 function TagList(){

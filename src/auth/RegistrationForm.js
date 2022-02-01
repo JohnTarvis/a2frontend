@@ -1,6 +1,6 @@
-// import React, { useState } from "react";
-// import { useHistory } from "react-router-dom";
-// import Alert from "../common/Alert";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import Alert from "../common/Alert";
 
 function randomAnon(){
   return `Anonymous${Math.floor(Math.random() * 999999)}`;

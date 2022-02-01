@@ -1,15 +1,15 @@
-// import React, { useState, useEffect, useContext } from "react";
-// import SearchForm from "../common/SearchForm";
-// import A2Api from "../api/a2api";
-// import LoadingSpinner from "../common/LoadingSpinner";
-// import PostCard from "./PostCard";
-// import { useHistory } from "react-router-dom";
-// import '../styles/PostsDisplay.css';
-// import TopBanner from "../top-banner/TopBanner";
+import React, { useState, useEffect, useContext } from "react";
+import SearchForm from "../common/SearchForm";
+import A2Api from "../api/a2api";
+import LoadingSpinner from "../common/LoadingSpinner";
+import PostCard from "./PostCard";
+import { useHistory } from "react-router-dom";
+import '../styles/PostsDisplay.css';
+import TopBanner from "../top-banner/TopBanner";
 
-// import PostContext from "./PostContext";
+import PostContext from "./PostContext";
 
-// import A2api2 from "../api/a2api2";
+import A2api2 from "../api/a2api2";
 
 
 function PostsDisplay(){

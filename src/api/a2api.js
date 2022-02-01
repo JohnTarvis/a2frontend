@@ -1,9 +1,9 @@
-// import axios from "axios";
+import axios from "axios";
 
-// import { response } from 'express';
+import { response } from 'express';
 
-// const app = require('express');
-// const cors = require('cors');
+const app = require('express');
+const cors = require('cors');
 
 
 app.use(response);

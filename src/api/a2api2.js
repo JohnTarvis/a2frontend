@@ -1,4 +1,4 @@
-// import axios from "axios";
+import axios from "axios";
 
 
 const BASE_URL = 'https://damp-island-15072.herokuapp.com/';

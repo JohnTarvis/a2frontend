@@ -1,6 +1,6 @@
-// import React, { useContext } from "react";
-// import { Route, Redirect } from "react-router-dom";
-// import AnonContext from "../auth/AnonContext";
+import React, { useContext } from "react";
+import { Route, Redirect } from "react-router-dom";
+import AnonContext from "../auth/AnonContext";
 
 function PrivateRoute({ exact, path, children }) {
   const { anon } = useContext(AnonContext);

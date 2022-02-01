@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 
 /** Context: provides user object and setter for it throughout app. */
 

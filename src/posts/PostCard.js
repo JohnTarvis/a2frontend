@@ -1,11 +1,11 @@
-// import React from "react";
-// import { Link } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 
-// import picunrel from "../resources/images/picunrel.jpeg";
+import picunrel from "../resources/images/picunrel.jpeg";
 
-// import ColoredLine from "../common/ColoredLine";
+import ColoredLine from "../common/ColoredLine";
 
-// import '../styles/PostCard.css';
+import '../styles/PostCard.css';
 
 
 function PostCard(props) {

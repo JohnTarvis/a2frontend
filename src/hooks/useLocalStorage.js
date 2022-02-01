@@ -1,4 +1,4 @@
-// import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 function useLocalStorage(key, firstValue = null) {
   const initialValue = localStorage.getItem(key) || firstValue;
