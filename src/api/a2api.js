@@ -1,10 +1,10 @@
 import axios from "axios";
 
 
-const app = require('express');
-const cors = require('cors');
+// const app = require('express');
+// const cors = require('cors');
 
-app.use(cors);
+// app.use(cors);
 
 
 const BASE_URL = 'https://damp-island-15072.herokuapp.com';//"http://localhost:3001";
