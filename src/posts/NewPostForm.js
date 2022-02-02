@@ -51,26 +51,6 @@ function NewPostForm({ createPost }) {
     // formData.image = selectedFile.name;
     // formData.file = selectedFile;
 
-///////////////////////////////////////////////////////////////////////////
-
-    // console.log("file data ====>", selectedFile);
-
-    // const data = new FormData();
-    // data.append("image", selectedFile); // image key to use in Postman
-
-    // const server = BASE_URL;
-
-    // fetch(`${server}/single`, {
-    //   method: "POST",
-    //   body: data,
-    // })
-    //   .then((result) => {
-    //     console.log("File sent successfully", result);
-    //   })
-    //   .catch((err) => {
-    //     console.log("Something Went Wrong", err);
-    //   });
-
 ////////////////////////////////////////////////////////////////////////////////////////CREATE POST
 
     let result = await createPost(formData);

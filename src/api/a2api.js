@@ -1,14 +1,6 @@
 import axios from "axios";
 
-
-// const app = require('express');
-// const cors = require('cors');
-
-// app.use(cors);
-
-
-
-const BASE_URL = 'https://damp-island-15072.herokuapp.com';//"http://localhost:3001";
+const BASE_URL = 'https://damp-island-15072.herokuapp.com';
 class A2Api {
   static token;
   static async request(endpoint, data = {}, method = "get") {
@@ -22,7 +14,6 @@ class A2Api {
         ? data
         : {};
     try {
-      // console.log('toaxios=========================================',{url,method,data,params,headers});
       return (await axios({ url, method, data, params, headers })).data;
     } catch (err) {
       console.error("API Error:", err.response);
