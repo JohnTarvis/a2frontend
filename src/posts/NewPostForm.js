@@ -48,13 +48,13 @@ function NewPostForm({ createPost }) {
     const date = new Date();
     formData.post_date = date;
 
-    // formData.image = selectedFile.name;
-    // formData.file = selectedFile;
+    console.log('file=============================',selectedFile);
+    formData.file = selectedFile;
+    formData.image = `https://a2uploads.s3.us-west-1.amazonaws.com/${selectedFile.name}`;
 
-////////////////////////////////////////////////////////////////////////////////////////CREATE POST
 
     let result = await createPost(formData);
-    
+
     if (result.success) {
       history.push("/");
     } else {

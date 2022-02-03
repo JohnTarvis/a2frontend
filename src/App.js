@@ -70,7 +70,7 @@ function App() {
   async function createPost(postData){
     try {
 
-      console.log('current anon=============================',anon);
+      // console.log('current anon=============================',anon);
 
       if(anon){
         postData.poster_handle = anon.handle;
