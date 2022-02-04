@@ -53,7 +53,6 @@ function NewPostForm({ createPost }) {
     formData.image = `https://a2uploads.s3.us-west-1.amazonaws.com/${selectedFile.name}`;
 
 
-
     let result = await createPost(formData);
 
     if (result.success) {
