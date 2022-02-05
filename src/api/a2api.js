@@ -32,7 +32,7 @@ class A2Api {
   static async createPost(params){
     let res = await this.request('post/',params,'post');
 
-    await this.request('/upload',params,'post');
+    // await this.request('/upload',params,'post');
 
     return res.posts;
   }
