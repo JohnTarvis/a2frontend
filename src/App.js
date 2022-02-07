@@ -81,10 +81,6 @@ function App() {
       await A2Api.createPost(postData);
       await createTags(postData.post_tags);
 
-      // await Awsapi(postData.post_image);
-
-      
-
       return { success: true };
     } catch (errors) {
       console.error("create post failed", errors);
