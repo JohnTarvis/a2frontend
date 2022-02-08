@@ -9,7 +9,7 @@ import '../styles/PostCard.css';
 
 
 function PostCard(props) {
-    const punrel = 'https://a2uploads.s3.us-west-1.amazonaws.com/unrelated.jpg';
+    const punrel = 'https://a2uploads.s3.us-west-1.amazonaws.com/picunrel.jpg';
     return (
             <div className="PostCard" id={`postcard-${props.id}` }>
 
