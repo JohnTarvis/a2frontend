@@ -141,14 +141,14 @@ class TagToggler{
 
             const shouldShow = this.shouldShow(tagElement,postCard);
 
-            console.log(`postcard ${postCard.id} shouldShow?: ${shouldShow}`);
+            // console.log(`postcard ${postCard.id} shouldShow?: ${shouldShow}`);
 
             if(shouldShow)
                 $(postCard).show();
             else
                 $(postCard).hide();
 
-            console.log(`postcard ${postCard.id} is showing?: ${$(postCard).is(':visible')}`);
+            // console.log(`postcard ${postCard.id} is showing?: ${$(postCard).is(':visible')}`);
 
         }
     }

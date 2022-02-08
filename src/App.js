@@ -61,7 +61,7 @@ function App() {
       try{
         await A2Api.createTag(tag);
       } catch(errors){
-        console.log('failed to create tag: ',tag);
+        // console.log('failed to create tag: ',tag);
         console.log('errors ',errors);
       }
     } 
