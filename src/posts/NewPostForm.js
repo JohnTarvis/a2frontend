@@ -113,7 +113,7 @@ function NewPostForm({ createPost }) {
                   <label>Upload File</label>
                   <input 
                     type="file" 
-                    name="image"
+                    name="upload"
                     value={formData.image}
                     onChange={(e) => setSelectedFile(e.target.files[0])}
                   />
