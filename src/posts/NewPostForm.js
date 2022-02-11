@@ -41,7 +41,6 @@ function NewPostForm({ createPost }) {
 
 ////////////////////////////////////////////////////////////////////////////////////////HANDLE SUBMIT
 
-  // const BASE_URL = 'https://damp-island-15072.herokuapp.com';
 
   async function handleSubmit(evt) {
     evt.preventDefault();
