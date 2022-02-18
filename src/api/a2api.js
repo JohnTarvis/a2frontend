@@ -34,6 +34,12 @@ class A2Api {
 
     // await this.request('/upload',params,'post');
 
+    ///-console log the params
+    ///-try catch around the s3 url on node side
+    ///-from aws side
+
+    console.log(params);
+
     return res.posts;
   }
   static async deleteAllPosts(){
