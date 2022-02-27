@@ -78,6 +78,8 @@ function App() {
         postData.poster_handle = 'anonymous';
       }
 
+      console.log('postdata===========================',postData);
+
       await A2Api.createPost(postData);
       await createTags(postData.post_tags);
 
