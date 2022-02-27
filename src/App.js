@@ -68,6 +68,7 @@ function App() {
   }
 /////////////////////////////////////////////////////////////////////////CREATE POST
   async function createPost(postData){
+    console.log('||||||||||||||||||||||||||||||||||||');
     try {
 
       // console.log('current anon=============================',anon);
