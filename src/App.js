@@ -68,7 +68,7 @@ function App() {
   }
 /////////////////////////////////////////////////////////////////////////CREATE POST
   async function createPost(postData){
-    console.log('||||||||||||||||||||||||||||||||||||');
+    // console.log('||||||||||||||||||||||||||||||||||||');
     try {
 
       // console.log('current anon=============================',anon);
@@ -79,7 +79,7 @@ function App() {
         postData.poster_handle = 'anonymous';
       }
 
-      console.log('postdata===========================',postData);
+      // console.log('postdata===========================',postData);
 
       await A2Api.createPost(postData);
       await createTags(postData.post_tags);
