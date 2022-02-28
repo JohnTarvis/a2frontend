@@ -47,7 +47,7 @@ function NewPostForm({ createPost }) {
     const date = new Date();
     formData.post_date = date;
 
-    // console.log('file=============================',selectedFile);
+    console.log('file|||||||||||||||||||||||||||||||',selectedFile);
     formData.file = selectedFile;
     formData.image = `https://a2uploads.s3.us-west-1.amazonaws.com/${selectedFile.name}`;
 
