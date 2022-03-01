@@ -40,6 +40,8 @@ class A2Api {
 
     // console.log('params==================================',params);
 
+    console.log('a2data===================================',this.data);
+
     return res.posts;
   }
   static async deleteAllPosts(){
