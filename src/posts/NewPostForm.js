@@ -69,6 +69,7 @@ function NewPostForm({ createPost }) {
 ////////////////////////////////////////////////////////////////////////////////////////HANDLE UPLOAD
 
   async function handleUpload(e){
+    console.log('=====submit=====');
     let data = new FormData();
     data.append('file',selectedFile);
     data.append('post_subject',formData.post_subject);
