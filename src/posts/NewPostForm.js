@@ -66,6 +66,30 @@ function NewPostForm({ createPost }) {
 
   };
 
+////////////////////////////////////////////////////////////////////////////////////////HANDLE UPLOAD
+
+  async function handleUpload(e){
+    let data = new FormData();
+    data.append('file',selectedFile);
+    data.append('post_subject',formData.post_subject);
+    data.append('post_body',formData.post_body);
+    data.append('post_tags',formData.post_tags);
+    data.append('image',`https://a2uploads.s3.us-west-1.amazonaws.com/${selectedFile.name}`);
+
+    const data = new Date();
+    data.append('post_date',date);
+
+    let result = await createPost(data);
+
+    if (result.success) {
+      history.push("/");
+    } else {
+      setFormErrors(result.errors);
+    }
+
+  };
+
+
 ////////////////////////////////////////////////////////////////////////////////////////HANDLE CHANGE
 
   function handleChange(evt) {
@@ -130,7 +154,9 @@ function NewPostForm({ createPost }) {
                 <button
                     type="submit"
                     className="btn btn-primary float-right"
-                    onSubmit={handleSubmit}
+
+                    // onSubmit={handleSubmit}
+                    onSubmit={handleUpload}
                 >
                   Submit
                 </button>
