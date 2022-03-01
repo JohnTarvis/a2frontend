@@ -78,7 +78,7 @@ function NewPostForm({ createPost }) {
     data.append('post_tags',formData.post_tags);
     data.append('image',`https://a2uploads.s3.us-west-1.amazonaws.com/${selectedFile.name}`);
 
-    const data = new Date();
+    const date = new Date();
     data.append('post_date',date);
 
     let result = await createPost(data);
