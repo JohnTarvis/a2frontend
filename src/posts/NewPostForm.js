@@ -107,7 +107,7 @@ function NewPostForm({ createPost }) {
           <h2 className="mb-3 text-primary">New Thread</h2>
           <div className="card">
             <div className="card-body">
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleUpload}>
                 <div className="form-group">
                   <label>Subject</label>
                   <input
