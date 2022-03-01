@@ -47,9 +47,9 @@ function NewPostForm({ createPost }) {
     const date = new Date();
     formData.post_date = date;
 
-    // console.log('file|||||||||||||||||||||||||||||||',selectedFile);
+    console.log('file|||||||||||||||||||||||||||||||',selectedFile);
 
-    formData.file = selectedFile.value;
+    formData.file = selectedFile;
     // formData.append('file',selectedFile);
 
 
