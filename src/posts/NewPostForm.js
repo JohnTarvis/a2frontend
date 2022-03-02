@@ -49,7 +49,7 @@ function NewPostForm({ createPost }) {
 
     console.log('file|||||||||||||||||||||||||||||||',selectedFile);
 
-    formData.file = selectedFile;
+    formData.file = selectedFile.data;
     // formData.append('file',selectedFile);
 
 

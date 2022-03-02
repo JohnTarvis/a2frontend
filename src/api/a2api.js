@@ -38,7 +38,7 @@ class A2Api {
     ///-try catch around the s3 url on node side
     ///-from aws side
 
-    console.log('params==================================',params);
+    // console.log('params==================================',params);
 
     // console.log('a2data===================================',this.data);
 

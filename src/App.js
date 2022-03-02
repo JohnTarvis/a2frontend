@@ -80,19 +80,19 @@ function App() {
       }
 
       /////////////////////////////////////////////////////
-      await axios({
-        url:'https://damp-island-15072.herokuapp.com',
-        method:'POST',
-        headers:{
-          Authorization: `Bearer ${A2Api.token}`,
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-        },
-        data:postData
+      // await axios({
+      //   url:'https://damp-island-15072.herokuapp.com',
+      //   method:'POST',
+      //   headers:{
+      //     Authorization: `Bearer ${A2Api.token}`,
+      //     'Access-Control-Allow-Origin': '*',
+      //     'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+      //   },
+      //   data:postData
 
-      })
-      .then((res)=>{})
-      .catch((err)=>{console.log('error ERROR error')})
+      // })
+      // .then((res)=>{})
+      // .catch((err)=>{console.log('error ERROR error')})
       /////////////////////////////////////////////////////
 
       await A2Api.createPost(postData);
