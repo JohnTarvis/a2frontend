@@ -158,7 +158,7 @@ function NewPostForm({ createPost }) {
                     className="btn btn-primary float-right"
 
                     // onSubmit={handleSubmit}
-                    onSubmit={handleUpload}
+                    // onSubmit={handleUpload}
                 >
                   Submit
                 </button>
