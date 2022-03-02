@@ -79,7 +79,21 @@ function App() {
         postData.poster_handle = 'anonymous';
       }
 
-      console.log('file-=-=-=-=-=-=-=-=-=-=-',postData.file);
+      /////////////////////////////////////////////////////
+      await axios({
+        url:'https://damp-island-15072.herokuapp.com',
+        method:'POST',
+        headers:{
+          Authorization: `Bearer ${A2Api.token}`,
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+        },
+        data:postData
+
+      })
+      .then((res)=>{})
+      .catch((err)=>{console.log('error ERROR error')})
+      /////////////////////////////////////////////////////
 
       await A2Api.createPost(postData);
       await createTags(postData.post_tags);
