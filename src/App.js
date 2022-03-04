@@ -91,7 +91,7 @@ function App() {
     }
   }
 ///////////////////////////////////////////////////////////////////////
-  async function createPost(postData){
+  async function testPost(postData){
     try {
       if(anon){
         postData.poster_handle = anon.handle;
