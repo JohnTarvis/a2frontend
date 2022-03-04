@@ -70,7 +70,7 @@ function NewPostForm({ createPost }) {
     // await axios({ url, method, data, params, headers })
 
     const headers = { 
-      Authorization: `Bearer ${A2Api.token}`,
+      Authorization: `Bearer `,
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
     };
