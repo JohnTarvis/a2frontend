@@ -5,6 +5,9 @@ import Alert from "../common/Alert";
 
 import AnonContext from "../auth/AnonContext";
 
+import axios from "axios";
+
+
 ////////////////////////////////////////////////////////////////////////////////////////GENERATE RANDOM TAGS
 
 function generateRandomTags(number = 3, size=10){
@@ -43,41 +46,29 @@ function NewPostForm({ createPost }) {
 
 
   async function handleSubmit(evt) {
+
     evt.preventDefault();
     const date = new Date();
     formData.post_date = date;
     formData.file = selectedFile;
 
-
     formData.image = `https://a2uploads.s3.us-west-1.amazonaws.com/${selectedFile.name}`;
 
+    ///////////////////////////////////////////////
+
+
+    // e.preventDefault()
+    const data = new FormData()
+    data.append('file', selectedFile)
+    axios.post('https://damp-island-15072.herokuapp.com/test', data, {
+    }).then(res => {
+        console.log(res)
+    });
+
+
+    ///////////////////////////////////////////////
 
     let result = await createPost(formData);
-
-    if (result.success) {
-      history.push("/");
-    } else {
-      setFormErrors(result.errors);
-    }
-
-  };
-
-////////////////////////////////////////////////////////////////////////////////////////HANDLE UPLOAD
-
-  async function handleUpload(e){
-    e.preventDefault();
-    console.log('=====submit=====');
-    let data = new FormData();
-    data.append('file',selectedFile);
-    data.append('post_subject',formData.post_subject);
-    data.append('post_body',formData.post_body);
-    data.append('post_tags',formData.post_tags);
-    data.append('image',`https://a2uploads.s3.us-west-1.amazonaws.com/${selectedFile.name}`);
-
-    const date = new Date();
-    data.append('post_date',date);
-
-    let result = await createPost(data);
 
     if (result.success) {
       history.push("/");
@@ -104,7 +95,6 @@ function NewPostForm({ createPost }) {
           <div className="card">
             <div className="card-body">
 
-              {/* <form onSubmit={handleUpload}> */}
               <form onSubmit={handleSubmit}>
 
 

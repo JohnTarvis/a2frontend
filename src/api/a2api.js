@@ -32,17 +32,6 @@ class A2Api {
   static async createPost(params){
     let res = await this.request('post/',params,'post');
 
-    // await this.request('/upload',params,'post');
-
-    ///-console log the params
-    ///-try catch around the s3 url on node side
-    ///-from aws side
-
-    // console.log('params==================================',params);
-
-    // console.log('a2data===================================',this.data);
-
-    console.log('params in create post===============',params);
 
     return res.posts;
   }
