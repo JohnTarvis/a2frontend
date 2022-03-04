@@ -7,7 +7,7 @@ import NewPostForm from "../posts/NewPostForm";
 import PostsDisplay from "../posts/PostsDisplay";
 import Post from "../posts/Post";
 
-function Routes({ login, register, createPost, getAllPosts }) {
+function Routes({ login, register, createPost, getAllPosts, testPost }) {
   // console.debug(
   //     "Routes",
   //     `login=${typeof login}`,
