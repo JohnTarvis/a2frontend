@@ -65,17 +65,7 @@ function NewPostForm({ createPost }) {
     const data = new FormData();
     data.append('file', selectedFile);
 
-    const url = 'https://damp-island-15072.herokuapp.com/post/test';
-
-    // await axios({ url, method, data, params, headers })
-
-    const headers = { 
-      Authorization: `Bearer `,
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-    };
-
-    await axios.post(url,data,{}, headers);
+    let res = await testPost(data);
 
     //////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////

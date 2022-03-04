@@ -25,6 +25,11 @@ class A2Api {
 ////////////////////////////////////////////////////////////////////////////////-posts
 //-add delete post
 
+  static async testPost(params){
+    let res = await this.request('post/test',params);
+    return res;
+  }
+
   static async getPosts(params){
     let res = await this.request(`post/`,params);
     return res.posts;
