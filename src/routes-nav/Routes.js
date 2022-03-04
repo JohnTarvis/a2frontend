@@ -35,6 +35,10 @@ function Routes({ login, register, createPost, getAllPosts }) {
             <NewPostForm createPost={createPost}/>
           </Route>
 
+          <Route exact path="/test-post">
+            <NewPostForm testPost={testPost}/>
+          </Route>
+
           <Route exact path="/posts">
             <PostsDisplay />
           </Route>
