@@ -131,7 +131,8 @@ function App() {
             <Navigation logout={logout} />
             <Routes login={login} 
                     register={register} 
-                    createPost={createPost} />
+                    createPost={createPost} 
+                    testPost={testPost}/>
           </div>
         </AnonContext.Provider>
       </BrowserRouter>
