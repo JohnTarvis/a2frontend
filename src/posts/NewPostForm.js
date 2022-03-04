@@ -40,6 +40,7 @@ function NewPostForm({ createPost,testPost }) {
       "createPost=", typeof createPost,
       "formData=", formData,
       "formErrors=", formErrors,
+      'testPost=',testPost,
   );
 
 ////////////////////////////////////////////////////////////////////////////////////////HANDLE SUBMIT
