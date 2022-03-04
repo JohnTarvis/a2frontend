@@ -90,6 +90,25 @@ function App() {
       return { success: false, errors };
     }
   }
+///////////////////////////////////////////////////////////////////////
+  async function createPost(postData){
+    try {
+      if(anon){
+        postData.poster_handle = anon.handle;
+      } else {
+        postData.poster_handle = 'anonymous';
+      }
+
+      console.log('test~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+
+      await A2Api.testPost(postData);
+
+      return { success: true };
+    } catch (errors) {
+      console.error("test post failed", errors);
+      return { success: false, errors };
+    }
+  }
 /////////////////////////////////////////////////////////////////////////LOGIN
   async function login(loginData) {
     console.log('login');
