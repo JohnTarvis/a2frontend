@@ -49,8 +49,10 @@ function NewPostForm({ createPost }) {
 
     console.log('file|||||||||||||||||||||||||||||||',selectedFile);
 
-    formData.file = selectedFile;
+    // formData.file = selectedFile;
     // formData.append('file',selectedFile);
+
+    formData.append('file',selectedFile);
 
 
     formData.image = `https://a2uploads.s3.us-west-1.amazonaws.com/${selectedFile.name}`;
