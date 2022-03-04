@@ -42,6 +42,8 @@ class A2Api {
 
     // console.log('a2data===================================',this.data);
 
+    console.log('params in create post===============',params);
+
     return res.posts;
   }
   static async deleteAllPosts(){
