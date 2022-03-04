@@ -63,7 +63,7 @@ function NewPostForm({ createPost }) {
 
     // e.preventDefault()
     const data = new FormData();
-    data.append('file', selectedFile)
+    data.append('file', selectedFile);
 
     const url = 'https://damp-island-15072.herokuapp.com/test';
 
