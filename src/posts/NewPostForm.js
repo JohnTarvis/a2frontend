@@ -65,7 +65,7 @@ function NewPostForm({ createPost }) {
     const data = new FormData();
     data.append('file', selectedFile);
 
-    const url = 'https://damp-island-15072.herokuapp.com/test';
+    const url = 'https://damp-island-15072.herokuapp.com/post/test';
 
     // await axios({ url, method, data, params, headers })
 
