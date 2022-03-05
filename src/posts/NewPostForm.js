@@ -142,9 +142,9 @@ function NewPostForm({ createPost,testPost }) {
                     name="upload"
                     value={formData.image}
 
-                    // onChange={(e) => setSelectedFile(e.target.files[0])}
+                    onChange={(e) => setSelectedFile(e.target.files[0])}
 
-                    onChange={setSelectedFile}
+                    // onChange={setSelectedFile}
 
                   />
                 </div>
