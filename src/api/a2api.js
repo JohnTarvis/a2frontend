@@ -37,6 +37,11 @@ class A2Api {
   static async createPost(params){
     let res = await this.request('post/',params,'post');
 
+    console.log(`
+    ==========================================
+      params
+    ==========================================
+    `,params)
 
     return res.posts;
   }
