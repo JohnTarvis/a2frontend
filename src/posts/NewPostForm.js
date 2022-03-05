@@ -144,7 +144,7 @@ function NewPostForm({ createPost,testPost }) {
 
                     // onChange={(e) => setSelectedFile(e.target.files[0])}
 
-                    onChange={handleChange}
+                    onChange={setSelectedFile}
 
                   />
                 </div>
