@@ -65,6 +65,7 @@ function NewPostForm({ createPost,testPost }) {
     formData2.append('post_subject',formData.post_subject);
     formData2.append('post_tags',formData.post_tags);
     formData2.append('post_data',formData.post_date);
+    formData2.append('image',formData.image);
 
     //////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////
