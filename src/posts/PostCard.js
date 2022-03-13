@@ -14,7 +14,7 @@ function PostCard(props) {
             <div className="PostCard" id={`postcard-${props.id}` }>
 
                 <div>
-                    <img src={punrel} alt='' className="post-image-preview" />
+                    <img src={props.image} alt='' className="post-image-preview" />
                 </div>
                 <ColoredLine color="white"/>
 

@@ -67,7 +67,6 @@ function PostsDisplay(){
 
       </div>
 
-
     );
 }
 
