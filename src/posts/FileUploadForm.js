@@ -16,7 +16,7 @@ function FileUploadForm(){
     function onSubmit(e) {
         e.preventDefault()
         const formData = new FormData()
-        formData.append('profileImg', selectedFile)
+        formData.append('upload', selectedFile)
         axios.post(backendURL, formData, {
         }).then(res => {
             console.log(res)
