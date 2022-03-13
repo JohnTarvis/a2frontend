@@ -60,14 +60,17 @@ function NewPostForm({ createPost,testPost }) {
     //////////////////////////////////////////////////////////////////////////////////////////////
 
     const formData2 = new FormData();
+
     formData2.append('upload',selectedFile);
     formData2.append('post_body',formData.post_body);
     formData2.append('post_subject',formData.post_subject);
     formData2.append('post_tags',formData.post_tags);
     formData2.append('post_data',formData.post_date);
     formData2.append('image',formData.image);
+    formData2.append('post_date',formData.post_date);
 
-    console.log('formData2================================================',formData2);
+
+    console.log('formData2================================================',formData2.post_tags);
 
     //////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////
