@@ -59,18 +59,18 @@ function NewPostForm({ createPost,testPost }) {
     //////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////
 
-    // const formData2 = new FormData();
-    // formData2.append('file',selectedFile);
-    // formData2.append('post_body',formData.post_body);
-    // formData2.append('post_subject',formData.post_subject);
-    // formData2.append('post_tags',formData.post_tags);
-    // formData2.append('post_data',formData.post_date);
+    const formData2 = new FormData();
+    formData2.append('upload',selectedFile);
+    formData2.append('post_body',formData.post_body);
+    formData2.append('post_subject',formData.post_subject);
+    formData2.append('post_tags',formData.post_tags);
+    formData2.append('post_data',formData.post_date);
 
     //////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////
 
-    let result = await createPost(formData);
+    let result = await createPost(formData2);
 
     if (result.success) {
       history.push("/");
