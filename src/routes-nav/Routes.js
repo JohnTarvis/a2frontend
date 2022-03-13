@@ -6,6 +6,9 @@ import RegistrationForm from "../auth/RegistrationForm";
 import NewPostForm from "../posts/NewPostForm";
 import PostsDisplay from "../posts/PostsDisplay";
 import Post from "../posts/Post";
+import FileUploadForm from "../posts/FileUploadForm";
+
+
 
 function Routes({ login, register, createPost, getAllPosts, testPost }) {
   // console.debug(
@@ -33,6 +36,10 @@ function Routes({ login, register, createPost, getAllPosts, testPost }) {
 
           <Route exact path="/new-post">
             <NewPostForm createPost={createPost}/>
+          </Route>
+
+          <Route exact path="/file-upload">
+            <FileUploadForm />
           </Route>
 
           <Route exact path="/test-post">

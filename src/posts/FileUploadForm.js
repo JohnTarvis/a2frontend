@@ -18,3 +18,4 @@ function FileUploadForm(){
     );
 }
 
+export default FileUploadForm;
