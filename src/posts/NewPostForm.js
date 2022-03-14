@@ -72,7 +72,7 @@ function NewPostForm({ createPost,testPost }) {
     formData2.append('post_tags',formData.post_tags);
     formData2.append('image',formData.image);
 
-    // formData2.append('post_date',date);
+    formData2.append('post_date',date);
 
 
     console.log('formData2================================================',formData2);
