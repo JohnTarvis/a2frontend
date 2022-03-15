@@ -59,12 +59,8 @@ function NewPostForm({ createPost,testPost }) {
     //////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////
 
-    // console.log('formData================================================',formData);
-
 
     const formData2 = new FormData();
-
-    // date = false;
 
     formData2.append('upload',selectedFile);
     formData2.append('post_body',formData.post_body);
@@ -75,13 +71,11 @@ function NewPostForm({ createPost,testPost }) {
     formData2.append('post_date',date);
 
 
-    // console.log('formData2.post_subject================================================',formData2.post_subject);
-
     //////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////
 
-    let result = await createPost(formData2);
+    let result = await createPost(formData);
 
     if (result.success) {
       history.push("/");
