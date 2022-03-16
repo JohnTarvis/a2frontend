@@ -70,21 +70,23 @@ function App() {
   async function createPost(postData){
     try {
 
-      // postData = Object.fromEntries(postData);
+      // if(anon){
+      //   postData.poster_handle = anon.handle;
+      // } else {
+      //   postData.poster_handle = 'anonymous';
+      // }
+
 
       if(anon){
-        postData.poster_handle = anon.handle;
+        postData.append('poster_handle',anon.handle);
       } else {
-        postData.poster_handle = 'anonymous';
+        postData.append('poster_handle','anonymous');
       }
 
       await A2Api.createPost(postData);
 
       const tags = postData.get('post_tags');
       await createTags(tags);
-
-
-      // await createTags(postData.post_tags);
 
 
       return { success: true };
