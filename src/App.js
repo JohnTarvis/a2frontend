@@ -70,7 +70,7 @@ function App() {
   async function createPost(postData){
     try {
 
-      postData = Object.fromEntries(postData);
+      // postData = Object.fromEntries(postData);
 
       if(anon){
         postData.poster_handle = anon.handle;
