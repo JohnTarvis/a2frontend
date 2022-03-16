@@ -1,9 +1,6 @@
 .Post {
     color: white;
-    /* border: 1px solid blue; */
     display:inline-block;
-    /* width:15rem; */
-    /* margin:7px; */
     overflow: hidden;
     padding:5px;
     background-color: #002244;
@@ -11,6 +8,10 @@
   
   .post-image-preview{
     min-width:100%;
+  }
+
+  .post-image{
+    max-width:100%;
   }
   
   .image-subject{
