@@ -70,6 +70,8 @@ function App() {
   async function createPost(postData){
     try {
 
+      postData = Object.fromEntries(postData);
+
       if(anon){
         postData.poster_handle = anon.handle;
       } else {
@@ -77,8 +79,9 @@ function App() {
       }
 
       await A2Api.createPost(postData);
+
       await createTags(postData.post_tags);
-      
+
 
       return { success: true };
     } catch (errors) {
