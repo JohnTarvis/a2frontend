@@ -24,6 +24,10 @@
   min-width:100%;
 }
 
+.post-image{
+  max-width:100%;
+}
+
 .image-subject{
   text-align:center;
   height:5rem;
