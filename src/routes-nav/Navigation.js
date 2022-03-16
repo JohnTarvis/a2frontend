@@ -28,11 +28,11 @@ function Navigation({ logout }) {
               Log out {anon.first_name || anon.anonname}
             </Link>
           </li>
-          <li className="nav-item mr-4">
+          {/* <li className="nav-item mr-4">
             <NavLink className='nav-link' to= '/file-upload'>
               Upload
             </NavLink>
-          </li>
+          </li> */}
 
         </ul>
     );
