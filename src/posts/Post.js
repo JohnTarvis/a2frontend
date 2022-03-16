@@ -40,7 +40,7 @@ function Post() {
                     <ColoredLine color="white"/>
 
                     <div>
-                        <img src={image} alt='' className="post-image-preview" />
+                        <img src={post[0].image} alt='' className="post-image-preview" />
                     </div>
 
                     <ColoredLine color="white"/>
