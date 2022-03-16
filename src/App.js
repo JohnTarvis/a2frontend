@@ -86,6 +86,9 @@ function App() {
       await A2Api.createPost(postData);
 
       const tags = postData.get('post_tags');
+
+      console.log('tags=========================================',tags);
+
       await createTags(tags);
 
 
