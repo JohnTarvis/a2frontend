@@ -74,7 +74,7 @@ function Post() {
                     </div>
 
                     <div>
-                        <button type="button" class="btn btn-primary">Primary</button>
+                        <button type="button" class="btn btn-primary">reply</button>
                     </div>
                 </div>
 
