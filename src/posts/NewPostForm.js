@@ -54,6 +54,7 @@ function NewPostForm({ createPost,testPost }) {
     formData.upload = selectedFile;
 
     if(formData.image){
+      selectedFile.name = Date.now() + '~';
       formData.image = `https://a2uploads.s3.us-west-1.amazonaws.com/${selectedFile.name}`;
     } else {
       formData.image = `https://a2uploads.s3.us-west-1.amazonaws.com/picunrel.jpg`;
@@ -150,9 +151,6 @@ function NewPostForm({ createPost,testPost }) {
                     type="file" 
                     name="upload"
                     value={formData.image}
-
-                    // onChange={(e) => setSelectedFile(e.target.files[0])}
-
                     onChange={onFileChange}
 
                   />
@@ -166,9 +164,6 @@ function NewPostForm({ createPost,testPost }) {
                 <button
                     type="submit"
                     className="btn btn-primary float-right"
-
-                    // onSubmit={handleSubmit}
-                    // onSubmit={handleUpload}
                 >
                   Submit
                 </button>
