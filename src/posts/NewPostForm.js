@@ -45,6 +45,13 @@ function NewPostForm({ createPost,testPost }) {
 
 ////////////////////////////////////////////////////////////////////////////////////////HANDLE SUBMIT
 
+  function renameFile(originalFile, newName) {
+    return new File([originalFile], newName, {
+        type: originalFile.type,
+        lastModified: originalFile.lastModified,
+    });
+  }
+
 
   async function handleSubmit(evt) {
 
@@ -54,8 +61,7 @@ function NewPostForm({ createPost,testPost }) {
     formData.upload = selectedFile;
 
     if(selectedFile){
-      selectedFile.name = '0000';
-      // console.log('selectedfile===========================================',selectedFile)
+      selectedFile = renameFile(selectedFile,Date.now());
       formData.image = `https://a2uploads.s3.us-west-1.amazonaws.com/${selectedFile.name}`;
     } else {
       formData.image = `https://a2uploads.s3.us-west-1.amazonaws.com/picunrel.jpg`;
