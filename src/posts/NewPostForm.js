@@ -53,6 +53,8 @@ function NewPostForm({ createPost,testPost }) {
     formData.post_date = date;
     formData.upload = selectedFile;
 
+    console.log('selectedfile========================================',selectedFile);
+
     if(formData.image){
       selectedFile.name = Date.now() + '~';
       formData.image = `https://a2uploads.s3.us-west-1.amazonaws.com/${selectedFile.name}`;
