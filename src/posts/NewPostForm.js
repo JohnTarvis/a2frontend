@@ -55,9 +55,9 @@ function NewPostForm({ createPost,testPost }) {
 
     // console.log('selectedfile========================================',selectedFile);
 
-    console.log('formdata=======================================================',formData);
+    console.log('selectedfile=======================================================',selectedFile);
 
-    if(formData.image){
+    if(selectedFile){
       formData.image = `https://a2uploads.s3.us-west-1.amazonaws.com/${selectedFile.name}`;
     } else {
       formData.image = `https://a2uploads.s3.us-west-1.amazonaws.com/picunrel.jpg`;
