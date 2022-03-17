@@ -61,8 +61,8 @@ function NewPostForm({ createPost,testPost }) {
     formData.upload = selectedFile;
 
     if(selectedFile){
-      selectedFile = renameFile(selectedFile,Date.now());
-      formData.image = `https://a2uploads.s3.us-west-1.amazonaws.com/${selectedFile.name}`;
+      const renamedFile = renameFile(selectedFile,Date.now());
+      formData.image = `https://a2uploads.s3.us-west-1.amazonaws.com/${renamedFile.name}`;
     } else {
       formData.image = `https://a2uploads.s3.us-west-1.amazonaws.com/picunrel.jpg`;
     }
@@ -74,7 +74,11 @@ function NewPostForm({ createPost,testPost }) {
 
     const formData2 = new FormData();
 
-    formData2.append('upload',selectedFile);
+    // formData2.append('upload',selectedFile);
+    formData2.append('upload',renamedFile);
+
+
+
     formData2.append('post_body',formData.post_body);
     formData2.append('post_subject',formData.post_subject);
     formData2.append('post_tags',formData.post_tags);
