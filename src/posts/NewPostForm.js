@@ -52,7 +52,6 @@ function NewPostForm({ createPost,testPost }) {
     });
   }
 
-
   async function handleSubmit(evt) {
 
     evt.preventDefault();
@@ -60,11 +59,7 @@ function NewPostForm({ createPost,testPost }) {
     formData.post_date = date;
     formData.upload = selectedFile;
     
-
-    // let renamedFile;
-
     if(selectedFile){
-      // renamedFile = renameFile(selectedFile,Date.now());
       formData.image = `https://a2uploads.s3.us-west-1.amazonaws.com/${selectedFile.name}`;
     } else {
       formData.image = `https://a2uploads.s3.us-west-1.amazonaws.com/picunrel.jpg`;
@@ -74,13 +69,9 @@ function NewPostForm({ createPost,testPost }) {
     //////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////
 
-
     const formData2 = new FormData();
 
-    // formData2.append('upload',selectedFile);
     formData2.append('upload',selectedFile);
-
-
 
     formData2.append('post_body',formData.post_body);
     formData2.append('post_subject',formData.post_subject);
@@ -88,7 +79,6 @@ function NewPostForm({ createPost,testPost }) {
     formData2.append('image',formData.image);
 
     formData2.append('post_date',date);
-
 
     //////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////
