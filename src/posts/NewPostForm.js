@@ -55,6 +55,8 @@ function NewPostForm({ createPost,testPost }) {
 
     // console.log('selectedfile========================================',selectedFile);
 
+    console.log('formdata=======================================================',formData);
+
     if(formData.image){
       formData.image = `https://a2uploads.s3.us-west-1.amazonaws.com/${selectedFile.name}`;
     } else {
