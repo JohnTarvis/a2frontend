@@ -72,6 +72,10 @@ function Post() {
                     <div>
                         {post[0].reply_to}
                     </div>
+
+                    <div>
+                        <button>reply</button>
+                    </div>
                 </div>
 
             </div>
