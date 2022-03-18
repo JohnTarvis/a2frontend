@@ -7,26 +7,10 @@ import AnonContext from "../auth/AnonContext";
 
 import axios from "axios";
 
-
 ////////////////////////////////////////////////////////////////////////////////////////GENERATE RANDOM TAGS
 
-function generateRandomTags(number = 3, size=10){
-  let back = '';
-  const tags = [];
-  for(let count = 0; count < number; count++){
-    let val = Math.floor(Math.random()*size);
-    while(tags.includes(val)){
-      val = Math.floor(Math.random()*size);
-    }
-    tags.push(val);
-  }
-  for(let count = 0; count < number; count++){
-    back += `Tag${tags[count]} `;
-  }
-  return back;
-}
 
-function NewPostForm({ createPost,testPost }) {
+function ReplyForm({ createPost,testPost }) {
   const { anon } = useContext(AnonContext);
   const history = useHistory();
   const [formData, setFormData] = useState({
@@ -44,13 +28,6 @@ function NewPostForm({ createPost,testPost }) {
   );
 
 ////////////////////////////////////////////////////////////////////////////////////////HANDLE SUBMIT
-
-  function renameFile(originalFile, newName) {
-    return new File([originalFile], newName, {
-        type: originalFile.type,
-        lastModified: originalFile.lastModified,
-    });
-  }
 
   async function handleSubmit(evt) {
 
@@ -110,22 +87,11 @@ function NewPostForm({ createPost,testPost }) {
   return (
       <div className="NewPostForm">
         <div className="container col-md-6 offset-md-3 col-lg-4 offset-lg-4">
-          <h2 className="mb-3 text-primary">New Thread</h2>
+          <h2 className="mb-3 text-primary">Reply</h2>
           <div className="card">
             <div className="card-body">
 
               <form onSubmit={handleSubmit}>
-
-
-                <div className="form-group">
-                  <label>Subject</label>
-                  <input
-                    name="post_subject"
-                    className="form-control"
-                    value={formData.post_subject}
-                    onChange={handleChange}
-                  />
-                </div>
 
                 <div className="form-group">
                   <label>Body</label>
@@ -133,16 +99,6 @@ function NewPostForm({ createPost,testPost }) {
                     name="post_body"
                     className="form-control"
                     value={formData.post_body}
-                    onChange={handleChange}
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label>Tags</label>
-                  <input
-                    name="post_tags"
-                    className="form-control"
-                    value={formData.post_tags}
                     onChange={handleChange}
                   />
                 </div>
@@ -177,4 +133,4 @@ function NewPostForm({ createPost,testPost }) {
   );
 }
 
-export default NewPostForm;
+export default ReplyForm;
