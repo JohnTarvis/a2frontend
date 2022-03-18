@@ -12,15 +12,17 @@ import picunrel from "../resources/images/picunrel.jpeg";
 
 import ReplyForm from "./ReplyForm";
 
-function displayReplyForm(){
-    return <ReplyForm/>;
-}
+// function displayReplyForm(){
+//     return <ReplyForm/>;
+// }
 
 
 
 function Post() {
 
     const {id} = useParams();
+
+    const [showReplyForm,setShowReplyForm] = useState(false);
 
     const [post, setPost] = useState(null);
     useEffect(function getPostsOnMount() {
@@ -82,7 +84,11 @@ function Post() {
                     </div>
 
                     <div>
-                        <button type="button" class="btn btn-primary" onClick={displayReplyForm}>reply</button>
+                        {showReplyForm && <ReplyForm/>}
+                    </div>
+
+                    <div>
+                        <button type="button" class="btn btn-primary" onClick={()=>setShowReplyForm(true)}>reply</button>
                     </div>
                 </div>
 

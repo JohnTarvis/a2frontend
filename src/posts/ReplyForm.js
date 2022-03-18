@@ -10,7 +10,7 @@ import axios from "axios";
 ////////////////////////////////////////////////////////////////////////////////////////GENERATE RANDOM TAGS
 
 
-function ReplyForm({ createPost,testPost }) {
+function ReplyForm({ createPost }) {
   const { anon } = useContext(AnonContext);
   const history = useHistory();
   const [formData, setFormData] = useState({
