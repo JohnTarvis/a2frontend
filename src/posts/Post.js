@@ -84,12 +84,12 @@ function Post() {
                     </div>
 
                     <div>
-                        {showReplyForm && <ReplyForm/>}
-                    </div>
-
-                    <div>
                         <button type="button" class="btn btn-primary" onClick={()=>setShowReplyForm(true)}>reply</button>
                     </div>
+                </div>
+
+                <div>
+                        {showReplyForm && <ReplyForm/>}
                 </div>
 
             </div>
