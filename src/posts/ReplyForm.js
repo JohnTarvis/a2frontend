@@ -22,7 +22,6 @@ function ReplyForm({ createPost }) {
       "createPost=", typeof createPost,
       "formData=", formData,
       "formErrors=", formErrors,
-      'testPost=',testPost,
   );
 
 ////////////////////////////////////////////////////////////////////////////////////////HANDLE SUBMIT
