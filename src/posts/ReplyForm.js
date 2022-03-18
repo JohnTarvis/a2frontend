@@ -14,9 +14,7 @@ function ReplyForm({ createPost,testPost }) {
   const { anon } = useContext(AnonContext);
   const history = useHistory();
   const [formData, setFormData] = useState({
-    post_subject: "subject",
     post_body: "blah blah blah",
-    post_tags: generateRandomTags()
   });
   const [formErrors, setFormErrors] = useState([]);
   console.debug(
