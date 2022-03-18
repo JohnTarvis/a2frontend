@@ -51,8 +51,6 @@ function ReplyForm({ createPost,testPost }) {
     formData2.append('upload',selectedFile);
 
     formData2.append('post_body',formData.post_body);
-    formData2.append('post_subject',formData.post_subject);
-    formData2.append('post_tags',formData.post_tags);
     formData2.append('image',formData.image);
 
     formData2.append('post_date',date);
