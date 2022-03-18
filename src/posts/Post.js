@@ -10,6 +10,12 @@ import '../styles/Post.css';
 
 import picunrel from "../resources/images/picunrel.jpeg";
 
+import ReplyForm from "./ReplyForm";
+
+function displayReplyForm(){
+    return <ReplyForm/>;
+}
+
 
 
 function Post() {
@@ -25,6 +31,8 @@ function Post() {
         let result = await A2Api.getPosts({id:id});
         setPost(result);
     }
+
+    
 
     if (!post) return <LoadingSpinner />;
 
@@ -74,7 +82,7 @@ function Post() {
                     </div>
 
                     <div>
-                        <button type="button" class="btn btn-primary">reply</button>
+                        <button type="button" class="btn btn-primary" onClick={displayReplyForm}>reply</button>
                     </div>
                 </div>
 
