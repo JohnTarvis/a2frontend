@@ -26,7 +26,7 @@ function generateRandomTags(number = 3, size=10){
   return back;
 }
 
-function NewPostForm({ createPost,testPost }) {
+function NewPostForm({ createPost,testPost },props) {
   const { anon } = useContext(AnonContext);
   const history = useHistory();
   const [formData, setFormData] = useState({
