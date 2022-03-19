@@ -89,11 +89,11 @@ function Post() {
                 </div>
 
                 <div>
-                        {showReplyForm && <ReplyForm postNumber={id}/>}
+                        {showReplyForm && <ReplyForm postNumber={id} createPost={createPost}/>}
                 </div>
 
                 <div>
-                    
+
                 </div>
 
             </div>

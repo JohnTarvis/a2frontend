@@ -154,6 +154,7 @@ function NewPostForm({ createPost,testPost }) {
                     name="upload"
                     value={formData.image}
                     onChange={onFileChange}
+                  
 
                   />
                 </div>
