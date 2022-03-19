@@ -92,6 +92,10 @@ function Post() {
                         {showReplyForm && <ReplyForm postNumber={id}/>}
                 </div>
 
+                <div>
+                    
+                </div>
+
             </div>
                 
     
