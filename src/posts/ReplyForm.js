@@ -10,7 +10,7 @@ import axios from "axios";
 ////////////////////////////////////////////////////////////////////////////////////////GENERATE RANDOM TAGS
 
 
-function ReplyForm({ createPost }) {
+function ReplyForm({ createPost }, props) {
   const { anon } = useContext(AnonContext);
   const history = useHistory();
   const [formData, setFormData] = useState({
@@ -51,6 +51,10 @@ function ReplyForm({ createPost }) {
     formData2.append('image',formData.image);
 
     formData2.append('post_date',date);
+
+    /////////////////
+
+    formData2.append('reply_to',props.postNumber)
 
     //////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////

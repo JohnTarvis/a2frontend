@@ -89,7 +89,7 @@ function Post() {
                 </div>
 
                 <div>
-                        {showReplyForm && <ReplyForm/>}
+                        {showReplyForm && <ReplyForm postNumber={id}/>}
                 </div>
 
             </div>
