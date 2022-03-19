@@ -18,7 +18,7 @@ import ReplyForm from "./ReplyForm";
 
 
 
-function Post() {
+function Post({createPost}) {
 
     const {id} = useParams();
 
