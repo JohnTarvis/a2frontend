@@ -9,6 +9,7 @@ function TopBanner() {
             <div className="container text-center">
                 <h1 className="mb-4 font-weight-bold">Anons Anonymous</h1>
                 <p className="lead">anti-social networking</p>
+                <p>_______________________________________</p>
             </div>
         </div>
     );
