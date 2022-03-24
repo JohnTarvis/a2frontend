@@ -6,7 +6,13 @@ import ColoredLine from "../common/ColoredLine";
 import A2api2 from "../api/a2api2";
 import A2Api from "../api/a2api";
 
-import '../styles/Thread.css';
+// import '../styles/Thread.css';
+
+import "../styles/Thread.css";
+
+
+
+
 
 import picunrel from "../resources/images/picunrel.jpeg";
 
@@ -33,7 +39,7 @@ function Thread({createThread}) {
         let result = await A2Api.getThreads({id:id});
         setThread(result);
     }
-    
+
 
     
 
