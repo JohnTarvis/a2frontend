@@ -8,7 +8,7 @@ import A2Api from "../api/a2api";
 
 // import '../styles/Thread.css';
 
-import "../Thread.css";
+// import "../Thread.css";
 
 
 
