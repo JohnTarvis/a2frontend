@@ -33,6 +33,7 @@ function Thread({createThread}) {
         let result = await A2Api.getThreads({id:id});
         setThread(result);
     }
+    
 
     
 
