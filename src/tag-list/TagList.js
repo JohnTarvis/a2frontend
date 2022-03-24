@@ -3,7 +3,7 @@ import '../styles/TagList.css';
 import ColoredLine from '../common/ColoredLine';
 import LoadingSpinner from "../common/LoadingSpinner";
 
-import PostContext from "../posts/PostContext";
+import PostContext from "../threads/PostContext";
 
 import $ from 'jquery';
 

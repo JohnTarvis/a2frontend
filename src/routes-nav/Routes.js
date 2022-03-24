@@ -3,10 +3,10 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import Landingpage from "../landingpage/Landingpage";
 import LoginForm from "../auth/LoginForm";
 import RegistrationForm from "../auth/RegistrationForm";
-import NewPostForm from "../posts/NewPostForm";
-import PostsDisplay from "../posts/PostsDisplay";
-import Post from "../posts/Post";
-import FileUploadForm from "../posts/FileUploadForm";
+import NewPostForm from "../threads/NewPostForm";
+import PostsDisplay from "../threads/PostsDisplay";
+import Post from "../threads/Thread";
+import FileUploadForm from "../threads/FileUploadForm";
 
 
 

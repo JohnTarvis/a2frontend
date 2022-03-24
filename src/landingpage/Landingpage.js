@@ -4,10 +4,10 @@ import '../styles/Landingpage.css';
 import AnonContext from "../auth/AnonContext";
 import { useHistory } from "react-router-dom";
 import TagList from '../tag-list/TagList';
-import PostsDisplay from "../posts/PostsDisplay";
+import PostsDisplay from "../threads/PostsDisplay";
 import '../styles/Landingpage.css';
 
-import PostContext from "../posts/PostContext";
+import PostContext from "../threads/PostContext";
 
 function Landingpage({getAllPosts}) {
 
