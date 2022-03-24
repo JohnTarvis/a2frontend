@@ -6,7 +6,7 @@ import ColoredLine from "../common/ColoredLine";
 import A2api2 from "../api/a2api2";
 import A2Api from "../api/a2api";
 
-import '../styles/Post.css';
+import '../styles/Thread.css';
 
 import picunrel from "../resources/images/picunrel.jpeg";
 
@@ -18,69 +18,69 @@ import ReplyForm from "./ReplyForm";
 
 
 
-function Post({createPost}) {
+function Thread({createThread}) {
 
     const {id} = useParams();
 
     const [showReplyForm,setShowReplyForm] = useState(false);
 
-    const [post, setPost] = useState(null);
-    useEffect(function getPostsOnMount() {
+    const [Thread, setThread] = useState(null);
+    useEffect(function getThreadsOnMount() {
         search();
     }, []);
   
     async function search() {
-        let result = await A2Api.getPosts({id:id});
-        setPost(result);
+        let result = await A2Api.getThreads({id:id});
+        setThread(result);
     }
 
     
 
-    if (!post) return <LoadingSpinner />;
+    if (!Thread) return <LoadingSpinner />;
 
     const punrel = 'https://a2uploads.s3.us-west-1.amazonaws.com/unrelated.jpg';
 
-    return <div className="post-page">
+    return <div className="Thread-page">
 
-                <div className="Post" id={`Post-${post[0].id}` }>
+                <div className="Thread" id={`Thread-${Thread[0].id}` }>
                     <div className="image-subject">
-                        {post.post_subject}
+                        {Thread.Thread_subject}
                     </div>
 
                     <ColoredLine color="white"/>
 
                     <div>
-                        <img src={post[0].image} alt='' className="post-image" />
+                        <img src={Thread[0].image} alt='' className="Thread-image" />
                     </div>
 
                     <ColoredLine color="white"/>
 
                     <div>
-                        {post[0].post_body}
+                        {Thread[0].Thread_body}
                     </div>
 
                     <ColoredLine color="white"/>
 
                     <small>
                         <div className='centered'>
-                            posted by : {post[0].poster_handle}
+                            Threaded by : {Thread[0].poster_handle}
                         </div>
 
                         <div className='centered'>
-                            posted at: {post[0].post_date}
+                            Threaded at: {Thread[0].post_date}
                         </div>
 
                         <div className='centered'>
-                            tags : {post[0].post_tags}
+                            tags : {Thread[0].post_tags}
                         </div>
                     </small>
 
                     <div>
-                        {post[0].admin_post}
+                        {Thread[0].admin_Thread}
                     </div>
 
                     <div>
-                        {post[0].reply_to}
+                        {Thread[0].reply_to}
                     </div>
 
                     <div>
@@ -89,7 +89,7 @@ function Post({createPost}) {
                 </div>
 
                 <div>
-                        {showReplyForm && <ReplyForm postNumber={id} createPost={createPost}/>}
+                        {showReplyForm && <ReplyForm ThreadNumber={id} createThread={createThread}/>}
                 </div>
 
                 <div>
@@ -101,4 +101,4 @@ function Post({createPost}) {
     
 }
 
-export default Post;
+export default Thread;
