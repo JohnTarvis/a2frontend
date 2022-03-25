@@ -38,15 +38,6 @@ class A2Api {
   static async createPost(params){
     let res = await this.request('post/',params,'post');
 
-    // params = Object.fromEntries(params);
-
-    // console.log(`
-    // ==========================================
-    //   params
-    // ==========================================
-    // `,params);
-    
-
     return res.posts;
   }
   static async deleteAllPosts(){
