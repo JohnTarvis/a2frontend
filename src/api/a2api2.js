@@ -42,7 +42,7 @@ class A2api2 {
 
 
 
-    static async getPosts(params){
+    static async getThreads(params){
         let res = await this.simpleRequest({method:'get',endpoint:'post/',data:params});
         return res.posts;
     }

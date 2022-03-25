@@ -18,12 +18,12 @@ function PostsDisplay(){
 
     const {allPosts,setAllPosts} = useContext(PostContext);
 
-    useEffect(function getPostsOnMount() {
+    useEffect(function getThreadsOnMount() {
       search();
     }, []);
   
     async function search(params) {
-      let posts = await A2Api.getPosts(params);
+      let posts = await A2Api.getThreads(params);
       setAllPosts(posts);
     }
 
