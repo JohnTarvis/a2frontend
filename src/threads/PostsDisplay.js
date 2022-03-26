@@ -55,10 +55,10 @@ function PostsDisplay(){
     }    
 
     return (
-      <div className="main-view" style = {style}>
+      <div className="main-view" >
         <TopBanner/>
         <div className="posts-display">
-          <div onClick={(e)=>clickHandler(e)}>
+          <div onClick={(e)=>clickHandler(e)} style = {style}>
             {allPosts.map(p => (
               <PostCard 
                 key={p.id}
