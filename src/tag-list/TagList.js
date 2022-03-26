@@ -20,10 +20,6 @@ function TagList(){
     const [tagsIncluded,setTagsIncluded] = useState(null);
     const [tagsExcluded,setTagsExcluded] = useState(null);
 
-    // const [toggleTags,setToggleTags] = useState(null);
-
-    // const [tagsInfo,setTagsInfo] = useState(null);
-
     const tagIncluded = 'tag-included';
     const tagExcluded = 'tag-excluded';
 

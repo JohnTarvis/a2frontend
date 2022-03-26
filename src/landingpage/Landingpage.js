@@ -6,8 +6,19 @@ import { useHistory } from "react-router-dom";
 import TagList from '../tag-list/TagList';
 import PostsDisplay from "../threads/PostsDisplay";
 import '../styles/Landingpage.css';
-
 import PostContext from "../threads/PostContext";
+
+function randomBG(){
+  let L = Math.ceil(Math.random() * 4);
+  return `#0${L}0${L}0${L}`;
+
+}
+
+const currentBG = randomBG();
+
+const style = {
+  backgroundColor: currentBG;
+}
 
 function Landingpage({getAllPosts}) {
 
@@ -17,7 +28,7 @@ function Landingpage({getAllPosts}) {
   const [allPosts,setAllPosts] = useState(null);
   return ( 
     <div>
-      <div className="Landingpage">
+      <div className="Landingpage" style={style}>
         <PostContext.Provider value={{allPosts,setAllPosts}}>
           <TagList/>
           <div className="PostsDisplay-container">
