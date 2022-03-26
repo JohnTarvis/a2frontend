@@ -20,7 +20,7 @@ function randomBG(){
 const currentBG = randomBG();
 
 const style = {
-  backgroundColor: 'orange',
+  backgroundColor: currentBG,
 }
 
 
