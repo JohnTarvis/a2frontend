@@ -69,9 +69,15 @@ class A2Api {
 
  ////////////////////////////////////////////////////////////////////////////////-tags
 
-  static async getTags(tag){
-    console.log('origtag========================================',tag);
-    let res = await this.request(`tag/`,{tag});
+  // static async getTags(tag){
+  //   console.log('origtag========================================',tag);
+  //   let res = await this.request(`tag/`,{tag});
+  //   return res;
+  // }
+
+  static async getTags(){
+    // console.log('origtag========================================',tag);
+    let res = await this.request(`tag/`);
     return res;
   }
 
