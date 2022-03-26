@@ -1,13 +1,8 @@
 import axios from "axios";
 
-
 const BASE_URL = 'https://damp-island-15072.herokuapp.com';
-
-
-
 class A2api2 {
     static token;
-    ///======================================================================================SIMPLE REQUEST
     static async simpleRequest(r = {method:'get',endpoint:'/',data:{}}){
         const {method, endpoint, data} = r;
         const url = `${BASE_URL}/${r.endpoint}`;
@@ -17,12 +12,12 @@ class A2api2 {
             'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
         }
         try {
-            await axios({
+            return await axios({
                 headers:headers,
                 method: method,
                 url: url,
                 data: data
-              });
+              }).data;
         } catch (err) {
             console.error("API Error:", err.response);
             let message = err.response.data.error.message;
