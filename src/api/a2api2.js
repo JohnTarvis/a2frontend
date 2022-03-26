@@ -12,12 +12,12 @@ class A2api2 {
             'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
         }
         try {
-            return await axios({
+            return (await axios({
                 headers:headers,
                 method: method,
                 url: url,
                 data: data
-              }).data;
+              })).data;
         } catch (err) {
             console.error("API Error:", err.response);
             let message = err.response.data.error.message;
