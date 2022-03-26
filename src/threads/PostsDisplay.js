@@ -12,8 +12,8 @@ import PostContext from "./PostContext";
 import A2api2 from "../api/a2api2";
 
 function randomBG(){
-  let L = Math.ceil(Math.random() * 4);
-  return `#0${L}0${L}0${L}`;
+  let L = () => Math.ceil(Math.random() * 8);
+  return `#${L()}${L()}${L()}`;
 
 }
 
