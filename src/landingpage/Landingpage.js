@@ -28,10 +28,10 @@ function Landingpage({getAllPosts}) {
   const [allPosts,setAllPosts] = useState(null);
   return ( 
     <div>
-      <div className="Landingpage" style={style}>
+      <div className="Landingpage" >
         <PostContext.Provider value={{allPosts,setAllPosts}}>
           <TagList/>
-          <div className="PostsDisplay-container">
+          <div className="PostsDisplay-container" style={style}>
             <div>
               <PostsDisplay getAllPosts={getAllPosts}/>
             </div>
