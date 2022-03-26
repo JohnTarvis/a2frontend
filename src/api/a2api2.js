@@ -20,7 +20,7 @@ class A2api2 {
             await axios({
                 headers:headers,
                 method: method,
-                url: url + endpoint,
+                url: url,
                 data: data
               });
         } catch (err) {
