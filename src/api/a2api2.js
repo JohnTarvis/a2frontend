@@ -44,9 +44,9 @@ class A2api2 {
 
 ///=============================================================================================TAGS
 
-    static async getTags(params){
-        let res = await this.simpleRequest({method:'get',endpoint:'tag/',data:{params}});
-        console.log('tags===================================',params);
+    static async getTags(){
+        let res = await this.simpleRequest({endpoint:'tag/'});
+        // console.log('tags===================================',params);
         return res;
     }
 
