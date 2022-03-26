@@ -33,7 +33,10 @@ function TagList(){
   
     async function search(params) {
         // console.log('PARAMS IN TAGLIST ',params);
-        let result = await A2Api.getTags(params);
+
+        // let result = await A2Api.getTags(params);
+        let result = await A2api2.getTags(params);
+
         result.tags.sort((a,b)=>{
             return a.tag > b.tag ? 1 : -1;
         });
