@@ -11,6 +11,18 @@ import PostContext from "./PostContext";
 
 import A2api2 from "../api/a2api2";
 
+function randomBG(){
+  let L = Math.ceil(Math.random() * 4);
+  return `#0${L}0${L}0${L}`;
+
+}
+
+const currentBG = randomBG();
+
+const style = {
+  backgroundColor: 'orange',
+}
+
 
 function PostsDisplay(){
 
@@ -43,7 +55,7 @@ function PostsDisplay(){
     }    
 
     return (
-      <div className="main-view">
+      <div className="main-view" style = {style}>
         <TopBanner/>
         <div className="posts-display">
           <div onClick={(e)=>clickHandler(e)}>

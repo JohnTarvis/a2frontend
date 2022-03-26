@@ -8,17 +8,7 @@ import PostsDisplay from "../threads/PostsDisplay";
 import '../styles/Landingpage.css';
 import PostContext from "../threads/PostContext";
 
-function randomBG(){
-  let L = Math.ceil(Math.random() * 4);
-  return `#0${L}0${L}0${L}`;
 
-}
-
-const currentBG = randomBG();
-
-const style = {
-  backgroundColor: 'orange',
-}
 
 function Landingpage({getAllPosts}) {
 
@@ -33,7 +23,7 @@ function Landingpage({getAllPosts}) {
           <TagList/>
           <div className="PostsDisplay-container" >
             <div >
-              <PostsDisplay getAllPosts={getAllPosts} style={style}/>
+              <PostsDisplay getAllPosts={getAllPosts} />
             </div>
           </div>
         </PostContext.Provider>
