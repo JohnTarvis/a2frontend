@@ -30,18 +30,7 @@ class A2api2 {
         }                   
     }
 
-
-
-
-
-
 ///=============================================================================================POSTS
-
-
-
-
-
-
 
     static async getThreads(params){
         let res = await this.simpleRequest({method:'get',endpoint:'post/',data:params});
@@ -58,16 +47,7 @@ class A2api2 {
     }
 
 
-
-
-
-
 ///=============================================================================================TAGS
-
-
-
-
-
 
     static async getTags(params){
         let res = await this.simpleRequest({method:'get',endpoint:'tag/',data:params});
@@ -83,11 +63,7 @@ class A2api2 {
         await this.simpleRequest({method:'delete',endpoint:'tag/',data:{}});
     }
 
-
-
-
 ///=============================================================================================ANONS
-
 
     static async getAnon(handle) {
         let res = await this.simpleRequest({method:'get',endpoint:`anon/${handle}`,data:{}});
@@ -108,16 +84,7 @@ class A2api2 {
         await this.simpleRequest({method:'delete',endpoint:'anon/',data:{}});
     }
 
-
-
-
-
 ///=============================================================================================PROFILE
-
-
-
-
-
 
     static async login(data) {
         let res = await this.simpleRequest({method:'post',data:data,endpoint:'auth/token'});

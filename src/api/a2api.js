@@ -30,7 +30,6 @@ class A2Api {
     return res;
   }
 
-
   static async getThreads(params){
     let res = await this.request(`post/`,params);
     return res.posts;
