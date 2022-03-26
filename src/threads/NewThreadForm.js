@@ -26,7 +26,7 @@ function generateRandomTags(number = 3, size=10){
   return back;
 }
 
-function NewPostForm({ createPost,testPost }) {
+function NewThreadForm({ createPost,testPost }) {
   const { anon } = useContext(AnonContext);
   const history = useHistory();
   const [formData, setFormData] = useState({
@@ -36,7 +36,7 @@ function NewPostForm({ createPost,testPost }) {
   });
   const [formErrors, setFormErrors] = useState([]);
   console.debug(
-      "NewPostForm",
+      "NewThreadForm",
       "createPost=", typeof createPost,
       "formData=", formData,
       "formErrors=", formErrors,
@@ -108,7 +108,7 @@ function NewPostForm({ createPost,testPost }) {
   }
 
   return (
-      <div className="NewPostForm">
+      <div className="NewThreadForm">
         <div className="container col-md-6 offset-md-3 col-lg-4 offset-lg-4">
           <h2 className="mb-3 text-primary">New Thread</h2>
           <div className="card">
@@ -178,4 +178,4 @@ function NewPostForm({ createPost,testPost }) {
   );
 }
 
-export default NewPostForm;
+export default NewThreadForm;

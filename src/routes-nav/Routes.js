@@ -3,7 +3,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import Landingpage from "../landingpage/Landingpage";
 import LoginForm from "../auth/LoginForm";
 import RegistrationForm from "../auth/RegistrationForm";
-import NewPostForm from "../threads/NewPostForm";
+import NewThreadForm from "../threads/NewThreadForm";
 import PostsDisplay from "../threads/PostsDisplay";
 import Post from "../threads/Thread";
 import FileUploadForm from "../threads/FileUploadForm";
@@ -35,7 +35,7 @@ function Routes({ login, register, createPost, getAllPosts, testPost }) {
           </Route>
 
           <Route exact path="/new-post">
-            <NewPostForm createPost={createPost}/>
+            <NewThreadForm createPost={createPost}/>
           </Route>
 
           <Route exact path="/file-upload">
@@ -43,7 +43,7 @@ function Routes({ login, register, createPost, getAllPosts, testPost }) {
           </Route>
 
           <Route exact path="/test-post">
-            <NewPostForm testPost={testPost}/>
+            <NewThreadForm testPost={testPost}/>
           </Route>
 
           <Route exact path="/posts">

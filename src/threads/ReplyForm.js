@@ -18,7 +18,7 @@ function ReplyForm({ createPost }, props) {
   });
   const [formErrors, setFormErrors] = useState([]);
   console.debug(
-      "NewPostForm",
+      "NewThreadForm",
       "createPost=", typeof createPost,
       "formData=", formData,
       "formErrors=", formErrors,
@@ -84,7 +84,7 @@ function ReplyForm({ createPost }, props) {
   }
 
   return (
-      <div className="NewPostForm">
+      <div className="NewThreadForm">
         <div className="container col-md-6 offset-md-3 col-lg-4 offset-lg-4">
           <h2 className="mb-3 text-primary">Reply</h2>
           <div className="card">
