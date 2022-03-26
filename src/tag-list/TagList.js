@@ -41,8 +41,8 @@ function TagList(){
         setTagsIncluded(sorted);
     }
 
-    function getAllPostCards(){
-        return document.querySelectorAll('.PostCard');
+    function getAllThreadPreviews(){
+        return document.querySelectorAll('.ThreadPreview');
     }
 
     function displayTaggedClient(e){
@@ -50,13 +50,13 @@ function TagList(){
         TagToggler.toggle(target);
         if(target.className != 'tag')return;
         const clickedTag = target.innerHTML;
-        const allPostCards = document.querySelectorAll('.PostCard');
-        for(let postCard of allPostCards){
-            const postCardId = postCard.id;
-            const tags = postCard.querySelector('.pc-tags').innerHTML;
+        const allThreadPreviews = document.querySelectorAll('.ThreadPreview');
+        for(let ThreadPreview of allThreadPreviews){
+            const ThreadPreviewId = ThreadPreview.id;
+            const tags = ThreadPreview.querySelector('.pc-tags').innerHTML;
             const tagArray = tags.split(/\W+/);
             if(!tagArray.includes(clickedTag)){
-                $(postCard).hide();
+                $(ThreadPreview).hide();
             }                        
         }
     }

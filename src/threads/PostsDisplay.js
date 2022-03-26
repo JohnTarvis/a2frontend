@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import SearchForm from "../common/SearchForm";
 import A2Api from "../api/a2api";
 import LoadingSpinner from "../common/LoadingSpinner";
-import PostCard from "./PostCard";
+import ThreadPreview from "./ThreadPreview";
 import { useHistory } from "react-router-dom";
 import '../styles/PostsDisplay.css';
 import TopBanner from "../top-banner/TopBanner";
@@ -46,7 +46,7 @@ function PostsDisplay(){
     function clickHandler(e){
       let elem = e.target;
       let maxJumps = 99;
-      while(elem.className != 'PostCard' && maxJumps > 0){
+      while(elem.className != 'ThreadPreview' && maxJumps > 0){
         maxJumps--;
         elem = elem.parentNode;
       }
@@ -60,7 +60,7 @@ function PostsDisplay(){
         <div className="posts-display" style = {style}>
           <div onClick={(e)=>clickHandler(e)} >
             {allPosts.map(p => (
-              <PostCard 
+              <ThreadPreview 
                 key={p.id}
                 post_date = {p.post_date}
                 poster_handle={p.poster_handle}

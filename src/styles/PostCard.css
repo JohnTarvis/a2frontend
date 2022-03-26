@@ -1,4 +1,4 @@
-.PostCard {
+.ThreadPreview {
   color: white;
   width:15rem;
   margin:7px;
@@ -11,11 +11,11 @@
 
 }
 
-.PostCard img {
+.ThreadPreview img {
   height: 150px;
 }
 
-.PostCard:hover { 
+.ThreadPreview:hover { 
   text-decoration: none;
   border:1px solid white;
 }

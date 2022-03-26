@@ -14,9 +14,9 @@ class TagToggler{
         return tags;
     }
 
-    static getPostCards(){
-        const postCards = $('.PostCard');
-        return postCards;
+    static getThreadPreviews(){
+        const ThreadPreviews = $('.ThreadPreview');
+        return ThreadPreviews;
     }
 
     static tagInclusion(tagElement){
@@ -27,8 +27,8 @@ class TagToggler{
         return tagElement.innerHTML;
     }
 
-    static hasTag(postCard,tagElement){
-        const tags = postCard.querySelector('.pc-tags').innerHTML;
+    static hasTag(ThreadPreview,tagElement){
+        const tags = ThreadPreview.querySelector('.pc-tags').innerHTML;
         const tagArray = tags.split(/\W+/);
         return tagArray.includes(this.tag(tagElement));
     }
@@ -44,10 +44,10 @@ class TagToggler{
     }
 
     static displaySelected(){
-        $('.PostCard').show();
-        const postCards = this.getPostCards();
+        $('.ThreadPreview').show();
+        const ThreadPreviews = this.getThreadPreviews();
 
-        // console.log('postcards======================================',$('.PostCard'));
+        // console.log('ThreadPreviews======================================',$('.ThreadPreview'));
 
         const excludedTags = $('.excluded');
         const includedTags = $('.included');
@@ -65,23 +65,23 @@ class TagToggler{
 
         for(let tag of includedTags){
 
-            for(let postCard of postCards){
+            for(let ThreadPreview of ThreadPreviews){
 
-                if( !this.hasTag(postCard,tag) )
-                    $(postCard).hide();
+                if( !this.hasTag(ThreadPreview,tag) )
+                    $(ThreadPreview).hide();
                 else
-                    $(postCard).show();
+                    $(ThreadPreview).show();
 
             }
         }
 
         for(let tag of excludedTags){
-            for(let postCard of postCards){
+            for(let ThreadPreview of ThreadPreviews){
                 
-                if( !this.hasTag(postCard,tag) )
-                    $(postCard).show();
+                if( !this.hasTag(ThreadPreview,tag) )
+                    $(ThreadPreview).show();
                 else
-                    $(postCard).hide();
+                    $(ThreadPreview).hide();
 
             }
         }
@@ -89,8 +89,8 @@ class TagToggler{
 
     }
 
-    static showAllPostCards(){
-        $('.PostCard').show();
+    static showAllThreadPreviews(){
+        $('.ThreadPreview').show();
     }
 
     static isTagElement(tagElement){
@@ -112,21 +112,21 @@ class TagToggler{
     static shouldHaveTag(tagElement){
         return this.toggles.indexOf(tagElement.className) - 1;
     }
-    static _hasTag(postCard,tagElement){
-        const tags = postCard.querySelector('.pc-tags').innerHTML;
+    static _hasTag(ThreadPreview,tagElement){
+        const tags = ThreadPreview.querySelector('.pc-tags').innerHTML;
         const tagArray = tags.split(/\W+/);
         return tagArray.includes(this.tag(tagElement)) ? 1 : -1;
     }
 
-    static shouldShow(tagElement,postCard, threshold = -1){
-        // const algo = this.hasTag(postCard,tagElement) * this.shouldHaveTag(tagElement);
+    static shouldShow(tagElement,ThreadPreview, threshold = -1){
+        // const algo = this.hasTag(ThreadPreview,tagElement) * this.shouldHaveTag(tagElement);
         // console.log('algo=================================',algo);
         // console.log(`${this.tag(tagElement)} algo at: ${algo}`);
         let back = true;
-        if((this.shouldHaveTag(tagElement) === -1) && this.hasTag(postCard,tagElement) === 1){
+        if((this.shouldHaveTag(tagElement) === -1) && this.hasTag(ThreadPreview,tagElement) === 1){
             back = false;
         } else 
-        if((this.shouldHaveTag(tagElement)) === 1 && this.hasTag(postCard,tagElement) === -1){
+        if((this.shouldHaveTag(tagElement)) === 1 && this.hasTag(ThreadPreview,tagElement) === -1){
             back = false;
         } 
         return back;     
@@ -134,21 +134,21 @@ class TagToggler{
 
 
 
-    static filterPostCards(tagElement){
-        this.showAllPostCards();
-        const allPostCards = document.querySelectorAll('.PostCard');
-        for(let postCard of allPostCards){
+    static filterThreadPreviews(tagElement){
+        this.showAllThreadPreviews();
+        const allThreadPreviews = document.querySelectorAll('.ThreadPreview');
+        for(let ThreadPreview of allThreadPreviews){
 
-            const shouldShow = this.shouldShow(tagElement,postCard);
+            const shouldShow = this.shouldShow(tagElement,ThreadPreview);
 
-            // console.log(`postcard ${postCard.id} shouldShow?: ${shouldShow}`);
+            // console.log(`ThreadPreview ${ThreadPreview.id} shouldShow?: ${shouldShow}`);
 
             if(shouldShow)
-                $(postCard).show();
+                $(ThreadPreview).show();
             else
-                $(postCard).hide();
+                $(ThreadPreview).hide();
 
-            // console.log(`postcard ${postCard.id} is showing?: ${$(postCard).is(':visible')}`);
+            // console.log(`ThreadPreview ${ThreadPreview.id} is showing?: ${$(ThreadPreview).is(':visible')}`);
 
         }
     }

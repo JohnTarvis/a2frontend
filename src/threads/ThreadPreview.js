@@ -5,13 +5,13 @@ import picunrel from "../resources/images/picunrel.jpeg";
 
 import ColoredLine from "../common/ColoredLine";
 
-import '../styles/PostCard.css';
+import '../styles/ThreadPreview.css';
 
 
-function PostCard(props) {
+function ThreadPreview(props) {
     const punrel = 'https://a2uploads.s3.us-west-1.amazonaws.com/picunrel.jpg';
     return (
-            <div className="PostCard" id={`postcard-${props.id}` }>
+            <div className="ThreadPreview" id={`ThreadPreview-${props.id}` }>
 
                 <div>
                     <img src={props.image || punrel} alt='' className="post-image-preview" />
@@ -49,4 +49,4 @@ function PostCard(props) {
     );
 }
 
-export default PostCard;
+export default ThreadPreview;
