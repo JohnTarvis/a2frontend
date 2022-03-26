@@ -32,8 +32,8 @@ function Landingpage({getAllPosts}) {
         <PostContext.Provider value={{allPosts,setAllPosts}}>
           <TagList/>
           <div className="PostsDisplay-container" >
-            <div style={style}>
-              <PostsDisplay getAllPosts={getAllPosts}/>
+            <div >
+              <PostsDisplay getAllPosts={getAllPosts} style={style}/>
             </div>
           </div>
         </PostContext.Provider>
