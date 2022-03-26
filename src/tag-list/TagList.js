@@ -9,8 +9,8 @@ import $ from 'jquery';
 
 import TagToggler from "./TagToggler";
 
-// import A2api2 from "../api/a2api2";
-import A2Api from "../api/a2api";
+import A2api2 from "../api/a2api2";
+// import A2Api from "../api/a2api";
 
 
 function TagList(){
@@ -30,8 +30,8 @@ function TagList(){
     async function search(params) {
         // console.log('PARAMS IN TAGLIST ',params);
 
-        let result = await A2Api.getTags(params);
-        // let result = await A2api2.getTags(params);
+        // let result = await A2Api.getTags(params);
+        let result = await A2api2.getTags();
 
         result.tags.sort((a,b)=>{
             return a.tag > b.tag ? 1 : -1;
