@@ -17,7 +17,7 @@ function randomBG(){
 const currentBG = randomBG();
 
 const style = {
-  backgroundColor: currentBG,
+  backgroundColor: 'orange',
 }
 
 function Landingpage({getAllPosts}) {
