@@ -51,7 +51,7 @@ function ThreadsDisplay(){
         elem = elem.parentNode;
       }
       const postId = elem.id.slice(14);
-      console.log('postid=================================',postId);
+      // console.log('postid=================================',postId);
       history.push(`/posts/${postId}`);
     }    
 

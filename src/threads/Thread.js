@@ -40,7 +40,7 @@ function Thread({createThread}) {
     }
 
 
-    console.log('thread number=================================',id);
+    // console.log('thread number=================================',id);
     
 
     if (!Thread) return <LoadingSpinner />;
