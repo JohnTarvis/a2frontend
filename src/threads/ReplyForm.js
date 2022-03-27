@@ -12,7 +12,7 @@ import axios from "axios";
 
 function ReplyForm({ createPost }, props) {
 
-  console.log('test=============================',props.test);
+  console.log('test=============================',props.name);
 
   const { anon } = useContext(AnonContext);
   const history = useHistory();
