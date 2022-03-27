@@ -50,7 +50,7 @@ function PostsDisplay(){
         maxJumps--;
         elem = elem.parentNode;
       }
-      const postId = elem.id.slice(12);
+      const postId = elem.id.slice(14);
       console.log('postid=================================',postId);
       history.push(`/posts/${postId}`);
     }    
