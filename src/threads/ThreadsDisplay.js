@@ -4,7 +4,7 @@ import A2Api from "../api/a2api";
 import LoadingSpinner from "../common/LoadingSpinner";
 import ThreadPreview from "./ThreadPreview";
 import { useHistory } from "react-router-dom";
-import '../styles/PostsDisplay.css';
+import '../styles/ThreadsDisplay.css';
 import TopBanner from "../top-banner/TopBanner";
 
 import PostContext from "./PostContext";
@@ -24,7 +24,7 @@ const style = {
 }
 
 
-function PostsDisplay(){
+function ThreadsDisplay(){
 
     // const [posts, setPosts] = useState(null);
 
@@ -84,4 +84,4 @@ function PostsDisplay(){
 }
 
 
-export default PostsDisplay;
+export default ThreadsDisplay;

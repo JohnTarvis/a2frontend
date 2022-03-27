@@ -4,7 +4,7 @@ import Landingpage from "../landingpage/Landingpage";
 import LoginForm from "../auth/LoginForm";
 import RegistrationForm from "../auth/RegistrationForm";
 import NewThreadForm from "../threads/NewThreadForm";
-import PostsDisplay from "../threads/PostsDisplay";
+import ThreadsDisplay from "../threads/ThreadsDisplay";
 import Post from "../threads/Thread";
 import FileUploadForm from "../threads/FileUploadForm";
 
@@ -47,7 +47,7 @@ function Routes({ login, register, createPost, getAllPosts, testPost }) {
           </Route>
 
           <Route exact path="/posts">
-            <PostsDisplay />
+            <ThreadsDisplay />
           </Route>
 
           <Route exact path="/posts/:id">
