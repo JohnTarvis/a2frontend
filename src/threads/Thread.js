@@ -103,6 +103,8 @@ function Thread({createThread}) {
 
                 <div>
 
+                    THREAD ID={id}
+
                 </div>
 
             </div>
