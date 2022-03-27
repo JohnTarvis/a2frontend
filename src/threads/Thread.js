@@ -98,7 +98,7 @@ function Thread({createThread}) {
                 </div>
 
                 <div>
-                        {showReplyForm && <ReplyForm ThreadNumber={id} createThread={createThread}/>}
+                        {showReplyForm && <ReplyForm ThreadNumber={id} createThread={createThread} test={5}/>}
                 </div>
 
                 <div>
