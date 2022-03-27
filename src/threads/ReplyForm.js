@@ -10,9 +10,9 @@ import axios from "axios";
 ////////////////////////////////////////////////////////////////////////////////////////GENERATE RANDOM TAGS
 
 
-function ReplyForm({ createPost },props) {
+function ReplyForm({ createPost }, ThreadNumber) {
 
-  console.log('props=============================',props);
+  console.log('props=============================',ThreadNumber);
 
   const { anon } = useContext(AnonContext);
   const history = useHistory();
