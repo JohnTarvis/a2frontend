@@ -11,6 +11,9 @@ import axios from "axios";
 
 
 function ReplyForm({ createPost }, props) {
+
+  console.log('props=============================',props);
+
   const { anon } = useContext(AnonContext);
   const history = useHistory();
   const [formData, setFormData] = useState({
@@ -69,6 +72,7 @@ function ReplyForm({ createPost }, props) {
     }
 
   };
+
 
 ////////////////////////////////////////////////////////////////////////////////////////HANDLE CHANGE
 
