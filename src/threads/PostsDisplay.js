@@ -51,6 +51,7 @@ function PostsDisplay(){
         elem = elem.parentNode;
       }
       const postId = elem.id.slice(9);
+      console.log('postid=================================',postId);
       history.push(`/posts/${postId}`);
     }    
 
