@@ -10,7 +10,7 @@ import axios from "axios";
 ////////////////////////////////////////////////////////////////////////////////////////GENERATE RANDOM TAGS
 
 
-function ReplyForm({ createPost,props }) {
+function ReplyForm({ createPost }) {
 
   console.log('props=============================',props);
 
