@@ -36,6 +36,8 @@ function Thread({createThread}) {
   
     async function search() {
         let result = await A2Api.getThreads({id:id});
+        console.log('thread number=================================',id);
+
         setThread(result);
     }
 
