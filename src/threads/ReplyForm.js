@@ -12,6 +12,8 @@ import axios from "axios";
 
 function ReplyForm(props,{ createThread }) {
 
+  console.log('createthread in replyform==============================',createThread)
+
 
 
   const { anon } = useContext(AnonContext);
