@@ -35,7 +35,7 @@ function ReplyForm(props,{ createThread }) {
 
     evt.preventDefault();
 
-    console.log('newthreadfunction=========================================',createThread);
+    // console.log('newthreadfunction=========================================',createThread);
 
 
 
