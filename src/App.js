@@ -73,13 +73,6 @@ function App() {
   async function createThread(postData){
     try {
 
-      // if(anon){
-      //   postData.poster_handle = anon.handle;
-      // } else {
-      //   postData.poster_handle = 'anonymous';
-      // }
-
-
       if(anon){
         postData.append('poster_handle',anon.handle);
       } else {
@@ -87,13 +80,8 @@ function App() {
       }
 
       await A2Api.createThread(postData);
-
       const tags = postData.get('post_tags');
-
-      // console.log('tags=========================================',tags);
-
       await createTags(tags);
-
 
       return { success: true };
     } catch (errors) {
@@ -110,9 +98,6 @@ function App() {
       } else {
         postData.poster_handle = 'anonymous';
       }
-
-      console.log('test~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
-
       await A2Api.testPost(postData);
 
       return { success: true };

@@ -24,7 +24,7 @@ const style = {
 }
 
 
-function ThreadsDisplay(){
+function ThreadsDisplay({createThread}){
 
     // const [posts, setPosts] = useState(null);
 

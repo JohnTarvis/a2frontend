@@ -18,7 +18,7 @@ import ReplyForm from "./ReplyForm";
 
 
 
-function Thread(props,{createThread}) {
+function Thread({createThread}) {
 
     console.log('createthread in Thread===============================================',createThread);
 
