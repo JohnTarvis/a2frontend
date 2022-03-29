@@ -20,6 +20,9 @@ import ReplyForm from "./ReplyForm";
 
 function Thread(props,{createThread}) {
 
+    console.log('createthread in Thread===============================================',createThread);
+
+
     const {id} = useParams();
 
     const [showReplyForm,setShowReplyForm] = useState(false);
