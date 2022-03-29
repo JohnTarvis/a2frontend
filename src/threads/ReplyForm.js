@@ -10,7 +10,7 @@ import axios from "axios";
 ////////////////////////////////////////////////////////////////////////////////////////GENERATE RANDOM TAGS
 
 
-function ReplyForm(props,{ createPost }) {
+function ReplyForm(props,{ createThread }) {
 
   // console.log('test=============================',props.ThreadNumber);
 
@@ -65,7 +65,7 @@ function ReplyForm(props,{ createPost }) {
     //////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////
 
-    let result = await createPost(formData2);
+    let result = await createTread(formData2);
 
     if (result.success) {
       history.push("/");
