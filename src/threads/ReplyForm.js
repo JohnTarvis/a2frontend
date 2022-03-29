@@ -12,7 +12,7 @@ import axios from "axios";
 
 function ReplyForm(props,{ createPost }) {
 
-  console.log('test=============================',props.ThreadNumber);
+  // console.log('test=============================',props.ThreadNumber);
 
   const { anon } = useContext(AnonContext);
   const history = useHistory();
@@ -57,7 +57,7 @@ function ReplyForm(props,{ createPost }) {
 
     /////////////////
 
-    formData2.append('reply_to',props.postNumber)
+    formData2.append('reply_to',props.ThreadNumber)
     // formData2.append('reply_to',ThreadNumber)
 
 
