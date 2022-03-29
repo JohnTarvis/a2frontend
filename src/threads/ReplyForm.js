@@ -14,8 +14,6 @@ function ReplyForm(props,{ createThread }) {
 
   console.log('createthread in replyform==============================',createThread)
 
-
-
   const { anon } = useContext(AnonContext);
   const history = useHistory();
   const [formData, setFormData] = useState({

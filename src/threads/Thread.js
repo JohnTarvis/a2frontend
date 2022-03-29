@@ -22,7 +22,6 @@ function Thread({createThread}) {
 
     console.log('createthread in Thread===============================================',createThread);
 
-
     const {id} = useParams();
 
     const [showReplyForm,setShowReplyForm] = useState(false);
@@ -34,14 +33,8 @@ function Thread({createThread}) {
   
     async function search() {
         let result = await A2Api.getThreads({id:id});
-        // console.log('thread number=================================',id);
-
         setThread(result);
-    }
-
-
-    // console.log('thread number=================================',id);
-    
+    }    
 
     if (!Thread) return <LoadingSpinner />;
 
