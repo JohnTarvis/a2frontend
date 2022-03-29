@@ -51,7 +51,7 @@ function Routes({ login, register, createThread, getAllPosts, testPost }) {
           </Route>
 
           <Route exact path="/posts/:id">
-            <Post />
+            <Thread createThread={createThread}/>
           </Route>
           
 
