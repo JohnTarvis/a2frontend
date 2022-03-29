@@ -18,7 +18,7 @@ import ReplyForm from "./ReplyForm";
 
 
 
-function Thread({createThread}) {
+function Thread(props,{createThread}) {
 
     const {id} = useParams();
 
