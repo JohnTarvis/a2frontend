@@ -5,7 +5,7 @@ import LoginForm from "../auth/LoginForm";
 import RegistrationForm from "../auth/RegistrationForm";
 import NewThreadForm from "../threads/NewThreadForm";
 import ThreadsDisplay from "../threads/ThreadsDisplay";
-import Post from "../threads/Thread";
+import Thread from "../threads/Thread";
 import FileUploadForm from "../threads/FileUploadForm";
 
 
