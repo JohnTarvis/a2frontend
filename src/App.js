@@ -70,7 +70,7 @@ function App() {
     } 
   }
 /////////////////////////////////////////////////////////////////////////CREATE POST
-  async function createPost(postData){
+  async function createThread(postData){
     try {
 
       // if(anon){
@@ -86,7 +86,7 @@ function App() {
         postData.append('poster_handle','anonymous');
       }
 
-      await A2Api.createPost(postData);
+      await A2Api.createThread(postData);
 
       const tags = postData.get('post_tags');
 
@@ -142,7 +142,7 @@ function App() {
             <Navigation logout={logout} />
             <Routes login={login} 
                     register={register} 
-                    createPost={createPost} 
+                    createThread={createThread} 
                     testPost={testPost}/>
           </div>
         </AnonContext.Provider>

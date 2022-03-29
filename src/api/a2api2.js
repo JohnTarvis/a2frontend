@@ -32,7 +32,7 @@ class A2api2 {
         return res.posts;
     }
 
-    static async createPost(params){
+    static async createThread(params){
         let res = await this.simpleRequest({method:'post',endpoint:'post/',data:params});
         return res.posts;
     }

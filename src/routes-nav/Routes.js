@@ -10,7 +10,7 @@ import FileUploadForm from "../threads/FileUploadForm";
 
 
 
-function Routes({ login, register, createPost, getAllPosts, testPost }) {
+function Routes({ login, register, createThread, getAllPosts, testPost }) {
   // console.debug(
   //     "Routes",
   //     `login=${typeof login}`,
@@ -35,7 +35,7 @@ function Routes({ login, register, createPost, getAllPosts, testPost }) {
           </Route>
 
           <Route exact path="/new-post">
-            <NewThreadForm createPost={createPost}/>
+            <NewThreadForm createThread={createThread}/>
           </Route>
 
           <Route exact path="/file-upload">

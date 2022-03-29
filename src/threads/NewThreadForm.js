@@ -26,7 +26,7 @@ function generateRandomTags(number = 3, size=10){
   return back;
 }
 
-function NewThreadForm({ createPost,testPost }) {
+function NewThreadForm({ createThread,testPost }) {
   const { anon } = useContext(AnonContext);
   const history = useHistory();
   const [formData, setFormData] = useState({
@@ -37,7 +37,7 @@ function NewThreadForm({ createPost,testPost }) {
   const [formErrors, setFormErrors] = useState([]);
   console.debug(
       "NewThreadForm",
-      "createPost=", typeof createPost,
+      "createThread=", typeof createThread,
       "formData=", formData,
       "formErrors=", formErrors,
       'testPost=',testPost,
@@ -84,7 +84,7 @@ function NewThreadForm({ createPost,testPost }) {
     //////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////
 
-    let result = await createPost(formData2);
+    let result = await createThread(formData2);
 
     if (result.success) {
       history.push("/");

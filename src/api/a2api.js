@@ -34,7 +34,7 @@ class A2Api {
     let res = await this.request(`post/`,params);
     return res.posts;
   }
-  static async createPost(params){
+  static async createThread(params){
     let res = await this.request('post/',params,'post');
 
     return res.posts;

@@ -8,11 +8,6 @@ import A2Api from "../api/a2api";
 
 import '../styles/test.css';
 
-
-
-
-
-
 import picunrel from "../resources/images/picunrel.jpeg";
 
 import ReplyForm from "./ReplyForm";

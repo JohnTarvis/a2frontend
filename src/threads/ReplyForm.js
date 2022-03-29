@@ -14,6 +14,8 @@ function ReplyForm(props,{ createThread }) {
 
   // console.log('test=============================',props.ThreadNumber);
 
+  console.log('newthreadfunction=========================================',createThread);
+
   const { anon } = useContext(AnonContext);
   const history = useHistory();
   const [formData, setFormData] = useState({
@@ -22,7 +24,7 @@ function ReplyForm(props,{ createThread }) {
   const [formErrors, setFormErrors] = useState([]);
   console.debug(
       "NewThreadForm",
-      "createPost=", typeof createPost,
+      "createThread=", typeof createThread,
       "formData=", formData,
       "formErrors=", formErrors,
   );
