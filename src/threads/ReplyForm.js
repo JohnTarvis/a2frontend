@@ -12,9 +12,7 @@ import axios from "axios";
 
 function ReplyForm(props,{ createThread }) {
 
-  // console.log('test=============================',props.ThreadNumber);
 
-  console.log('newthreadfunction=========================================',createThread);
 
   const { anon } = useContext(AnonContext);
   const history = useHistory();
@@ -34,6 +32,11 @@ function ReplyForm(props,{ createThread }) {
   async function handleSubmit(evt) {
 
     evt.preventDefault();
+
+    console.log('newthreadfunction=========================================',createThread);
+
+
+
     const date = new Date();
     formData.post_date = date;
     formData.upload = selectedFile;
