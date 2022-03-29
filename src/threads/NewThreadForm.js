@@ -43,6 +43,9 @@ function NewThreadForm({ createThread,testPost }) {
       'testPost=',testPost,
   );
 
+  console.log('createthread in newthreadform===============================================',createThread);
+
+
 ////////////////////////////////////////////////////////////////////////////////////////HANDLE SUBMIT
 
   function renameFile(originalFile, newName) {
@@ -53,6 +56,8 @@ function NewThreadForm({ createThread,testPost }) {
   }
 
   async function handleSubmit(evt) {
+
+    console.log('createthread in newthreadform===============================================',createThread);
 
     evt.preventDefault();
     const date = new Date();
