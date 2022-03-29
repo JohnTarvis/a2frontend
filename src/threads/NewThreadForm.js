@@ -57,7 +57,7 @@ function NewThreadForm({ createThread,testPost }) {
 
   async function handleSubmit(evt) {
 
-    console.log('createthread in newthreadform===============================================',createThread);
+    // console.log('createthread in newthreadform===============================================',createThread);
 
     evt.preventDefault();
     const date = new Date();
