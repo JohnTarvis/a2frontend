@@ -81,7 +81,10 @@ function App() {
 
       await A2Api.createThread(postData);
       const tags = postData.get('post_tags');
-      await createTags(tags);
+
+      if(!!tags){
+        await createTags(tags);
+      }
 
       return { success: true };
     } catch (errors) {
