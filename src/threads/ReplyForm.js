@@ -13,6 +13,8 @@ import axios from "axios";
 function ReplyForm(props,{ createThread }) {
 
   console.log('createthread in replyform==============================',createThread)
+  console.log('createthread in props????==============================',props.createThread)
+
 
   const { anon } = useContext(AnonContext);
   const history = useHistory();
