@@ -15,7 +15,7 @@ function ReplyForm(props,{ createThread }) {
   // console.log('createthread in replyform==============================',createThread)
   // console.log('createthread in props????==============================',props.createThread)
 
-  console.log('props threadnumber========================',props.ThreadNumber);
+  // console.log('props threadnumber========================',props.ThreadNumber);
 
 
   const { anon } = useContext(AnonContext);
@@ -37,9 +37,7 @@ function ReplyForm(props,{ createThread }) {
 
     evt.preventDefault();
 
-    // console.log('newthreadfunction=========================================',createThread);
-
-
+    
 
     const date = new Date();
     formData.post_date = date;
@@ -65,7 +63,7 @@ function ReplyForm(props,{ createThread }) {
     formData2.append('post_date',date);
 
 
-    formData2.append('reply_to',parseInt(props.ThreadNumber))
+    formData2.append('reply_to',props.ThreadNumber);
     // formData2.append('reply_to',ThreadNumber)
 
 
