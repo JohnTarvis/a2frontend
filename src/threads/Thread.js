@@ -20,7 +20,7 @@ import ReplyForm from "./ReplyForm";
 
 function Thread({createThread}) {
 
-    console.log('createthread in Thread===============================================',createThread);
+    // console.log('createthread in Thread===============================================',createThread);
 
     const {id} = useParams();
 
