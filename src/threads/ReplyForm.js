@@ -65,7 +65,7 @@ function ReplyForm(props,{ createThread }) {
     formData2.append('post_date',date);
 
 
-    formData2.append('reply_to',props.ThreadNumber)
+    formData2.append('reply_to',parseInt(props.ThreadNumber))
     // formData2.append('reply_to',ThreadNumber)
 
 
