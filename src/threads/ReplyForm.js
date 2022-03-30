@@ -15,7 +15,7 @@ function ReplyForm(props,{ createThread }) {
   // console.log('createthread in replyform==============================',createThread)
   // console.log('createthread in props????==============================',props.createThread)
 
-  console.log(props.ThreadNumber);
+  console.log('props threadnumber========================',props.ThreadNumber);
 
 
   const { anon } = useContext(AnonContext);
