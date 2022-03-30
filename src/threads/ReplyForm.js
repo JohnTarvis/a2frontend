@@ -12,8 +12,8 @@ import axios from "axios";
 
 function ReplyForm(props,{ createThread }) {
 
-  console.log('createthread in replyform==============================',createThread)
-  console.log('createthread in props????==============================',props.createThread)
+  // console.log('createthread in replyform==============================',createThread)
+  // console.log('createthread in props????==============================',props.createThread)
 
 
   const { anon } = useContext(AnonContext);
@@ -72,7 +72,7 @@ function ReplyForm(props,{ createThread }) {
     //////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////
 
-    let result = await createThread(formData2);
+    let result = await props.createThread(formData2);
 
     if (result.success) {
       history.push("/");
