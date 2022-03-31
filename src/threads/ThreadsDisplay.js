@@ -26,8 +26,6 @@ const style = {
 
 function ThreadsDisplay({createThread}){
 
-    // const [posts, setPosts] = useState(null);
-
     const {allPosts,setAllPosts} = useContext(PostContext);
 
     useEffect(function getThreadsOnMount() {
@@ -43,6 +41,8 @@ function ThreadsDisplay({createThread}){
 
     if (!allPosts) return <LoadingSpinner />;
 
+    allPosts = allPosts.filter((post) => !post.reply_to)
+
     function clickHandler(e){
       let elem = e.target;
       let maxJumps = 99;
@@ -51,7 +51,6 @@ function ThreadsDisplay({createThread}){
         elem = elem.parentNode;
       }
       const postId = elem.id.slice(14);
-      // console.log('postid=================================',postId);
       history.push(`/posts/${postId}`);
     }    
 
@@ -75,11 +74,8 @@ function ThreadsDisplay({createThread}){
               />
             ))}   
           </div>;
-          
         </div>
-
       </div>
-
     );
 }
 
