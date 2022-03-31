@@ -12,9 +12,7 @@ import picunrel from "../resources/images/picunrel.jpeg";
 
 import ReplyForm from "./ReplyForm";
 
-// function displayReplyForm(){
-//     return <ReplyForm/>;
-// }
+import '../styles/Thread.css';
 
 
 
