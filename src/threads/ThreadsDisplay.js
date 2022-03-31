@@ -26,7 +26,7 @@ const style = {
 
 function ThreadsDisplay({createThread}){
 
-    const {allPosts,setAllPosts} = useContext(PostContext);
+    let {allPosts,setAllPosts} = useContext(PostContext);
 
     useEffect(function getThreadsOnMount() {
       search();
