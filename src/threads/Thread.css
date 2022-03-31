@@ -13,9 +13,10 @@ button{
     display:inline-block;
     overflow: hidden;
     padding:5px;
-    /* background-color: #002244; */
 
-    background-color: red;
+    background-color: #002244;
+
+    /* background-color: red; */
   }
   
   .Thread-image-preview{
