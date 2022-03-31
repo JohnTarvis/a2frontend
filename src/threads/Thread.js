@@ -38,8 +38,8 @@ function Thread({createThread}) {
         // let result = await A2Api.getThreads({id:id});
 
         let allThreads = await A2Api.getThreads();
-        let currentThread = allThreads.filter((thread)=>thread.id = id);
-        let replies = allThreads.filter((thread)=>thread.reply_to = id);
+        let currentThread = allThreads.filter((thread)=>thread.id == id);
+        let replies = allThreads.filter((thread)=>thread.reply_to == id);
 
         setThread(currentThread);
         setReplies(replies);
