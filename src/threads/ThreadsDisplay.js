@@ -39,6 +39,7 @@ function ThreadsDisplay(){
     }
 
     const history = useHistory();
+    
 
     if (!allPosts) return <LoadingSpinner />;
 
