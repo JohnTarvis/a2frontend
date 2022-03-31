@@ -24,7 +24,7 @@ const style = {
 }
 
 
-function ThreadsDisplay({createThread}){
+function ThreadsDisplay(){
 
     const {allPosts,setAllPosts} = useContext(PostContext);
 
