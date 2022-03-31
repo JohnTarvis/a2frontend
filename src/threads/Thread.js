@@ -56,7 +56,7 @@ function Thread({createThread}) {
                     <ColoredLine color="white"/>
 
                     <div>
-                        {Thread[0].Thread_body}
+                        {Thread[0].post_body}
                     </div>
 
                     <ColoredLine color="white"/>
