@@ -26,14 +26,14 @@ const style = {
 
 function ThreadsDisplay({createThread}){
 
-    let {allPosts,setAllPosts} = useContext(PostContext);
+    const {allPosts,setAllPosts} = useContext(PostContext);
 
     useEffect(function getThreadsOnMount() {
       search();
     }, []);
   
     async function search(params) {
-      let posts = await A2Api.getThreads(params);
+      let posts = await A2Api.getThreads(params).filter((post)=>!post.reply_to);
       setAllPosts(posts);
     }
 
@@ -41,7 +41,7 @@ function ThreadsDisplay({createThread}){
 
     if (!allPosts) return <LoadingSpinner />;
 
-    allPosts = allPosts.filter((post) => !post.reply_to)
+    // allPosts = allPosts.filter((post) => !post.reply_to)
 
     function clickHandler(e){
       let elem = e.target;
