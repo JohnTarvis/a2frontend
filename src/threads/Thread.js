@@ -109,7 +109,12 @@ function Thread({createThread}) {
                 <div>
                 {Replies.map(p => (
 
-                    <>
+                    <div className = 'reply'>
+
+                        <div>
+                            <img src={p.image} alt='' className="reply-image" />
+                        </div>
+
                         <div>
                             id: {p.id}
                         </div>
@@ -126,11 +131,9 @@ function Thread({createThread}) {
                             post_body: {p.post_body}
                         </div>
 
-                        <div>
-                            <img src={p.image} alt='' className="reply-image" />
-                        </div>
+
                         
-                    </>
+                    </div>
 
 
                     ))}  

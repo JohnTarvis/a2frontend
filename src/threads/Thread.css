@@ -47,3 +47,10 @@ button{
   .reply-image{
     max-width: 30%;
   }
+
+
+
+  .reply{
+    background-color: #001122;
+    border:1px solid blue;
+  }
