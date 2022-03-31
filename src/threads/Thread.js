@@ -27,13 +27,22 @@ function Thread({createThread}) {
     const [showReplyForm,setShowReplyForm] = useState(false);
 
     const [Thread, setThread] = useState(null);
-    useEffect(function getThreadsOnMount() {
+
+    const [Replies, setReplies] = useState([]);
+
+    useEffect(function getRepliesOnMount() {
         search();
     }, []);
   
     async function search() {
-        let result = await A2Api.getThreads({id:id});
-        setThread(result);
+        // let result = await A2Api.getThreads({id:id});
+
+        let allThreads = await A2Api.getThreads();
+        let currentThread = allThreads.filter((thread)=>thread.id = id);
+        let replies = allThreads.filter((thread)=>thread.reply_to = id);
+
+        setThread(currentThread);
+        setReplies(replies);
     }    
 
     if (!Thread) return <LoadingSpinner />;
@@ -96,6 +105,37 @@ function Thread({createThread}) {
 
                     THREAD ID={id}
 
+                </div>
+
+
+                <div>
+                {Replies.map(p => (
+
+                    <>
+                        <div>
+                            id: {p.id}
+                        </div>
+
+                        <div>
+                            date: {p.post_date}
+                        </div>
+
+                        <div>
+                            poster_handle:{p.poster_handle}
+                        </div>
+
+                        <div>
+                            post_body: {p.post_body}
+                        </div>
+
+                        <div>
+                            image = {p.image}
+                        </div>
+                        
+                    </>
+
+
+                    ))}  
                 </div>
 
             </div>
