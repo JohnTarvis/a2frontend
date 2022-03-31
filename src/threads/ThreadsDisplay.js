@@ -34,12 +34,13 @@ function ThreadsDisplay(){
   
     async function search(params) {
       let posts = await A2Api.getThreads(params);
-      let nonReplies = posts.filter((post)=>!!post.reply_to);
+      console.log('posts========================',posts);
+      let nonReplies = posts.filter((post)=>!post.reply_to);
       setAllPosts(nonReplies);
     }
 
     const history = useHistory();
-    
+
 
     if (!allPosts) return <LoadingSpinner />;
 
