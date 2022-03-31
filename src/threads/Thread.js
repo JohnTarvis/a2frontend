@@ -12,7 +12,7 @@ import picunrel from "../resources/images/picunrel.jpeg";
 
 import ReplyForm from "./ReplyForm";
 
-import '../styles/Thread.css';
+import './Thread.css';
 
 
 
