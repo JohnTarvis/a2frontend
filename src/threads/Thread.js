@@ -15,6 +15,13 @@ import ReplyForm from "./ReplyForm";
 import './Thread.css';
 
 
+function replyImageClickHandler(e){
+    let elem = e.target;
+
+    console.log('target=======================',elem.className);
+}
+
+
 
 function Thread({createThread}) {
 
@@ -102,7 +109,7 @@ function Thread({createThread}) {
                 <div>
                 {Replies.map(p => (
 
-                    <div className = 'reply'>
+                    <div className = 'reply' onClick={(e)=>replyImageClickHandler(e)}>
 
                         <div>
                             <img src={p.image} alt='' className="reply-image" />
