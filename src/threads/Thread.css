@@ -48,6 +48,10 @@ button{
     max-width: 30%;
   }
 
+  .reply-image-expanded{
+    max-width: 100%;
+  }
+
 
 
   .reply{

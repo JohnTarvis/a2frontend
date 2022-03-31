@@ -18,7 +18,12 @@ import './Thread.css';
 function replyImageClickHandler(e){
     let elem = e.target;
 
-    console.log('target=======================',elem.className);
+    if(elem.className == 'reply-image'){
+        elem.className = 'reply-image-expanded';
+    } else {
+        elem.className = 'reply-image';
+    }
+
 }
 
 
