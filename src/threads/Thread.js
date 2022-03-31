@@ -18,14 +18,9 @@ import './Thread.css';
 
 function Thread({createThread}) {
 
-    // console.log('createthread in Thread===============================================',createThread);
-
     const {id} = useParams();
-
     const [showReplyForm,setShowReplyForm] = useState(false);
-
     const [Thread, setThread] = useState(null);
-
     const [Replies, setReplies] = useState([]);
 
     useEffect(function getRepliesOnMount() {
@@ -33,8 +28,6 @@ function Thread({createThread}) {
     }, []);
   
     async function search() {
-        // let result = await A2Api.getThreads({id:id});
-
         let allThreads = await A2Api.getThreads();
         let currentThread = allThreads.filter((thread)=>thread.id == id);
         let replies = allThreads.filter((thread)=>thread.reply_to == id);
@@ -101,7 +94,7 @@ function Thread({createThread}) {
 
                 <div>
 
-                    THREAD ID={id}
+                    {/* THREAD ID={id} */}
 
                 </div>
 
