@@ -35,3 +35,7 @@ button{
     text-align: center;
     width:auto;
   }
+
+  .reply-image{
+    max-width: 30%;
+  }

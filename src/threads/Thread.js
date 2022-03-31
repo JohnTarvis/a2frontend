@@ -129,8 +129,7 @@ function Thread({createThread}) {
                         </div>
 
                         <div>
-                            <img src={p.image} alt='' className="Thread-image" />
-
+                            <img src={p.image} alt='' className="reply-image" />
                         </div>
                         
                     </>
