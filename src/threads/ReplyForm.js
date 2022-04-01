@@ -69,7 +69,7 @@ function ReplyForm(props,{ createThread }) {
     let result = await props.createThread(formData2);
 
     if (result.success) {
-      history.push(`/posts/${props.ThreadNumber}`);
+      // history.push(`/posts/${props.ThreadNumber}`);
     } else {
       setFormErrors(result.errors);
     }
