@@ -48,9 +48,13 @@ button{
     max-width: 100%;
   }
 
+
+
   .reply{
     color:white;
     background-color: #001122;
     border:1px solid blue;
     text-align: left;
+    margin:3px;
+    padding:1px;
   }
