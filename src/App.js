@@ -57,10 +57,10 @@ function App() {
 /////////////////////////////////////////////////////////////////////////CREATE TAGS
   async function createTags(tagString){
     const tags = tagString.split(/\W+/);
-    console.log('tags in createTags=====================================',tags);
+    // console.log('tags in createTags=====================================',tags);
     for(let tag of tags){
       try{
-        console.log('tag=====================================',tag);
+        // console.log('tag=====================================',tag);
         if(tag.length > 0){
           await A2Api.createTag(tag);
         }
