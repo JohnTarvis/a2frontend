@@ -43,7 +43,7 @@ function NewThreadForm({ createThread,testPost }) {
       'testPost=',testPost,
   );
 
-  console.log('createthread in newthreadform===============================================',createThread);
+  // console.log('createthread in newthreadform===============================================',createThread);
 
 
 ////////////////////////////////////////////////////////////////////////////////////////HANDLE SUBMIT
