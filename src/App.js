@@ -57,7 +57,7 @@ function App() {
 /////////////////////////////////////////////////////////////////////////CREATE TAGS
   async function createTags(tagString){
     const tags = tagString.split(/\W+/);
-    // console.log('tags=====================================',tags);
+    console.log('tags in createTags=====================================',tags);
     for(let tag of tags){
       try{
         if(tag.length > 0){
@@ -82,7 +82,7 @@ function App() {
       await A2Api.createThread(postData);
       const tags = postData.get('post_tags');
 
-      console.log('tags?=================================',tags);
+      // console.log('tags?=================================',tags);
 
       if(!!tags){
         await createTags(tags);
