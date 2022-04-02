@@ -66,6 +66,7 @@ function NewThreadForm({ createThread,testPost }) {
 
     console.log('formdata tags==================================',formData.post_tags);
     
+    
     if(selectedFile){
       formData.image = `https://a2uploads.s3.us-west-1.amazonaws.com/${selectedFile.name}`;
     } else {
