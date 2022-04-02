@@ -132,7 +132,7 @@ function Thread({createThread}) {
                             poster_handle:{p.poster_handle}
                         </div>
 
-                        <div>
+                        <div className = "post-body">
                             post_body: {p.post_body}
                         </div>
 
