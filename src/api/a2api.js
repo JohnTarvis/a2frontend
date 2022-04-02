@@ -82,8 +82,9 @@ class A2Api {
     return res;
   }
 
-  static async createTag(){
-    let res = await this.request('tag/',{},'post');
+  static async createTag(params){
+    let res = await this.request('tag/',params,'post');
+    return res;
   }
 
   static async deleteAllTags(){
