@@ -121,19 +121,15 @@ function Thread({createThread}) {
                         </div>
 
                         <div>
-                            id: {p.id}
-                        </div>
-
-                        <div>
                             date: {p.post_date}
                         </div>
 
                         <div>
-                            poster_handle:{p.poster_handle}
+                            posted by: {p.poster_handle}
                         </div>
 
                         <div className = "post-body">
-                            post_body: {p.post_body}
+                            {p.post_body}
                         </div>
 
 
