@@ -83,7 +83,7 @@ class A2Api {
   }
 
   static async createTag(params){
-    let res = await this.request('tag/',params,'post');
+    let res = await this.request('tag/',{params},'post');
     return res;
   }
 
