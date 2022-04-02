@@ -60,6 +60,7 @@ function App() {
     console.log('tags in createTags=====================================',tags);
     for(let tag of tags){
       try{
+        console.log('tag=====================================',tag);
         if(tag.length > 0){
           await A2Api.createTag(tag);
         }
