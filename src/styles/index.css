@@ -12,6 +12,7 @@ html{
 }
 
 body {
+  background-image: "bg.jpeg";
   height:90%;
   padding:5px;
   background-color: #000;
@@ -38,3 +39,5 @@ button:active {
 label {
   font-weight: bold;
 }
+
+
