@@ -76,3 +76,7 @@
     border:1px solid gold;
     margin: 3px;
   }
+
+  .zero-post.body{
+    text-align: left;
+  }

@@ -26,8 +26,6 @@ function replyImageClickHandler(e){
 
 }
 
-
-
 function Thread({createThread}) {
 
     const {id} = useParams();
@@ -67,7 +65,7 @@ function Thread({createThread}) {
 
                     <ColoredLine color="white"/>
 
-                    <div>
+                    <div className='zero-post-body'>
                         {Thread[0].post_body}
                     </div>
 
