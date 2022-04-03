@@ -40,7 +40,7 @@
     width:auto;
     padding:3px;
     margin:2px;
-    border:1px solid red;
+    /* border:1px solid red; */
   }
 
   .reply-image{
@@ -57,7 +57,7 @@
     border:1px solid blue;
     text-align: left;
     margin:3px;
-    padding:1px;
+    padding:5px;
   }
 
   .post-body{
