@@ -79,8 +79,8 @@ function Thread({createThread}) {
                         </div>
                     </small>
 
-                    <div>
-                        tags: {Thread[0].post_tags}
+                    <div className='tags'>
+                        {Thread[0].post_tags}
                     </div>
                     
                     <div>
