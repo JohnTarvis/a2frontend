@@ -121,7 +121,7 @@ function Thread({createThread}) {
 
                         <small>
                             <div className='centered'>
-                                <i>{p.poster_handle}</i>
+                                <p><i>{p.poster_handle}</i></p>
                                 <span className = 'date'>{p.post_date}</span>
                             </div>
                         </small>
