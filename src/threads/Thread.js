@@ -77,12 +77,15 @@ function Thread({createThread}) {
                         <div className='centered'>
                             posted by: <i>{Thread[0].poster_handle}</i> at: <span className = 'date'>{Thread[0].post_date}</span>
                         </div>
-
-                        <div className='tags'>
-                            tags: {Thread[0].post_tags}
-                        </div>
                     </small>
 
+                    <div>
+                        tags: 
+                        <div className='tags'>
+                                tags: {Thread[0].post_tags}
+                        </div>
+                    </div>
+                    
                     <div>
                         {Thread[0].admin_Thread}
                     </div>
