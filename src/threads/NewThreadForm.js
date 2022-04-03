@@ -30,9 +30,9 @@ function NewThreadForm({ createThread,testPost }) {
   const { anon } = useContext(AnonContext);
   const history = useHistory();
   const [formData, setFormData] = useState({
-    post_subject: "subject",
-    post_body: "blah blah blah",
-    post_tags: generateRandomTags()
+    post_subject: "random",
+    post_body: "I thought what I'd do was, I'd pretend I was one of those deaf-mutes. That way I wouldn't have to have any goddam stupid useless conversations with anybody. If anybody wanted to tell me something, they'd have to write it on a piece of paper and shove it over to me.",
+    post_tags: "random nsfw"
   });
   const [formErrors, setFormErrors] = useState([]);
   console.debug(
