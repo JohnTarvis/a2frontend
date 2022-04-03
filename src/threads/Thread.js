@@ -116,22 +116,17 @@ function Thread({createThread}) {
                             <img src={p.image} alt='' className="reply-image" />
                         </div>
 
-                        <div>
-                            date: {p.post_date}
-                        </div>
-
-                        <div>
-                            posted by: {p.poster_handle}
-                        </div>
-
-                        <div className >
+                        <div >
                             {p.post_body}
                         </div>
 
-
+                        <small>
+                            <div className='centered'>
+                                posted by: <i>{p.poster_handle}</i> at: <span className = 'date'>{p.post_date}</span>
+                            </div>
+                        </small>
                         
                     </div>
-
 
                     ))}  
                 </div>
