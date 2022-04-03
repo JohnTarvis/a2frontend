@@ -75,7 +75,7 @@ function Thread({createThread}) {
 
                     <small>
                         <div className='centered'>
-                            posted by : <i>{Thread[0].poster_handle}</i> at: {Thread[0].post_date}
+                            posted by : <i>{Thread[0].poster_handle}</i> at: <span>{Thread[0].post_date}</span>
                         </div>
 
                         <div className='centered'>
