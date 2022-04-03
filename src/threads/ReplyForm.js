@@ -9,14 +9,12 @@ import axios from "axios";
 
 ////////////////////////////////////////////////////////////////////////////////////////GENERATE RANDOM TAGS
 
-
 function ReplyForm(props,{ createThread }) {
-
 
   const { anon } = useContext(AnonContext);
   const history = useHistory();
   const [formData, setFormData] = useState({
-    post_body: "blah blah blah",
+    post_body: "Hello.  I have nothing to say.",
   });
   const [formErrors, setFormErrors] = useState([]);
   console.debug(
@@ -31,8 +29,6 @@ function ReplyForm(props,{ createThread }) {
   async function handleSubmit(evt) {
 
     evt.preventDefault();
-
-    
 
     const date = new Date();
     formData.post_date = date;
@@ -57,10 +53,7 @@ function ReplyForm(props,{ createThread }) {
 
     formData2.append('post_date',date);
 
-
     formData2.append('reply_to',props.ThreadNumber);
-    // formData2.append('reply_to',ThreadNumber)
-
 
     //////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////////
@@ -75,7 +68,6 @@ function ReplyForm(props,{ createThread }) {
     }
 
   };
-
 
 ////////////////////////////////////////////////////////////////////////////////////////HANDLE CHANGE
 
