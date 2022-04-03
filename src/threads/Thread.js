@@ -56,7 +56,7 @@ function Thread({createThread}) {
 
                 <div className="Thread" id={`Thread-${Thread[0].id}` }>
                     <div className="image-subject">
-                        {Thread.Thread_subject}
+                        {Thread.post_subject}
                     </div>
 
                     <ColoredLine color="white"/>
