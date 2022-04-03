@@ -38,6 +38,8 @@
   .Thread-page{
     text-align: center;
     width:auto;
+    padding:3px;
+    margin:2px;
   }
 
   .reply-image{
