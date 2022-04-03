@@ -71,4 +71,5 @@
   .tags{
     background-color: white;
     color:black;
+    display:inline-block;
   }
