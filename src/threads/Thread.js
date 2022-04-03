@@ -74,7 +74,7 @@ function Thread({createThread}) {
                     <small>
                         <div className='centered'>
                             <p><i>{Thread[0].poster_handle}</i></p> 
-                            <span className = 'date'>{Thread[0].post_date}</span>
+                            <p className = 'date'>{Thread[0].post_date}</p>
                         </div>
                     </small>
 
@@ -122,7 +122,7 @@ function Thread({createThread}) {
                         <small>
                             <div className='centered'>
                                 <p><i>{p.poster_handle}</i></p>
-                                <span className = 'date'>{p.post_date}</span>
+                                <p className = 'date'>{p.post_date}</p>
                             </div>
                         </small>
                         
