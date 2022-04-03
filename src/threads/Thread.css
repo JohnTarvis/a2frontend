@@ -65,4 +65,10 @@
 
   .date{
     font-family: Georgia, 'Times New Roman', Times, serif;
+    color:red;
+  }
+
+  .tags{
+    background-color: black;
+    color:white;
   }
