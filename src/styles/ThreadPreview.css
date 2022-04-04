@@ -27,6 +27,11 @@
   opacity: 1;
 }
 
+.thread-preview{
+  min-width:100%;
+  opacity: 1;
+}
+
 .post-image{
   max-width:100%;
 }
