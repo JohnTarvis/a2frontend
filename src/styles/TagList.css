@@ -1,6 +1,7 @@
 .tag-list{
     margin: 0 auto ; 
     color:white;
+    background-color: black;
     width:15%;
     float:inline-start;
     text-align: center;
