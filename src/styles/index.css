@@ -13,6 +13,7 @@ html{
 
 body {
   background-image: url("bg.jpg");
+  background-repeat: repeat;
   height:90%;
   padding:5px;
   background-color: #000;
