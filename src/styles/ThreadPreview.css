@@ -4,7 +4,8 @@
   margin:7px;
   overflow: hidden;
   padding:5px;
-  background-color: #002288;
+  /* background-color: #002288; */
+  background-color: azure;
   border:1px solid black;
   float:inline-start;
   border: 1px groove grey;
