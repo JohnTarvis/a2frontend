@@ -9,7 +9,7 @@
   border:1px solid black;
   float:inline-start;
   border: 1px groove grey;
-  opacity: 0.9;
+  opacity: 0.5;
 
 }
 
@@ -23,11 +23,6 @@
 }
 
 .post-image-preview{
-  min-width:100%;
-  opacity: 1;
-}
-
-.thread-preview{
   min-width:100%;
   opacity: 1;
 }

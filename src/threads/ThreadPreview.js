@@ -26,7 +26,7 @@ function ThreadPreview(props) {
 
                 <small>
                     <div className='centered'>
-                        posted by : {props.poster_handle}
+                        posted by: {props.poster_handle}
                     </div>
 
                     <div className='centered'>
@@ -34,7 +34,7 @@ function ThreadPreview(props) {
                     </div>
 
                     <div className='centered pc-tags'>
-                        tags : {props.post_tags}
+                        tags: {props.post_tags}
                     </div>
                 </small>
 
