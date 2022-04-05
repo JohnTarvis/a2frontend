@@ -15,6 +15,7 @@
 
 .ThreadPreview img {
   height: 150px;
+  opacity: 1.0;
 }
 
 .ThreadPreview:hover { 
