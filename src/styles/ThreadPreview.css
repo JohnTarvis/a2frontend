@@ -4,12 +4,11 @@
   margin:7px;
   overflow: hidden;
   padding:5px;
-  /* background-color: #002288; */
-  background-color: rgb(7, 44, 26);
+  background-color: rgba(7, 44, 26,0.5);
   border:1px solid black;
   float:inline-start;
   border: 1px groove grey;
-  opacity: 0.5;
+  /* opacity: 0.5; */
 
 }
 
