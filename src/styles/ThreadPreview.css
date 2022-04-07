@@ -10,7 +10,7 @@
   border: 1px groove grey;
 
   -webkit-text-stroke:1px rgb(255, 0, 0);
-  -webkit-text-fill-color:transparent;
+  /* -webkit-text-fill-color:transparent; */
 }
 
 .ThreadPreview img {
