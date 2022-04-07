@@ -11,11 +11,6 @@ import FileUploadForm from "../threads/FileUploadForm";
 
 
 function Routes({ login, register, createThread, getAllPosts, testPost }) {
-  // console.debug(
-  //     "Routes",
-  //     `login=${typeof login}`,
-  //     `register=${typeof register}`,
-  // );
 
   
   return (

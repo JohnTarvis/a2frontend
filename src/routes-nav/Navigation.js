@@ -8,7 +8,6 @@ import ColoredLine from "../common/ColoredLine";
 
 function Navigation({ logout }) {
   const { anon } = useContext(AnonContext);
-  // console.debug("Navigation", "anon=", anon);
 
   function loggedInNav() {
     return (
@@ -28,11 +27,6 @@ function Navigation({ logout }) {
               Log out {anon.first_name || anon.anonname}
             </Link>
           </li>
-          {/* <li className="nav-item mr-4">
-            <NavLink className='nav-link' to= '/file-upload'>
-              Upload
-            </NavLink>
-          </li> */}
 
         </ul>
     );
