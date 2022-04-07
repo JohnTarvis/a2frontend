@@ -1,14 +1,11 @@
 .Landingpage {
-  background-color: black;
+  /* background-color: black; */
+  background-color: rgba(0,0,0,1);
   border-top:1px solid white;
   height:100%;
-  /* background-image: url('../resources/images/sky.png'); */
-  /* background-size: cover; */
-  /* background */
 
 }
 
 .ThreadsDisplay-container{
   height:100%;
-  /* text-align: center; */
 }
