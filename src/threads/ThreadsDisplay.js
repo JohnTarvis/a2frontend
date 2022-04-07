@@ -4,7 +4,7 @@ import A2Api from "../api/a2api";
 import LoadingSpinner from "../common/LoadingSpinner";
 import ThreadPreview from "./ThreadPreview";
 import { useHistory } from "react-router-dom";
-import '../styles/ThreadsDisplay.css';
+// import '../styles/ThreadsDisplay.css';
 import TopBanner from "../top-banner/TopBanner";
 
 import PostContext from "./PostContext";
