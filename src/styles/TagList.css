@@ -1,7 +1,7 @@
 .tag-list{
     margin: 0 auto ; 
     color:white;
-    background-color: rgba(0,0,0,0.0);
+    background-color: rgba(0,0,0,0.5);
     width:15%;
     float:inline-start;
     text-align: center;
