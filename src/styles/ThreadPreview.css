@@ -1,16 +1,18 @@
 .ThreadPreview {
   /* color: rgb(91, 115, 255); */
+  color:black;
   width:15rem;
   margin:7px;
   overflow: hidden;
   padding:5px;
-  background-color: rgba(7, 44, 26,0.8);
+  background-color: rgba(87, 98, 201, 0.8);
   border:1px solid black;
   float:inline-start;
   border: 1px groove grey;
-
+  
+/* 
   -webkit-text-stroke:1px black;
-  -webkit-text-fill-color:white;
+  -webkit-text-fill-color:white; */
 }
 
 .ThreadPreview img {
