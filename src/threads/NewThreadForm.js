@@ -62,9 +62,10 @@ function NewThreadForm({ createThread,testPost }) {
 
     const robot = !formData.notARobot;
 
-    console.log('robot?'  , robot);
+    if(robot){
+      
+    }
 
-    // console.log('createthread in newthreadform===============================================',createThread);
 
     evt.preventDefault();
     const date = new Date();
