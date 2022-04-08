@@ -59,7 +59,6 @@ function NewThreadForm({ createThread,testPost }) {
 
   async function handleSubmit(evt) {
 
-
     const robot = !formData.notARobot;
 
     if(robot){
@@ -67,14 +66,10 @@ function NewThreadForm({ createThread,testPost }) {
       return;
     } 
 
-
     evt.preventDefault();
     const date = new Date();
     formData.post_date = date;
     formData.upload = selectedFile;
-
-    // console.log('formdata tags==================================',formData.post_tags);
-
     
     if(selectedFile){
       formData.image = `https://a2uploads.s3.us-west-1.amazonaws.com/${selectedFile.name}`;

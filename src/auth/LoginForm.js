@@ -20,7 +20,6 @@ function LoginForm({ login }) {
   async function handleSubmit(evt) {
     evt.preventDefault();
     let loginResult = await login(formData);
-    // console.log('loginResult= ',loginResult);
     if (loginResult.success) {
       history.push("/");
     } else {
