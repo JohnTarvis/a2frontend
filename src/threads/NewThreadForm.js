@@ -32,7 +32,8 @@ function NewThreadForm({ createThread,testPost }) {
   const [formData, setFormData] = useState({
     post_subject: "random",
     post_body: "I thought what I'd do was, I'd pretend I was one of those deaf-mutes. That way I wouldn't have to have any goddam stupid useless conversations with anybody. If anybody wanted to tell me something, they'd have to write it on a piece of paper and shove it over to me.",
-    post_tags: "random nsfw"
+    post_tags: "random nsfw",
+    notARobot:false
   });
   const [formErrors, setFormErrors] = useState([]);
   console.debug(
@@ -162,8 +163,16 @@ function NewThreadForm({ createThread,testPost }) {
                     name="upload"
                     value={formData.image}
                     onChange={onFileChange}
-                  
+                  />
+                </div>
 
+                <div className="form-group">
+                  <label>I am NOT a robot</label>
+                  <input 
+                    type="checkbox" 
+                    name="notARobot"
+                    checked={formData.checked}
+                    onChange={handleChange}
                   />
                 </div>
 
