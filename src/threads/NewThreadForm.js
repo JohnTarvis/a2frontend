@@ -167,7 +167,7 @@ function NewThreadForm({ createThread,testPost }) {
                 </div>
 
                 <div className="form-group">
-                  <label>I am NOT a robot</label>
+                  <label>I am NOT a robot </label>
                   <input 
                     type="checkbox" 
                     name="notARobot"
