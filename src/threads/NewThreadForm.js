@@ -63,8 +63,9 @@ function NewThreadForm({ createThread,testPost }) {
     const robot = !formData.notARobot;
 
     if(robot){
-      
-    }
+      alert("Only humans can post!");
+      return;
+    } 
 
 
     evt.preventDefault();
