@@ -59,6 +59,11 @@ function NewThreadForm({ createThread,testPost }) {
 
   async function handleSubmit(evt) {
 
+
+    const robot = !formData.notARobot;
+
+    console.log('robot?'  , robot);
+
     // console.log('createthread in newthreadform===============================================',createThread);
 
     evt.preventDefault();
