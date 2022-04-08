@@ -7,6 +7,7 @@ import AnonContext from "../auth/AnonContext";
 
 import axios from "axios";
 
+import '../styles/form.css';
 
 ////////////////////////////////////////////////////////////////////////////////////////GENERATE RANDOM TAGS
 
