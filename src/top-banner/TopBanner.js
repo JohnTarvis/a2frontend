@@ -16,18 +16,16 @@ function TopBanner() {
 
     const { anon } = useContext(AnonContext);
 
-    // console.log('tb_anon===============================',anon);
 
     const {is_admin} = anon;
 
-    console.log('isadmin====================================',is_admin);
 
     return (
         <div className="top-banner">
             <div className="container text-center">
                 <h1 className="mb-4 font-weight-bold">Anons Anonymous</h1>
                 <p className="lead">anti-social networking</p>
-                {/* <p>_______________________________________</p> */}
+                {is_admin && <p>WELCOME ADMIN</p>}
             </div>
         </div>
     );

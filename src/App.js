@@ -28,7 +28,6 @@ function App() {
           let { handle } = jwt.decode(token);
           A2Api.token = token;
           let anon = await A2Api.getAnon(handle);
-          // console.log('getanon================================',anon);
           setAnon(anon);
         } catch (err) {
           console.error("App loadanonInfo: problem loading", err);
@@ -60,15 +59,12 @@ function App() {
 /////////////////////////////////////////////////////////////////////////CREATE TAGS
   async function createTags(tagString){
     const tags = tagString.split(/\W+/);
-    // console.log('tags in createTags=====================================',tags);
     for(let tag of tags){
       try{
-        // console.log('tag=====================================',tag);
         if(tag.length > 0){
           await A2Api.createTag(tag);
         }
       } catch(errors){
-        // console.log('failed to create tag: ',tag);
         console.log('errors ',errors);
       }
     } 
