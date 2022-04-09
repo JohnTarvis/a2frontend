@@ -1,4 +1,9 @@
-import React from "react";
+
+
+// import React from "react";
+import React, { useState,useContext } from "react";
+
+
 import '../styles/TopBanner.css';
 import AnonContext from "../auth/AnonContext";
 
@@ -7,7 +12,7 @@ import A2Api from "../api/a2api";
 // import untitled from "../resources/images/untitled.jpg";
 
 function TopBanner() {
-    
+
 
     const { anon } = useContext(AnonContext);
 
