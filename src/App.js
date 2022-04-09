@@ -74,6 +74,8 @@ function App() {
   async function createThread(postData){
     try {
 
+      console.log('anon=========================',AnonContext);
+
       if(anon){
         postData.append('poster_handle',anon.handle);
       } else {
