@@ -13,11 +13,13 @@ import A2Api from "../api/a2api";
 
 function TopBanner() {
 
+    let is_admin = false;
 
     const { anon } = useContext(AnonContext);
-
-
-    const {is_admin} = anon;
+    
+    if(anon){
+        is_admin = anon.is_admin;
+    }
 
 
     return (
