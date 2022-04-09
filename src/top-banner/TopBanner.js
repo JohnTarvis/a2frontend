@@ -4,12 +4,12 @@ import A2Api from "../api/a2api";
 
 // import untitled from "../resources/images/untitled.jpg";
 
-async function TopBanner() {
+function TopBanner() {
 
 
-    const anon = await A2Api.getAnon();
+    // const anon = await A2Api.getAnon();
 
-    console.log('topbanneranon======================',anon);
+    // console.log('topbanneranon======================',anon);
 
     return (
         <div className="top-banner">
