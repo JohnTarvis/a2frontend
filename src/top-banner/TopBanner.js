@@ -11,6 +11,10 @@ function TopBanner() {
 
     // console.log('topbanneranon======================',anon);
 
+    const anon = useContext(anon);
+
+    console.log('tb_anon===============================',anon);
+
     return (
         <div className="top-banner">
             <div className="container text-center">
