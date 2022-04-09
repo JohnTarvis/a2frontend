@@ -1,17 +1,14 @@
 import React from "react";
 import '../styles/TopBanner.css';
+import AnonContext from "../auth/AnonContext";
+
 import A2Api from "../api/a2api";
 
 // import untitled from "../resources/images/untitled.jpg";
 
 function TopBanner() {
 
-
-    // const anon = await A2Api.getAnon();
-
-    // console.log('topbanneranon======================',anon);
-
-    const anon = useContext(anon);
+    const { anon } = useContext(AnonContext);
 
     console.log('tb_anon===============================',anon);
 
