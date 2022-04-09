@@ -28,7 +28,7 @@ function App() {
           let { handle } = jwt.decode(token);
           A2Api.token = token;
           let anon = await A2Api.getAnon(handle);
-          console.log('getanon================================',anon);
+          // console.log('getanon================================',anon);
           setAnon(anon);
         } catch (err) {
           console.error("App loadanonInfo: problem loading", err);
@@ -36,6 +36,7 @@ function App() {
         }
       }
       setLoaded(true);
+      return anon;
     }
     setLoaded(false);
     getAnon();

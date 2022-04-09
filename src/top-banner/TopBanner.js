@@ -1,9 +1,16 @@
 import React from "react";
 import '../styles/TopBanner.css';
+import A2Api from "../api/a2api";
 
 // import untitled from "../resources/images/untitled.jpg";
 
 function TopBanner() {
+
+
+    const anon = A2Api.getAnon();
+
+    console.log('topbanneranon======================',anon);
+
     return (
         <div className="top-banner">
             <div className="container text-center">
