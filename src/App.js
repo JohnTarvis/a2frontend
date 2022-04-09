@@ -20,6 +20,7 @@ function App() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(function loadanonInfo() {
+  
 
     async function getAnon() {
       if (token) {
@@ -27,6 +28,7 @@ function App() {
           let { handle } = jwt.decode(token);
           A2Api.token = token;
           let anon = await A2Api.getAnon(handle);
+          console.log('getanon================================',anon);
           setAnon(anon);
         } catch (err) {
           console.error("App loadanonInfo: problem loading", err);
