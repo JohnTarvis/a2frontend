@@ -17,7 +17,7 @@ function ThreadPreview(props) {
 
                 {
                     <div className='delete-thread-button-wrapper'> 
-                        <div className='delete-thread-button'> x </div> 
+                        <div className='delete-thread-button'> X </div> 
                     </div>
                 }
 
