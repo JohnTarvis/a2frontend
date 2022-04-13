@@ -36,6 +36,8 @@
   text-align:center;
   height:2rem;
   overflow: hidden;
+  font-size: large;
+  color:blue;
 }
 
 hr{
