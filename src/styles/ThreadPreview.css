@@ -48,9 +48,15 @@ hr{
   text-align: center;
 }
 
+.delete-thread-button-wrapper{
+  text-align: right;
+}
+
 .delete-thread-button{
   color:red;
   background-color: white;
   border: 1px outset black;
-  text-align: right;
+  margin: 2px;
+  padding:1px;
+  display:inline-block;
 }

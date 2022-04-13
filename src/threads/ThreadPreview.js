@@ -15,7 +15,11 @@ function ThreadPreview(props) {
     return (
             <div className="ThreadPreview" id={`ThreadPreview-${props.id}` }>
 
-                {<div className='delete-thread-button'> X </div>}
+                {
+                    <div className='delete-thread-button-wrapper'> 
+                        <div className='delete-thread-button'> X </div> 
+                    </div>
+                }
 
                 <div>
                     <img src={props.image || punrel} alt='' className="post-image-preview" />
