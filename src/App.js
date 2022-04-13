@@ -10,6 +10,7 @@ import AnonContext from "./auth/AnonContext";
 import jwt from "jsonwebtoken";
 
 import A2Api from "./api/a2api";
+import A2api2 from "./api/a2api2";
 
 export const A2_TOKEN = "anonanon-token";
 
@@ -97,6 +98,15 @@ function App() {
     }
   }
 
+  async function deleteThread(id){
+    // if(!anon.is_Admin){
+    //   return "only admins can delete threads";    
+    // }
+
+    await A2api2.deleteThread(id);
+    
+  }
+
 ///////////////////////////////////////////////////////////////////////
   async function testPost(postData){
     try {
@@ -136,6 +146,7 @@ function App() {
             <Routes login={login} 
                     register={register} 
                     createThread={createThread} 
+                    deleteThread={deleteThread}
                     testPost={testPost}/>
           </div>
         </AnonContext.Provider>
