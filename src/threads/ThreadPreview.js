@@ -24,6 +24,8 @@ function ThreadPreview(props) {
                     {props.post_subject}
                 </div>
 
+                {<div> test </div>}
+
                 <ColoredLine color="white"/>
 
                 <small>
