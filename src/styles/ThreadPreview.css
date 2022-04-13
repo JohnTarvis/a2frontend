@@ -56,7 +56,7 @@ hr{
 
 .delete-thread-button{
   color:red;
-  background-color: white;
+  /* background-color: white; */
   margin: 2px;
   padding:1px;
   display:inline-block;
