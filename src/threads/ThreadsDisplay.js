@@ -47,6 +47,8 @@ function ThreadsDisplay(){
       let elem = e.target;
       let maxJumps = 99;
 
+      console.log(elem.className);
+
       if(elem.className == 'delete-threat-button'){
         console.log('pressed');
         return;
