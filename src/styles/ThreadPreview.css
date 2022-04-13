@@ -52,9 +52,6 @@ hr{
   text-align: right;
   margin:1px;
   padding:2px;
-  border: 1px outset black;
-
-
 }
 
 .delete-thread-button{
@@ -63,4 +60,5 @@ hr{
   margin: 2px;
   padding:1px;
   display:inline-block;
+  border: 1px outset black;
 }
