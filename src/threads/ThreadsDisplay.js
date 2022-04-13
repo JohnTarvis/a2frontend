@@ -49,7 +49,7 @@ function ThreadsDisplay(){
 
       console.log(elem.className);
 
-      if(elem.className == 'delete-threat-button'){
+      if(elem.className == 'delete-thread-button'){
         console.log('pressed');
         return;
       }
