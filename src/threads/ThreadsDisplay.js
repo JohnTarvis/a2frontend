@@ -46,6 +46,12 @@ function ThreadsDisplay(){
     function clickHandler(e){
       let elem = e.target;
       let maxJumps = 99;
+
+      if(elem.className == 'delete-threat-button'){
+        console.log('pressed');
+        return;
+      }
+
       while(elem.className != 'ThreadPreview' && maxJumps > 0){
         maxJumps--;
         elem = elem.parentNode;
@@ -53,6 +59,7 @@ function ThreadsDisplay(){
       const postId = elem.id.slice(14);
       history.push(`/posts/${postId}`);
     }    
+
 
     return (
       <div className="main-view" >
