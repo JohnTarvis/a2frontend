@@ -44,7 +44,9 @@ class A2Api {
     await this.request('post/',{},'delete');
   }
 
-  
+  static async deletePost(id){
+    await this.request('post/',id,'delete');
+  }
 
 ////////////////////////////////////////////////////////////////////////////////-anons
 
