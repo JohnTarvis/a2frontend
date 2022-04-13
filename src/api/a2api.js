@@ -44,6 +44,8 @@ class A2Api {
     await this.request('post/',{},'delete');
   }
 
+  
+
 ////////////////////////////////////////////////////////////////////////////////-anons
 
   static async getAnon(handle) {
