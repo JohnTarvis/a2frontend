@@ -24,7 +24,7 @@ function ThreadPreview(props) {
                     {props.post_subject}
                 </div>
 
-                {<div> test </div>}
+                {<div className='delete-thread-button'> X </div>}
 
                 <ColoredLine color="white"/>
 
