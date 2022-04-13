@@ -50,6 +50,8 @@ hr{
 
 .delete-thread-button-wrapper{
   text-align: right;
+  margin:1px;
+  padding:2px;
 }
 
 .delete-thread-button{
