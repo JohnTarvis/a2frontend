@@ -51,14 +51,14 @@ hr{
 .delete-thread-button-wrapper{
   text-align: right;
   margin:1px;
-  padding:2px;
+  /* padding:2px; */
 }
 
 .delete-thread-button{
   color:red;
   /* background-color: white; */
-  margin: 2px;
-  padding:1px;
+  /* margin: 2px;
+  padding:1px; */
   display:inline-block;
   border: 1px outset black;
 }
