@@ -61,4 +61,5 @@ hr{
 
 .delete-thread-button:hover{
   color:white;
+  cursor:pointer;
 }
