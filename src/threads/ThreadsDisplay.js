@@ -40,18 +40,15 @@ function ThreadsDisplay(){
 
     const history = useHistory();
 
-
     if (!allPosts) return <LoadingSpinner />;
 
     function clickHandler(e){
       let elem = e.target;
       let maxJumps = 99;
-
-      console.log(elem.className);
+      let pressed = false;
 
       if(elem.className == 'delete-thread-button'){
-        console.log('pressed');
-        return;
+        pressed = true;
       }
 
       while(elem.className != 'ThreadPreview' && maxJumps > 0){
@@ -59,7 +56,12 @@ function ThreadsDisplay(){
         elem = elem.parentNode;
       }
       const postId = elem.id.slice(14);
-      history.push(`/posts/${postId}`);
+
+      if(pressed){
+        A2Api.deleteThread(postId);
+      } else {
+        history.push(`/posts/${postId}`);
+      }
     }    
 
 
