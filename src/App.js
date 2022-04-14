@@ -103,7 +103,7 @@ function App() {
     //   return "only admins can delete threads";    
     // }
 
-    await A2api.deleteThread(id);
+    await A2Api.deleteThread(id);
     
   }
 
