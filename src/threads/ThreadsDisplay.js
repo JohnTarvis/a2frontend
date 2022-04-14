@@ -58,6 +58,7 @@ function ThreadsDisplay(){
       const postId = elem.id.slice(14);
 
       if(pressed){
+        console.log('postid in threadsdisplay',postId);
         A2Api.deleteThread(postId);
       } else {
         history.push(`/posts/${postId}`);
