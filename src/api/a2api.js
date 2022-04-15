@@ -44,10 +44,15 @@ class A2Api {
     await this.request('post/',{},'delete');
   }
 
+  // static async deleteThread(id){
+  //   console.log('id in a2api.js=================================',id);
+  //   let result = await this.request('post/',id,'delete');
+  //   console.log('result in a2api.js=============================',result);
+  // }
+
   static async deleteThread(id){
-    console.log('id in a2api.js=================================',id);
-    let result = await this.request('post/',id,'delete');
-    console.log('result in a2api.js=============================',result);
+    let result = await this.request(`post/${id}`,{},'delete');
+    return result;
   }
 
 ////////////////////////////////////////////////////////////////////////////////-anons
