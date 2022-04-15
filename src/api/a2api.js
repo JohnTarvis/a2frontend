@@ -45,7 +45,8 @@ class A2Api {
   }
 
   static async deleteThread(id){
-    await this.request('post/',id,'delete');
+    let result = await this.request('post/',id,'delete');
+    console.log('result in a2api.js=============================',result);
   }
 
 ////////////////////////////////////////////////////////////////////////////////-anons
