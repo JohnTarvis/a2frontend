@@ -60,7 +60,7 @@ function ThreadsDisplay(){
 
       if(pressed){
         console.log('postid in threadsdisplay',postId);
-        await A2Api.deleteThread(postId);
+        A2Api.deleteThread(postId);
       } else {
         history.push(`/posts/${postId}`);
       }
