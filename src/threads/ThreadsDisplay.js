@@ -10,18 +10,6 @@ import A2api2 from "../api/a2api2";
 
 const history = useHistory();
 
-function randomBG(){
-  let L = () => Math.ceil(Math.random() * 8);
-  return `#${L()}${L()}${L()}`;
-
-}
-
-const currentBG = randomBG();
-
-const style = {
-  backgroundColor: currentBG,
-}
-
 async function clickHandler(e){
   let elem = e.target;
   let maxJumps = 99;
