@@ -51,7 +51,7 @@ class A2Api {
   // }
 
   static async deleteThread(id){
-    let result = await this.request(`posts/${id}`,{},'delete');
+    let result = await this.request(`post/${id}`,{},'delete');
     return result;
   }
 
