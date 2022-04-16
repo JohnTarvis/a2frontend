@@ -23,6 +23,28 @@ const style = {
   backgroundColor: currentBG,
 }
 
+async function clickHandler(e){
+  let elem = e.target;
+  let maxJumps = 99;
+  let pressed = false;
+
+  if(elem.className == 'delete-thread-button'){
+    pressed = true;
+  }
+
+  while(elem.className != 'ThreadPreview' && maxJumps > 0){
+    maxJumps--;
+    elem = elem.parentNode;
+  }
+  const postId = elem.id.slice(14);
+
+  if(pressed){
+    console.log('postid in threadsdisplay',postId);
+    await A2Api.deleteThread(postId);
+  } else {
+    history.push(`/posts/${postId}`);
+  }
+}   
 
 
 async function ThreadsDisplay(){
@@ -43,28 +65,7 @@ async function ThreadsDisplay(){
 
     if (!allPosts) return <LoadingSpinner />;
 
-    async function clickHandler(e){
-      let elem = e.target;
-      let maxJumps = 99;
-      let pressed = false;
-
-      if(elem.className == 'delete-thread-button'){
-        pressed = true;
-      }
-
-      while(elem.className != 'ThreadPreview' && maxJumps > 0){
-        maxJumps--;
-        elem = elem.parentNode;
-      }
-      const postId = elem.id.slice(14);
-
-      if(pressed){
-        console.log('postid in threadsdisplay',postId);
-        await A2Api.deleteThread(postId);
-      } else {
-        history.push(`/posts/${postId}`);
-      }
-    }    
+ 
 
 
     return (
