@@ -4,12 +4,11 @@ import A2Api from "../api/a2api";
 import LoadingSpinner from "../common/LoadingSpinner";
 import ThreadPreview from "./ThreadPreview";
 import { useHistory } from "react-router-dom";
-// import '../styles/ThreadsDisplay.css';
 import TopBanner from "../top-banner/TopBanner";
-
 import PostContext from "./PostContext";
-
 import A2api2 from "../api/a2api2";
+
+const history = useHistory();
 
 function randomBG(){
   let L = () => Math.ceil(Math.random() * 8);
@@ -61,7 +60,6 @@ async function ThreadsDisplay(){
       setAllPosts(nonReplies);
     }
 
-    const history = useHistory();
 
     if (!allPosts) return <LoadingSpinner />;
 
