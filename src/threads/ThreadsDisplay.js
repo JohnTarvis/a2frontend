@@ -10,28 +10,7 @@ import A2api2 from "../api/a2api2";
 
 const history = useHistory();
 
-async function clickHandler(e){
-  let elem = e.target;
-  let maxJumps = 99;
-  let pressed = false;
 
-  if(elem.className == 'delete-thread-button'){
-    pressed = true;
-  }
-
-  while(elem.className != 'ThreadPreview' && maxJumps > 0){
-    maxJumps--;
-    elem = elem.parentNode;
-  }
-  const postId = elem.id.slice(14);
-
-  if(pressed){
-    console.log('postid in threadsdisplay',postId);
-    await A2Api.deleteThread(postId);
-  } else {
-    history.push(`/posts/${postId}`);
-  }
-}   
 
 
 async function ThreadsDisplay(){
@@ -48,11 +27,30 @@ async function ThreadsDisplay(){
       setAllPosts(nonReplies);
     }
 
-
     if (!allPosts) return <LoadingSpinner />;
-
  
-
+    async function clickHandler(e){
+      let elem = e.target;
+      let maxJumps = 99;
+      let pressed = false;
+    
+      if(elem.className == 'delete-thread-button'){
+        pressed = true;
+      }
+    
+      while(elem.className != 'ThreadPreview' && maxJumps > 0){
+        maxJumps--;
+        elem = elem.parentNode;
+      }
+      const postId = elem.id.slice(14);
+    
+      if(pressed){
+        console.log('postid in threadsdisplay',postId);
+        await A2Api.deleteThread(postId);
+      } else {
+        history.push(`/posts/${postId}`);
+      }
+    }   
 
     return (
       <div className="main-view" >
