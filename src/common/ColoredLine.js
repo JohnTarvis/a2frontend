@@ -11,4 +11,5 @@ const ColoredLine = ({ color }) => (
     />
 );
 
+
 export default ColoredLine;
