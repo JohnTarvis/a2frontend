@@ -43,7 +43,7 @@ async function ThreadsDisplay(){
 
     if (!allPosts) return <LoadingSpinner />;
 
-    async function clickHandler(e){
+    function clickHandler(e){
       let elem = e.target;
       let maxJumps = 99;
       let pressed = false;
