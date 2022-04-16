@@ -25,7 +25,7 @@ const style = {
 
 
 
-async function ThreadsDisplay(){
+function ThreadsDisplay(){
 
     const {allPosts,setAllPosts} = useContext(PostContext);
 
