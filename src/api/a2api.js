@@ -6,8 +6,8 @@ class A2Api {
   static async request(endpoint, data = {}, method = "get") {
     const url = `${BASE_URL}/${endpoint}`;
 
-    console.log(`================================url ${url}
-                 =============================method ${method}`);
+    // console.log(`================================url ${url}
+    //              =============================method ${method}`);
 
     const headers = { 
       Authorization: `Bearer ${A2Api.token}`,
