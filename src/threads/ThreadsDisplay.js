@@ -25,7 +25,7 @@ const style = {
 
 
 
-function ThreadsDisplay(){
+async function ThreadsDisplay(){
 
     const {allPosts,setAllPosts} = useContext(PostContext);
 
@@ -59,7 +59,7 @@ function ThreadsDisplay(){
       const postId = elem.id.slice(14);
 
       if(pressed){
-        console.log('postid in threadsdisplay',postId);
+        // console.log('postid in threadsdisplay',postId);
         await A2Api.deleteThread(postId);
         window.location.reload();
 
