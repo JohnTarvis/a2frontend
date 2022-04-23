@@ -20,14 +20,11 @@ const style = {
   backgroundColor: currentBG,
 }
 
-
- 
-
 function ThreadsDisplay(){
 
     const history = useHistory();
 
-    function clickHandler(e){
+    async function clickHandler(e){
 
       let elem = e.target;
       let maxJumps = 99;
