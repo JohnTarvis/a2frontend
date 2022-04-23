@@ -70,7 +70,7 @@ function ThreadsDisplay(){
         <TopBanner/>
         <div className="posts-display" >
           <div onClick={
-              function(e){clickHandler(e)}
+              async function(e){await clickHandler(e)}
             } >
             {allPosts.map(p => (
               <ThreadPreview 
