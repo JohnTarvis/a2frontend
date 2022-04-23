@@ -42,8 +42,8 @@ function ThreadsDisplay(){
     
       if(pressed){
         // console.log('postid in threadsdisplay',postId);
-        A2Api.deleteThread(postId);
-        // window.location.reload();
+        await A2Api.deleteThread(postId);
+        window.location.reload();
     
       } else {
         history.push(`/posts/${postId}`);
