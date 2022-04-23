@@ -20,9 +20,12 @@ const style = {
   backgroundColor: currentBG,
 }
 
-const history = useHistory();
 
 function clickHandler(e){
+
+  const history = useHistory();
+
+
   let elem = e.target;
   let maxJumps = 99;
   let pressed = false;
