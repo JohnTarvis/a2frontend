@@ -69,7 +69,9 @@ function ThreadsDisplay(){
       <div className="main-view" >
         <TopBanner/>
         <div className="posts-display" >
-          <div onClick={(e)=>await clickHandler(e)} >
+          <div onClick={
+              function(e){clickHandler(e)}
+            } >
             {allPosts.map(p => (
               <ThreadPreview 
                 key={p.id}
