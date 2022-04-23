@@ -21,36 +21,37 @@ const style = {
 }
 
 
-function clickHandler(e){
-
-  const history = useHistory();
-
-
-  let elem = e.target;
-  let maxJumps = 99;
-  let pressed = false;
-
-  if(elem.className == 'delete-thread-button'){
-    pressed = true;
-  }
-
-  while(elem.className != 'ThreadPreview' && maxJumps > 0){
-    maxJumps--;
-    elem = elem.parentNode;
-  }
-  const postId = elem.id.slice(14);
-
-  if(pressed){
-    // console.log('postid in threadsdisplay',postId);
-    A2Api.deleteThread(postId);
-    // window.location.reload();
-
-  } else {
-    history.push(`/posts/${postId}`);
-  }
-}    
+ 
 
 function ThreadsDisplay(){
+
+    const history = useHistory();
+
+    function clickHandler(e){
+
+      let elem = e.target;
+      let maxJumps = 99;
+      let pressed = false;
+    
+      if(elem.className == 'delete-thread-button'){
+        pressed = true;
+      }
+    
+      while(elem.className != 'ThreadPreview' && maxJumps > 0){
+        maxJumps--;
+        elem = elem.parentNode;
+      }
+      const postId = elem.id.slice(14);
+    
+      if(pressed){
+        // console.log('postid in threadsdisplay',postId);
+        A2Api.deleteThread(postId);
+        // window.location.reload();
+    
+      } else {
+        history.push(`/posts/${postId}`);
+      }
+    }   
 
     const {allPosts,setAllPosts} = useContext(PostContext);
 
