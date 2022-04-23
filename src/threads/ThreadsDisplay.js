@@ -20,6 +20,8 @@ const style = {
   backgroundColor: currentBG,
 }
 
+const history = useHistory();
+
 function clickHandler(e){
   let elem = e.target;
   let maxJumps = 99;
@@ -59,7 +61,6 @@ function ThreadsDisplay(){
       setAllPosts(nonReplies);
     }
 
-    const history = useHistory();
 
     if (!allPosts) return <LoadingSpinner />;
 
