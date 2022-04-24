@@ -98,10 +98,9 @@ function App() {
     }
   }
 
+
   async function deleteThread(id){
-    // if(!anon.is_Admin){
-    //   return "only admins can delete threads";    
-    // }
+
 
     await A2Api.deleteThread(id);
     
