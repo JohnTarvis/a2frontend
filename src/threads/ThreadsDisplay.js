@@ -20,7 +20,7 @@ const style = {
   backgroundColor: currentBG,
 }
 
-async function ThreadsDisplay(){
+function ThreadsDisplay(){
 
     const history = useHistory();
 
