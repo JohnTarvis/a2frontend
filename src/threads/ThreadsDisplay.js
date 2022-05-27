@@ -33,6 +33,7 @@ function ThreadsDisplay(){
       if(elem.className == 'delete-thread-button'){
         pressed = true;
       }
+      
     
       while(elem.className != 'ThreadPreview' && maxJumps > 0){
         maxJumps--;
