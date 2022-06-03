@@ -14,7 +14,7 @@ function Navigation({ logout }) {
         <ul className="navbar-nav ml-auto">
           <li className="nav-item mr-4">
             <NavLink className="nav-link" to="/new-post">
-              Create Post
+              Create Thread
             </NavLink>
           </li>
           <li className="nav-item mr-4">
