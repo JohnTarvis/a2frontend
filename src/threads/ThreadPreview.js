@@ -12,15 +12,20 @@ import AnonContext from "../auth/AnonContext";
 
 function ThreadPreview(props) {
 
-    const { anon } = useContext(AnonContext);
+    let is_admin = false;
 
-    console.log('anon=========================================================',anon);
+    const { anon } = useContext(AnonContext);
+    
+    if(anon){
+        is_admin = anon.is_admin;
+    }
+    
 
     const punrel = 'https://a2uploads.s3.us-west-1.amazonaws.com/picunrel.jpg';
     return (
             <div className="ThreadPreview" id={`ThreadPreview-${props.id}` }>
 
-                {/* { anon.is_admin &&  */
+                {is_admin && 
                     <div className='delete-thread-button-wrapper'> 
                         <div className='delete-thread-button'> X </div> 
                     </div>
