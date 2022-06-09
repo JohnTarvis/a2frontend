@@ -18,7 +18,7 @@ function ThreadPreview(props) {
     return (
             <div className="ThreadPreview" id={`ThreadPreview-${props.id}` }>
 
-                { anon.is_admin && 
+                {/* { anon.is_admin &&  */
                     <div className='delete-thread-button-wrapper'> 
                         <div className='delete-thread-button'> X </div> 
                     </div>
