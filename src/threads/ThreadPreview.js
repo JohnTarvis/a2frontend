@@ -7,15 +7,18 @@ import ColoredLine from "../common/ColoredLine";
 
 import '../styles/ThreadPreview.css';
 
-
+import AnonContext from "../auth/AnonContext";
 
 
 function ThreadPreview(props) {
+
+    const { anon } = useContext(AnonContext);
+
     const punrel = 'https://a2uploads.s3.us-west-1.amazonaws.com/picunrel.jpg';
     return (
             <div className="ThreadPreview" id={`ThreadPreview-${props.id}` }>
 
-                {
+                { anon.is_admin && 
                     <div className='delete-thread-button-wrapper'> 
                         <div className='delete-thread-button'> X </div> 
                     </div>
