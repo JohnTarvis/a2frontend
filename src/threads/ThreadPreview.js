@@ -14,6 +14,8 @@ function ThreadPreview(props) {
 
     const { anon } = useContext(AnonContext);
 
+    console.log('anon=========================================================',anon);
+
     const punrel = 'https://a2uploads.s3.us-west-1.amazonaws.com/picunrel.jpg';
     return (
             <div className="ThreadPreview" id={`ThreadPreview-${props.id}` }>
