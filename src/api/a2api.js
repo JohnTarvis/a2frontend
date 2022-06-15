@@ -25,6 +25,7 @@ class A2Api {
       throw Array.isArray(message) ? message : [message];
     }
   }
+  
 
 ////////////////////////////////////////////////////////////////////////////////-posts
 //-add delete post
