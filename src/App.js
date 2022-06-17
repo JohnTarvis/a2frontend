@@ -82,7 +82,12 @@ function App() {
         postData.append('poster_handle','anonymous');
       }
 
-      await A2Api.createThread(postData);
+      const result = await A2Api.createThread(postData);
+
+      if(result === 'banned'){
+        console.log("you're banned");
+      }
+
       const tags = postData.get('post_tags');
 
       // console.log('tags?=================================',tags);

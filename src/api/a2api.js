@@ -43,6 +43,10 @@ class A2Api {
   static async createThread(params){
     let res = await this.request('post/',params,'post');
 
+    if(res.banned){
+      return 'banned';
+    }
+
     return res.posts;
   }
   static async deleteAllPosts(){
