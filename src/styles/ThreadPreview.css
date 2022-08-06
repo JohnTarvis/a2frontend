@@ -49,9 +49,9 @@ hr{
 }
 
 .thread-preview-top-buttons-wrapper{
-  /* text-align: right; */
   margin:1px;
-  /* padding:2px; */
+  display:flex;
+  justify-content: space-between;
 }
 
 .delete-thread-button{
