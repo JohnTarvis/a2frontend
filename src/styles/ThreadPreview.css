@@ -48,8 +48,8 @@ hr{
   text-align: center;
 }
 
-.delete-thread-button-wrapper{
-  text-align: right;
+.thread-preview-top-buttons-wrapper{
+  /* text-align: right; */
   margin:1px;
   /* padding:2px; */
 }
@@ -62,4 +62,8 @@ hr{
 .delete-thread-button:hover{
   color:white;
   cursor:pointer;
+}
+
+.ban-user-button{
+  
 }

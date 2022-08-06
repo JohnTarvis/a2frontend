@@ -25,14 +25,12 @@ function ThreadPreview(props) {
     return (
             <div className="ThreadPreview" id={`ThreadPreview-${props.id}` }>
 
-                {is_admin && 
-                    <div className="ban-user-button-wrapper">
-                        <div className="ban-user-button">ban user</div>
-                    </div>
-                }
+
+
 
                 {is_admin && 
-                    <div className='delete-thread-button-wrapper'> 
+                    <div className='thread-preview-top-buttons-wrapper'> 
+                        <div className='ban-user-button'>ban user </div>
                         <div className='delete-thread-button'> X </div> 
                     </div>
                 }
